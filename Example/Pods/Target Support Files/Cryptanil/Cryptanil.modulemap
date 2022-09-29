@@ -1,0 +1,6 @@
+framework module Cryptanil {
+  umbrella header "Cryptanil-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -41,12 +41,12 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6CCDC60018F6F365420B4809 /* Pods_Cryptanil_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptanil_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71577CD13575B4ACA3DB7657 /* Pods-Cryptanil_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptanil_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Cryptanil_Tests/Pods-Cryptanil_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BD9EB7DE339CC10FBBE2711A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BD9EB7DE339CC10FBBE2711A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C34D5B45B58897A38873ADF7 /* Pods-Cryptanil_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptanil_Example.debug.xcconfig"; path = "Target Support Files/Pods-Cryptanil_Example/Pods-Cryptanil_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFCCF756851419A2E85D087 /* Pods-Cryptanil_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptanil_Example.release.xcconfig"; path = "Target Support Files/Pods-Cryptanil_Example/Pods-Cryptanil_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DC1C4D04F754DD91B08C17EC /* Pods-Cryptanil_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptanil_Tests.release.xcconfig"; path = "Target Support Files/Pods-Cryptanil_Tests/Pods-Cryptanil_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E78BC6354B1AEA4C51601F58 /* Cryptanil.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Cryptanil.podspec; path = ../Cryptanil.podspec; sourceTree = "<group>"; };
-		F75FF05B9E1282D5C636CDA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E78BC6354B1AEA4C51601F58 /* Cryptanil.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Cryptanil.podspec; path = ../Cryptanil.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F75FF05B9E1282D5C636CDA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				71577CD13575B4ACA3DB7657 /* Pods-Cryptanil_Tests.debug.xcconfig */,
 				DC1C4D04F754DD91B08C17EC /* Pods-Cryptanil_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

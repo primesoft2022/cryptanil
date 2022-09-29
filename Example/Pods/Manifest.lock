@@ -1,0 +1,16 @@
+PODS:
+  - Cryptanil (0.1.0)
+
+DEPENDENCIES:
+  - Cryptanil (from `../`)
+
+EXTERNAL SOURCES:
+  Cryptanil:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Cryptanil: 9f0dc9e34c278d261046c8061fae57e6fcccf783
+
+PODFILE CHECKSUM: 8cd9d1848c3ea17fba8de98d4966937a0a3d2ab0
+
+COCOAPODS: 1.11.2

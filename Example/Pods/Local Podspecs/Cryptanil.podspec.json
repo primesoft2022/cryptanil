@@ -1,0 +1,22 @@
+{
+  "name": "Cryptanil",
+  "version": "0.1.0",
+  "summary": "A short description of Cryptanil.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Hayk Movsesyan/Cryptanil",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Hayk Movsesyan": "hayk.movsesyan@primesoft.am"
+  },
+  "source": {
+    "git": "https://github.com/Hayk Movsesyan/Cryptanil.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Cryptanil/Classes/**/*"
+}
