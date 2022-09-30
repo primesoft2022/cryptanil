@@ -30,14 +30,15 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '13.0'
 
-  s.source_files = 'Cryptanil/Classes/**/*'
+  s.source_files = 'Cryptanil/Source/**/*'
   s.swift_version = '4.0'
   
-  # s.resource_bundles = {
-  #   'Cryptanil' => ['Cryptanil/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'Cryptanil' => ['Cryptanil/Assets.xcassets']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'Alamofire', '~> 4.7.0'
+#   s.dependency 'AFNetworking', '~> 2.3'
 end

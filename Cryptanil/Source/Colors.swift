@@ -9,19 +9,19 @@ import Foundation
 
 class Colors {
     
-    static func background() -> UIColor {
-        return UIColor(named: "background", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
+    static var background: UIColor {
+        UIColor(named: "background", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
     }
-    
-    static func gray() -> UIColor {
-        return UIColor(named: "gray", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
+    static var gray: UIColor {
+        UIColor(named: "gray", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
     }
-    
-    static func blue() -> UIColor {
-        return UIColor(named: "blue", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
+    static var blue: UIColor {
+        UIColor(named: "blue", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
     }
-    
-    static func black() -> UIColor {
-        return UIColor(named: "black", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
+    static var black: UIColor {
+        UIColor(named: "black", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
+    }
+    static var inputBackground: UIColor {
+        UIColor(named: "inputBackground", in: Bundle(for: self), compatibleWith: nil) ?? UIColor()
     }
 }
