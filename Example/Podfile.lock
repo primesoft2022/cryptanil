@@ -1,16 +1,23 @@
 PODS:
-  - Cryptanil (0.1.0)
+  - Alamofire (4.7.3)
+  - Cryptanil (0.0.5):
+    - Alamofire (~> 4.7.0)
 
 DEPENDENCIES:
   - Cryptanil (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
 
 EXTERNAL SOURCES:
   Cryptanil:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Cryptanil: 9f0dc9e34c278d261046c8061fae57e6fcccf783
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Cryptanil: b12ca7e970ab66de2655456414e55db8dd8a1052
 
-PODFILE CHECKSUM: 8cd9d1848c3ea17fba8de98d4966937a0a3d2ab0
+PODFILE CHECKSUM: 7df424753db399c7f2a82b91bdb7e6223273c8d1
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

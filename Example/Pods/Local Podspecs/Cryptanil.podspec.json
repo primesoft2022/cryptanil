@@ -1,9 +1,9 @@
 {
   "name": "Cryptanil",
-  "version": "0.1.0",
-  "summary": "A short description of Cryptanil.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Hayk Movsesyan/Cryptanil",
+  "version": "0.0.5",
+  "summary": "Cryptanils is good thing.",
+  "description": "\"CRYPTANIL IS GOOD THING .\"",
+  "homepage": "https://github.com/primesoft2022/cryptanil",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,23 @@
     "Hayk Movsesyan": "hayk.movsesyan@primesoft.am"
   },
   "source": {
-    "git": "https://github.com/Hayk Movsesyan/Cryptanil.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/primesoft2022/cryptanil.git",
+    "tag": "0.0.5"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "13.0"
   },
-  "source_files": "Cryptanil/Classes/**/*"
+  "source_files": "Cryptanil/Source/**/*",
+  "swift_versions": "4.0",
+  "resource_bundles": {
+    "Cryptanil": [
+      "Cryptanil/Assets.xcassets"
+    ]
+  },
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.7.0"
+    ]
+  },
+  "swift_version": "4.0"
 }
