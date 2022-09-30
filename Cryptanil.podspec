@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Cryptanil'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Cryptanils is good thing.'
 
 # This description is used to generate tags and improve search results.
@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
 
   s.source_files = 'Cryptanil/Classes/**/*'
+  s.swift_version = '4.0'
   
   # s.resource_bundles = {
   #   'Cryptanil' => ['Cryptanil/Assets/*.png']
