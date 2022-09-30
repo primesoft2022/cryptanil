@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Cryptanil'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'Cryptanils is good thing.'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESCgit 
+  s.description      = <<-DESC
 "CRYPTANIL IS GOOD THING ."
                        DESC
 
