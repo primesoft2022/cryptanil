@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 "CRYPTANIL IS GOOD THING ."
                        DESC
 
-  s.homepage         = 'https://github.com/Hayk Movsesyan/Cryptanil'
+  s.homepage         = 'https://github.com/primesoft2022/cryptanil'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hayk Movsesyan' => 'hayk.movsesyan@primesoft.am' }
-  s.source           = { :git => 'https://github.com/Hayk Movsesyan/Cryptanil.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/primesoft2022/cryptanil.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'Cryptanil/Classes/**/*'
   

@@ -1,7 +1,10 @@
 import Foundation
 
-class Valod {
-    func a(){
+public class Valod {
+    
+    public init() {}
+    
+    public func a() {
         print("valod")
     }
 }
