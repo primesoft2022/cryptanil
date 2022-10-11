@@ -8,9 +8,12 @@
 
 import UIKit
 import Cryptanil
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var idTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,11 +23,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let vc = CryptanilViewController()
-        present(vc, animated: true)
+    
+    @IBAction func show() {
+        let vc = CryptanilViewController(id: idTF.text!)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

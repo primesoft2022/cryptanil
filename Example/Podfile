@@ -8,6 +8,7 @@ target 'Cryptanil_Example' do
   target 'Cryptanil_Tests' do
     inherit! :search_paths
 
-    
   end
+  
+  pod 'Bagel'
 end
