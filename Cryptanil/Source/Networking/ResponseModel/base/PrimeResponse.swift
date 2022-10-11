@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct PrimeResponse<T:Codable>:Codable {
+    var result: PrimeResult<T>?
+    var error: PrimeError?
+    
+    func hasError() -> Bool{
+        return error != nil
+    }
+}

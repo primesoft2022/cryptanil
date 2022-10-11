@@ -1,5 +1,5 @@
 //
-//  CreateOrderRequest.swift
+//  GetCoinAddressRequest.swift
 //  Cryptanil
 //
 //  Created by Hayk Movsesyan on 03.10.22.
@@ -14,7 +14,7 @@ struct GetCoinAddressRequest: Codable {
     let coin: String
     let network: String
     
-    var parameters: Parameters {
-        return ["auth": auth, "coin": coin, "network": network]
+    var parameters: String {
+        return "?auth=\(auth)&coin=\(coin)&network=\(network)"
     }
 }

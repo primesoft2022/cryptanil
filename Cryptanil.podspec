@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Cryptanil'
-  s.version          = '0.0.5'
+  s.version          = '0.0.8'
   s.summary          = 'Cryptanils is good thing.'
 
 # This description is used to generate tags and improve search results.
@@ -33,10 +33,12 @@ Pod::Spec.new do |s|
   s.source_files = 'Cryptanil/Source/**/*'
   s.swift_version = '4.0'
   
-   s.resource_bundles = {
-     'Cryptanil' => ['Cryptanil/Assets.xcassets']
-   }
-
+  s.resource_bundles = {
+    'Cryptanil' => ['Cryptanil/Assets/*']
+  }
+  
+  s.resources = "Cryptanil/Assets/Assets.xcassets"
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'Alamofire', '~> 4.7.0'

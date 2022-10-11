@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct SubmitOrderRequest: Codable {
+    let txId: String
+    let auth: String
+}

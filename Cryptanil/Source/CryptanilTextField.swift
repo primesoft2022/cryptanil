@@ -10,17 +10,31 @@ import UIKit
 class CryptanilTextField: UIView {
     
     private var placeholderLabel: UILabel!
-    private var textField: UITextField!
+    var textField: UITextField!
     private var button: UIButton!
     private var placeholder: String!
-    private var text: String!
     private var buttonText: String?
     private var showArrow: Bool = true
-    var delegate: UITextFieldDelegate!
+    var text: String {
+        get {
+            return textField?.text ?? ""
+        }
+        set {
+            textField?.text = newValue
+        }
+    }
+    var delegate: UITextFieldDelegate? {
+        get {
+            return textField.delegate
+        }
+        set {
+            textField.delegate = newValue
+        }
+    }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        setupView()
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+//        setupView()
     }
     
     func setup(placeholder: String, text: String, buttonText: String?, showArrow: Bool) {
@@ -28,6 +42,7 @@ class CryptanilTextField: UIView {
         self.text = text
         self.showArrow = showArrow
         self.buttonText = buttonText
+        setupView()
     }
     
     private func setupView() {
@@ -59,6 +74,7 @@ class CryptanilTextField: UIView {
         textField.layer.borderWidth = 1
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
         textField.leftViewMode = .always
+        textField.font = UIFont.systemFont(ofSize: 14)
         if showArrow {
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 0))
             let arrowImageView = UIImageView()
@@ -75,7 +91,6 @@ class CryptanilTextField: UIView {
             textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
             textField.rightViewMode = .always
         }
-        textField.delegate = delegate
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.topAnchor.constraint(equalTo: placeholderLabel.bottomAnchor, constant: 5).isActive = true
         textField.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -86,17 +101,25 @@ class CryptanilTextField: UIView {
     private func addCopyButton() {
         if let text = buttonText {
             button = UIButton()
-            addSubview(button)
             let atributedText = NSAttributedString(string: text, attributes: [.underlineColor: Colors.blue, .underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
             button.setAttributedTitle(atributedText, for: .normal)
             button.setTitleColor(Colors.blue, for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+            addSubview(button)
             button.translatesAutoresizingMaskIntoConstraints = false
             button.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 5).isActive = true
             button.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor).isActive = true
             button.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
             button.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         }
+    }
+    
+    @objc private func buttonTapped() {
+        UIPasteboard.general.string = text
+        let messageView = Loading.loadFromNib()
+        messageView.showSuccess(message: "Copied")
+        messageView.makeKeyAndVisible()
     }
 }
 

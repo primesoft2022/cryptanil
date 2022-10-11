@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct PrimeResult<T:Codable>: Codable {
+    var data: T?
+    var message: PrimeMessage?
+}

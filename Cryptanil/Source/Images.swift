@@ -12,4 +12,20 @@ class Images {
     static var logo: UIImage {
         UIImage(named: "logo", in: Bundle(for: self), compatibleWith: nil) ?? UIImage()
     }
+    
+    static var submitted: UIImage {
+        UIImage(named: "submitted", in: Bundle(for: self), with: nil) ?? UIImage()
+    }
+    
+    static var complited: UIImage {
+        UIImage(named: "complited", in: Bundle(for: self), with: nil) ?? UIImage()
+    }
+    
+    static var warning: UIImage {
+        UIImage(named: "warning", in: Bundle(for: self), with: nil) ?? UIImage()
+    }
+    
+    static var expired: UIImage {
+        UIImage(named: "expired", in: Bundle(for: self), with: nil) ?? UIImage()
+    }
 }

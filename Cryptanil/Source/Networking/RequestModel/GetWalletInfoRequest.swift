@@ -12,7 +12,7 @@ struct GetWalletInfoRequest: Codable {
     
     let auth: String
     
-    var parameters: Parameters {
-        return ["auth": auth]
+    var parameters: String {
+        return "?auth=\(auth)"
     }
 }

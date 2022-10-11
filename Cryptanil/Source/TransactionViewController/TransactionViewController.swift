@@ -21,6 +21,7 @@ final class TransactionViewController: UIViewController {
     private var submitButton: UIButton!
     private var networkPicker: UIPickerView!
     
+    private var orderInfo: CryptanilOrderInfo!
     private var wallets: [WalletInfo] = []
     private var selectedWallet: WalletInfo? {
         willSet {
@@ -60,19 +61,12 @@ final class TransactionViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         registerKeyboardNotifications()
+        getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        getCryptaneilOrderInfo()
-    }
-    
-    convenience init() {
-        self.init(id: "")
-    }
-    
-    public init(id: String) {
+    public init(id: String, orderInfo: CryptanilOrderInfo) {
         self.id = id
+        self.orderInfo = orderInfo
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -219,9 +213,11 @@ final class TransactionViewController: UIViewController {
         let submitOrderRequest = SubmitOrderRequest(txId: txIDTextField.text, auth: id)
         ApiClient.submitOrder(body: submitOrderRequest) { submitOrderResponse, message, error in
             if let submitOrderResponse = submitOrderResponse {
-                let vc = PaymentStatusViewController()
-                vc.submitOrderResponse = submitOrderResponse
-                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = PaymentStatusViewController(orderInfo: submitOrderResponse)
+                var viewControllers = self.navigationController?.viewControllers ?? []
+                viewControllers.removeAll(where: {$0 == self})
+                viewControllers.append(vc)
+                self.navigationController?.setViewControllers(viewControllers, animated: true)
             }
         }
     }
@@ -234,16 +230,6 @@ final class TransactionViewController: UIViewController {
         textField.heightAnchor.constraint(equalToConstant: 100).isActive = true
         textField.delegate = self
         return textField
-    }
-    
-    func getCryptaneilOrderInfo() {
-        ApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id)) { orderInfo, message, error in
-            if let orderInfo = orderInfo {
-                if orderInfo.status == OrderStatuses.created.rawValue {
-                    self.getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
-                }
-            }
-        }
     }
     
     func getWalletInfo(convertedCoinType: String) {
