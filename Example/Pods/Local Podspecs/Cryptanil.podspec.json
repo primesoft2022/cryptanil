@@ -1,6 +1,6 @@
 {
   "name": "Cryptanil",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "summary": "Cryptanils is good thing.",
   "description": "\"CRYPTANIL IS GOOD THING .\"",
   "homepage": "https://github.com/primesoft2022/cryptanil",
@@ -13,19 +13,19 @@
   },
   "source": {
     "git": "https://github.com/primesoft2022/cryptanil.git",
-    "tag": "0.0.6"
+    "tag": "0.0.8"
   },
   "platforms": {
     "ios": "13.0"
   },
-  "source_files": "Cryptanil/Source/**/*",
+  "source_files": "Cryptanil/Source/**/*.swift",
   "swift_versions": "4.0",
   "resource_bundles": {
     "Cryptanil": [
       "Cryptanil/Assets/*"
     ]
   },
-  "resources": "Cryptanil/Assets/*",
+  "resources": "Cryptanil/Assets/Assets.xcassets",
   "dependencies": {
     "Alamofire": [
       "~> 4.7.0"
