@@ -22,7 +22,8 @@
   "swift_versions": "4.0",
   "resource_bundles": {
     "Cryptanil": [
-      "Cryptanil/Resource/*"
+      "Cryptanil/Resource/*",
+      "Cryptanil/CryptanilLocalizations/*.lproj/*.strings"
     ]
   },
   "resources": [
