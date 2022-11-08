@@ -20,9 +20,9 @@ public class CryptanilViewController: UIViewController {
     private var presenting: Bool {
         return presentingViewController != nil && navigationController?.viewControllers == [self]
     }
-    public var language: Language = .en {
+    public var language: CryptanilLanguage = .en {
         willSet {
-            Language.current = newValue
+            CryptanilLanguage.current = newValue
         }
     }
 
@@ -57,7 +57,7 @@ public class CryptanilViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = Colors.background
+        view.backgroundColor = CryptanilColors.background
         navigationController?.navigationBar.isHidden = true
         let contentView = UIView()
         view.addSubview(contentView)
@@ -66,7 +66,7 @@ public class CryptanilViewController: UIViewController {
         contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         let iconView = UIImageView()
-        iconView.image = Images.logo
+        iconView.image = CryptanilImages.logo
         contentView.addSubview(iconView)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
@@ -76,7 +76,7 @@ public class CryptanilViewController: UIViewController {
         let cryptalinLabel = UILabel()
         cryptalinLabel.text = "Cryptanil"
         cryptalinLabel.font = UIFont.systemFont(ofSize: 24)
-        cryptalinLabel.textColor = Colors.black
+        cryptalinLabel.textColor = CryptanilColors.black
         cryptalinLabel.textAlignment = .center
         contentView.addSubview(cryptalinLabel)
         cryptalinLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -87,14 +87,14 @@ public class CryptanilViewController: UIViewController {
     }
     
     func getCryptaneilOrderInfo() {
-        ApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id)) { orderInfo, message, error in
+        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id)) { orderInfo, message, error in
             if let orderInfo = orderInfo, let orderStatus = CryptanilOrderStatus(rawValue: orderInfo.status) {
                 self.delegate?.cryptanilTransactionChanged(to: orderStatus, for: orderInfo)
                 var vc: UIViewController!
                 if orderStatus == .created {
-                    vc = TransactionViewController(id: self.id, orderInfo: orderInfo, delegate: self.delegate, presenting: self.presenting)
+                    vc = CryptanilTransactionViewController(id: self.id, orderInfo: orderInfo, delegate: self.delegate, presenting: self.presenting)
                 } else {
-                    vc = PaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
+                    vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
                 }
                 var viewControllers = self.navigationController?.viewControllers ?? []
                 viewControllers.removeAll(where: {$0 == self})

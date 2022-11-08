@@ -8,7 +8,7 @@
 import Alamofire
 import UIKit
 
-extension ApiClient {
+extension CryptanilApiClient {
     
     private (set) static var counter: Int = 0
     

@@ -69,25 +69,25 @@ extension UIView {
 
 extension Encodable {
     
-    func jsonData()->Data{
+    func cryptanilJsonData()->Data{
         return try! JSONEncoder().encode(self)
     }
 }
 
 extension String {
     
-    func localized() -> String {
-        return NSLocalizedString(self, tableName: nil, bundle: Bundle.localizedBundle(), value: "", comment: "")
+    func cryptanilLocalized() -> String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.localizedCryptanilBundle(), value: "", comment: "")
     }
     
-    func toQrCode() -> UIImage? {
+    func toCryptanilQrCode() -> UIImage? {
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setValue(self.data(using: String.Encoding.ascii), forKey: "inputMessage")
         let filterFalseColor = CIFilter(name: "CIFalseColor")
         filterFalseColor?.setDefaults()
         filterFalseColor?.setValue(filter?.outputImage, forKey: "inputImage")
         // convert method
-        let cgColor: CGColor? = Colors.blue.cgColor
+        let cgColor: CGColor? = CryptanilColors.blue.cgColor
         let qrColor: CIColor = CIColor(cgColor: cgColor!)
         let transparentBG: CIColor = CIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         filterFalseColor?.setValue(qrColor, forKey: "inputColor0")
@@ -118,27 +118,14 @@ extension UIViewController {
 
 extension Bundle {
     
-    private static var bundle: Bundle!
+    private static var cryptanilBundle: Bundle!
     
-    public static func localizedBundle() -> Bundle! {
-        if bundle == nil {
-            let appLang = Language.de// AppLanguage(rawValue: UserDefaults.standard.string(forKey: "app_lang") ?? "") ?? 
+    public static func localizedCryptanilBundle() -> Bundle! {
+        if cryptanilBundle == nil {
+            let appLang = CryptanilLanguage.current
             let path = Bundle(identifier: "org.cocoapods.Cryptanil")?.path(forResource: appLang.rawValue, ofType: "lproj")
-            bundle = Bundle(path: path!)
+            cryptanilBundle = Bundle(path: path!)
         }
-        return bundle
+        return cryptanilBundle
     }
-    
-    public static func setLanguage(lang: Language) {
-        UserDefaults.standard.set(lang.rawValue, forKey: "app_lang")
-        let path = Bundle.main.path(forResource: lang.rawValue, ofType: "lproj")
-        bundle = Bundle(path: path!)
-    }
-    
-    public static func getLanguage() -> Language {
-        let langVal = UserDefaults.standard.string(forKey: "app_lang")
-        let lang = Language(rawValue: langVal ?? "") ?? .en
-        return lang
-    }
-    
 }

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-extension ApiClient {
+extension CryptanilApiClient {
     
     internal static weak var loading: CryptanilLoading!
     internal static var loadingQueue = DispatchQueue(label: "loading_queue")
@@ -77,7 +77,7 @@ extension ApiClient {
             Alamofire.SessionManager.default.session.getAllTasks { (tasks) in
                 tasks.forEach{ $0.cancel() }
             }
-            ApiClient.handleNoInternetConnection { action in
+            CryptanilApiClient.handleNoInternetConnection { action in
                 if action == .cancel {
                     cryptaninFailed(.noInternetConnection)
                     completion(nil, nil, CryptanilError.noInternetConnection)
@@ -94,7 +94,7 @@ extension ApiClient {
             increment()
             startLoading()
         }
-        let request: DataRequest = Alamofire.request(Router.checkMaintenance)
+        let request: DataRequest = Alamofire.request(CryptanilRouter.checkMaintenance)
         request.responseJSONDecodable(decoder: JSONDecoder()) { (response: DataResponse<CryptanilResponse<Bool>>) in
             if !isSilent {
                 decrement()

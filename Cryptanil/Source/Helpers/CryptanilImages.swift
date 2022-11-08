@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Images {
+class CryptanilImages {
     
     static var logo: UIImage {
         UIImage(named: "logo", in: Bundle(for: self), compatibleWith: nil) ?? UIImage()

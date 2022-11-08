@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TransactionViewController: UIViewController {
+final class CryptanilTransactionViewController: UIViewController {
     
     private var cryptoTypeTextField: CryptanilTextField!
     private var networkTextField: CryptanilTextField!
@@ -50,7 +50,7 @@ final class TransactionViewController: UIViewController {
         willSet {
             if let address = newValue {
                 addressTextField.text = address
-                addressQrCode.image = address.toQrCode()
+                addressQrCode.image = address.toCryptanilQrCode()
                 addressStackView.isHidden = false
             } else {
                 addressStackView.isHidden = true
@@ -95,8 +95,8 @@ final class TransactionViewController: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = Colors.background
-        navigationItem.title = "Transaction".localized()
+        view.backgroundColor = CryptanilColors.background
+        navigationItem.title = "Transaction".cryptanilLocalized()
         if presenting {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTransaction))
         }
@@ -152,15 +152,15 @@ final class TransactionViewController: UIViewController {
         headerStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         headerStackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         iconView = UIImageView()
-        iconView.image = Images.logo
+        iconView.image = CryptanilImages.logo
         iconView.contentMode = .scaleAspectFit
         headerStackView.addArrangedSubview(iconView)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         iconView.widthAnchor.constraint(equalToConstant: 60).isActive = true
         let headerTitle = UILabel()
-        headerTitle.text = "Cryptanil Address to which trnsaction should be made".localized()
-        headerTitle.textColor = Colors.black
+        headerTitle.text = "Cryptanil Address to which trnsaction should be made".cryptanilLocalized()
+        headerTitle.textColor = CryptanilColors.black
         headerTitle.numberOfLines = 0
         headerTitle.font = UIFont.systemFont(ofSize: 14)
         headerStackView.addArrangedSubview(headerTitle)
@@ -176,11 +176,11 @@ final class TransactionViewController: UIViewController {
         textFieldsStackView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 20).isActive = true
         textFieldsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         textFieldsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        cryptoTypeTextField = textField(placeholder: "Crypto type".localized(), showArrow: true)
-        networkTextField = textField(placeholder: "Network".localized(), showArrow: true)
-        addressTextField = textField(placeholder: "Address".localized(), buttonText: "copy address".localized())
-        memoTextField = textField(placeholder: "Memo".localized(), buttonText: "copy memo".localized())
-        txIDTextField = textField(placeholder: "TxID".localized())
+        cryptoTypeTextField = textField(placeholder: "Crypto type".cryptanilLocalized(), showArrow: true)
+        networkTextField = textField(placeholder: "Network".cryptanilLocalized(), showArrow: true)
+        addressTextField = textField(placeholder: "Address".cryptanilLocalized(), buttonText: "copy address".cryptanilLocalized())
+        memoTextField = textField(placeholder: "Memo".cryptanilLocalized(), buttonText: "copy memo".cryptanilLocalized())
+        txIDTextField = textField(placeholder: "TxID".cryptanilLocalized())
         addressTextField.disable()
         memoTextField.disable()
         memoTextField.isHidden = true
@@ -237,8 +237,8 @@ final class TransactionViewController: UIViewController {
     private func setupSubmitButton() {
         submitButton = UIButton()
         submitButton.disable()
-        submitButton.backgroundColor = Colors.blue
-        submitButton.setTitle("Submit".localized(), for: .normal)
+        submitButton.backgroundColor = CryptanilColors.blue
+        submitButton.setTitle("Submit".cryptanilLocalized(), for: .normal)
         submitButton.setTitleColor(.white, for: .normal)
         submitButton.layer.cornerRadius = 10
         submitButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
@@ -254,10 +254,10 @@ final class TransactionViewController: UIViewController {
     
     @objc private func submitTapped() {
         let submitOrderRequest = SubmitOrderRequest(txId: txIDTextField.text, auth: id)
-        ApiClient.submitOrder(body: submitOrderRequest) { orderInfo, message, error in
+        CryptanilApiClient.submitOrder(body: submitOrderRequest) { orderInfo, message, error in
             if let orderInfo = orderInfo, let status = CryptanilOrderStatus(rawValue: orderInfo.status) {
                 self.delegate?.cryptanilTransactionChanged(to: status, for: orderInfo)
-                let vc = PaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
+                let vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
                 var viewControllers = self.navigationController?.viewControllers ?? []
                 viewControllers.removeAll(where: {$0 == self})
                 viewControllers.append(vc)
@@ -282,7 +282,7 @@ final class TransactionViewController: UIViewController {
     }
     
     func getWalletInfo(convertedCoinType: String) {
-        ApiClient.getWalletInfo(parameter: GetWalletInfoRequest(auth: id)) { walletInfo, message, error in
+        CryptanilApiClient.getWalletInfo(parameter: GetWalletInfoRequest(auth: id)) { walletInfo, message, error in
             if let walletInfo = walletInfo {
                 self.wallets = walletInfo
                 self.selectedWallet = self.wallets.first(where: {$0.coin == convertedCoinType})
@@ -300,7 +300,7 @@ final class TransactionViewController: UIViewController {
 
     func getCoinAddresses() {
         if let coin = selectedWallet?.coin, let network = selectedNetwork?.network {
-            ApiClient.getCoinAddress(parameter: GetCoinAddressRequest(auth: id, coin: coin, network: network)) { coinAddress, message, error in
+            CryptanilApiClient.getCoinAddress(parameter: GetCoinAddressRequest(auth: id, coin: coin, network: network)) { coinAddress, message, error in
                 if let coinAddress = coinAddress {
                     self.address = coinAddress.address
                     self.memo = coinAddress.tag
@@ -324,7 +324,7 @@ final class TransactionViewController: UIViewController {
     }
 }
 
-extension TransactionViewController {
+extension CryptanilTransactionViewController {
     
     func registerKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardDidShow, object: nil)
@@ -346,7 +346,7 @@ extension TransactionViewController {
     }
 }
 
-extension TransactionViewController: SearchViewControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+extension CryptanilTransactionViewController: CryptanilSearchViewControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     func selected(wallet: WalletInfo) {
         selectedWallet = wallet
@@ -355,7 +355,7 @@ extension TransactionViewController: SearchViewControllerDelegate, UITextFieldDe
     
     public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == cryptoTypeTextField.textField {
-            let vc = SearchViewController()
+            let vc = CryptanilSearchViewController()
             vc.wallets = wallets
             vc.delegate = self
             self.present(vc, animated: true)

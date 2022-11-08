@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol SearchViewControllerDelegate: AnyObject {
+protocol CryptanilSearchViewControllerDelegate: AnyObject {
     func selected(wallet: WalletInfo)
 }
 
-final class SearchViewController: UIViewController {
+final class CryptanilSearchViewController: UIViewController {
     
     private var navBar: UINavigationBar!
     private var tableView: UITableView!
@@ -22,7 +22,7 @@ final class SearchViewController: UIViewController {
         }
     }
     private var searchWallets = [WalletInfo]()
-    weak var delegate: SearchViewControllerDelegate?
+    weak var delegate: CryptanilSearchViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ final class SearchViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = Colors.background
+        view.backgroundColor = CryptanilColors.background
         setupNavigationBar()
         setupSearchBar()
         setupTableView()
@@ -39,7 +39,7 @@ final class SearchViewController: UIViewController {
     
     private func setupNavigationBar() {
         navBar = UINavigationBar()
-        navBar.backgroundColor = Colors.background
+        navBar.backgroundColor = CryptanilColors.background
         view.addSubview(navBar)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
@@ -93,7 +93,7 @@ final class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController {
+extension CryptanilSearchViewController {
     
     func registerKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardDidShow, object: nil)
@@ -116,7 +116,7 @@ extension SearchViewController {
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+extension CryptanilSearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchWallets.count
@@ -125,8 +125,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = searchWallets[indexPath.row].coin
-        cell.textLabel?.textColor = Colors.black
-        cell.backgroundColor = Colors.inputBackground
+        cell.textLabel?.textColor = CryptanilColors.black
+        cell.backgroundColor = CryptanilColors.inputBackground
         return cell
     }
     

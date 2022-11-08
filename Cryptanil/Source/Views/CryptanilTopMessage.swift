@@ -13,7 +13,7 @@ class CryptanilTopMessage {
         if let viewController = UIApplication.shared.keyWindow?.rootViewController?.topMostViewController(), let view = viewController.view {
             let messageView = UIView()
             messageView.layer.cornerRadius = 8
-            messageView.backgroundColor = Colors.loading_background
+            messageView.backgroundColor = CryptanilColors.loading_background
             view.addSubview(messageView)
             messageView.translatesAutoresizingMaskIntoConstraints = false
             messageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20 + view.safeAreaInsets.top).isActive = true

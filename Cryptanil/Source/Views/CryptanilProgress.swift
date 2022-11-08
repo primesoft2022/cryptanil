@@ -20,16 +20,16 @@ class CryptanilProgress: UIView {
     }
     
     func setupBackgroundView() {
-        backgroundColor = Colors.gray
+        backgroundColor = CryptanilColors.gray
         layer.cornerRadius = frame.height / 2
-        layer.borderColor = Colors.gray.cgColor
+        layer.borderColor = CryptanilColors.gray.cgColor
         layer.borderWidth = 1
         clipsToBounds = true
     }
     
     func setupProgressViews() -> UIView {
         let progressView = UIView()
-        progressView.backgroundColor = Colors.blue
+        progressView.backgroundColor = CryptanilColors.blue
         progressView.layer.cornerRadius = (frame.size.height - 2) / 2
         addSubview(progressView)
         progressView.translatesAutoresizingMaskIntoConstraints = false

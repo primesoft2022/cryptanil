@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-enum Router: URLRequestConvertible{
+enum CryptanilRouter: URLRequestConvertible{
     
     case getCoinAddress(param: GetCoinAddressRequest)
     case getCryptanilOrderInfo(param: GetCryptanilOrderInfoRequest)
@@ -43,7 +43,7 @@ enum Router: URLRequestConvertible{
     var body: Data? {
         switch self {
         case .submitOrder(let body):
-            return body.jsonData()
+            return body.cryptanilJsonData()
         default:
             return nil
         }
@@ -53,7 +53,7 @@ enum Router: URLRequestConvertible{
         
         var url: URL
         var urlRequest: URLRequest
-        let finalPath = ApiClient.base_url + path
+        let finalPath = CryptanilApiClient.base_url + path
         url = try (finalPath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!).asURL()
         urlRequest = URLRequest(url: url)
         urlRequest.timeoutInterval = 80

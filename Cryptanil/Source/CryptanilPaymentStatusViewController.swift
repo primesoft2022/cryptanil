@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PaymentStatusViewController: UIViewController {
+final class CryptanilPaymentStatusViewController: UIViewController {
     
     private var scrollView: UIScrollView!
     private var contentView: UIView!
@@ -47,7 +47,7 @@ final class PaymentStatusViewController: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = Colors.background
+        view.backgroundColor = CryptanilColors.background
         navigationItem.title = "Transaction status"
         if presenting {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
@@ -64,7 +64,7 @@ final class PaymentStatusViewController: UIViewController {
     }
     
     @objc private func getOrderInfo() {
-        ApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id), isSilent: true) { orderInfo, message, error in
+        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id), isSilent: true) { orderInfo, message, error in
             if let orderInfo = orderInfo {
                 if CryptanilOrderStatus(rawValue: orderInfo.status) == .expired || CryptanilOrderStatus(rawValue: orderInfo.status) == .completed {
                     self.orderInfo = orderInfo
@@ -124,7 +124,7 @@ final class PaymentStatusViewController: UIViewController {
         imageView.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
         titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 18)
-        titleLabel.textColor = Colors.black
+        titleLabel.textColor = CryptanilColors.black
         titleLabel.textAlignment = .center
         headerView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -134,9 +134,9 @@ final class PaymentStatusViewController: UIViewController {
         messageLabel = UILabel()
         messageLabel.font = UIFont.systemFont(ofSize: 14)
         if orderInfo.status == CryptanilOrderStatus.expired.rawValue {
-            messageLabel.textColor = Colors.red
+            messageLabel.textColor = CryptanilColors.red
         } else {
-            messageLabel.textColor = Colors.blue
+            messageLabel.textColor = CryptanilColors.blue
         }
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
@@ -175,8 +175,8 @@ final class PaymentStatusViewController: UIViewController {
     
     private func setupSubmitButton() {
         doneButton = UIButton()
-        doneButton.backgroundColor = Colors.blue
-        doneButton.setTitle("Go to merchant page".localized(), for: .normal)
+        doneButton.backgroundColor = CryptanilColors.blue
+        doneButton.setTitle("Go to merchant page".cryptanilLocalized(), for: .normal)
         doneButton.setTitleColor(.white, for: .normal)
         doneButton.layer.cornerRadius = 10
         doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
@@ -205,15 +205,15 @@ final class PaymentStatusViewController: UIViewController {
         for view in infoStackView.arrangedSubviews {
             infoStackView.removeArrangedSubview(view)
         }
-        let coinAmount = setupInfoView(title: "Coin amount".localized(), info: orderInfo.cryptoAmount ?? "-", previousInfoView: nil, for: infoStackView)
+        let coinAmount = setupInfoView(title: "Coin amount".cryptanilLocalized(), info: orderInfo.cryptoAmount ?? "-", previousInfoView: nil, for: infoStackView)
         if let convertedAmount = orderInfo.convertedAmountToString {
-            let _ = setupInfoView(title: "Converted amount".localized(), info: "\(convertedAmount)", previousInfoView: coinAmount, for: infoStackView)
+            let _ = setupInfoView(title: "Converted amount".cryptanilLocalized(), info: "\(convertedAmount)", previousInfoView: coinAmount, for: infoStackView)
         }
         if let convertedCurrency = orderInfo.vonvertedCurrencyToString {
-            let _ = setupInfoView(title: "Converted Currency".localized(), info: "\(convertedCurrency)", previousInfoView: coinAmount, for: infoStackView)
+            let _ = setupInfoView(title: "Converted Currency".cryptanilLocalized(), info: "\(convertedCurrency)", previousInfoView: coinAmount, for: infoStackView)
         }
-        let _ = setupInfoView(title: "TxID".localized(), info: orderInfo.txID ?? "", previousInfoView: coinAmount, for: infoStackView)
-        let _ = setupInfoView(title: "Company name".localized(), info: orderInfo.companyName, previousInfoView: coinAmount, for: infoStackView)
+        let _ = setupInfoView(title: "TxID".cryptanilLocalized(), info: orderInfo.txID ?? "", previousInfoView: coinAmount, for: infoStackView)
+        let _ = setupInfoView(title: "Company name".cryptanilLocalized(), info: orderInfo.companyName, previousInfoView: coinAmount, for: infoStackView)
         if CryptanilOrderStatus(rawValue: orderInfo.status) != .submitted {
             progressView?.removeFromSuperview()
             messageLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
@@ -226,7 +226,7 @@ final class PaymentStatusViewController: UIViewController {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         titleLabel.text = title
-        titleLabel.textColor = Colors.black
+        titleLabel.textColor = CryptanilColors.black
         titleLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         infoView.addSubview(titleLabel)
@@ -237,7 +237,7 @@ final class PaymentStatusViewController: UIViewController {
         let infoLabel = UILabel()
         infoLabel.font = UIFont.systemFont(ofSize: 14)
         infoLabel.text = info
-        infoLabel.textColor = Colors.black
+        infoLabel.textColor = CryptanilColors.black
         infoLabel.numberOfLines = 0
         infoView.addSubview(infoLabel)
         infoLabel.translatesAutoresizingMaskIntoConstraints = false

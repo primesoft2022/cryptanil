@@ -63,7 +63,7 @@ class CryptanilTextField: UIView {
     private func addPaceholder() {
         placeholderLabel = UILabel()
         addSubview(placeholderLabel)
-        placeholderLabel.textColor = Colors.black
+        placeholderLabel.textColor = CryptanilColors.black
         placeholderLabel.font = UIFont.systemFont(ofSize: 14)
         placeholderLabel.text = placeholder
         placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -76,10 +76,10 @@ class CryptanilTextField: UIView {
         textField = UITextField()
         addSubview(textField)
         textField.text = text
-        textField.textColor = Colors.black
+        textField.textColor = CryptanilColors.black
         textField.layer.cornerRadius = 10
-        textField.layer.borderColor = Colors.gray.cgColor
-        textField.backgroundColor = Colors.inputBackground
+        textField.layer.borderColor = CryptanilColors.gray.cgColor
+        textField.backgroundColor = CryptanilColors.inputBackground
         textField.layer.borderWidth = 1
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
         textField.leftViewMode = .always
@@ -90,7 +90,7 @@ class CryptanilTextField: UIView {
             let image = UIImage(systemName: "chevron.down")
             arrowImageView.image = image
             arrowImageView.contentMode = .center
-            arrowImageView.tintColor = Colors.black
+            arrowImageView.tintColor = CryptanilColors.black
             arrowImageView.center = rightView.center
             rightView.addSubview(arrowImageView)
             rightView.isUserInteractionEnabled = false
@@ -110,9 +110,9 @@ class CryptanilTextField: UIView {
     private func addCopyButton() {
         if let text = buttonText {
             button = UIButton()
-            let atributedText = NSAttributedString(string: text, attributes: [.underlineColor: Colors.blue, .underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+            let atributedText = NSAttributedString(string: text, attributes: [.underlineColor: CryptanilColors.blue, .underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
             button.setAttributedTitle(atributedText, for: .normal)
-            button.setTitleColor(Colors.blue, for: .normal)
+            button.setTitleColor(CryptanilColors.blue, for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
             button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
             addSubview(button)

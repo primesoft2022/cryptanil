@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Language: String, CaseIterable {
+public enum CryptanilLanguage: String, CaseIterable {
     
     case en = "en"
     case ru = "ru"
@@ -15,5 +15,5 @@ public enum Language: String, CaseIterable {
     case de = "de"
     case fr = "fr"
     
-    static var current: Language = .en
+    static var current: CryptanilLanguage = .en
 }

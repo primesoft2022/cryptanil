@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Colors {
+class CryptanilColors {
     
     static var background: UIColor {
         UIColor(named: "background", in: Bundle(for: self), compatibleWith: nil) ?? UIColor.systemBackground
