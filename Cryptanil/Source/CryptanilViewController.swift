@@ -7,24 +7,49 @@
 
 import UIKit
 
+public protocol CryptanilViewControllerDelegate: AnyObject {
+    func cryptanilTransactionChanged(to status: CryptanilOrderStatus, for orderInfo: CryptanilOrderInfo)
+    func cryptanilTransactionFailed(with error: CryptanilError)
+    func cryptanilTransactionCanceled()
+}
+
 public class CryptanilViewController: UIViewController {
     
-    private var id = "bfc73d31-8132-4f03-a05f-9cfc119ff89b"
+    private var id: String
+    public weak var delegate: CryptanilViewControllerDelegate?
+    private var presenting: Bool {
+        return presentingViewController != nil && navigationController?.viewControllers == [self]
+    }
+    public var language: Language = .en {
+        willSet {
+            Language.current = newValue
+        }
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        getCryptaneilOrderInfo()
+        if !presenting {
+            getCryptaneilOrderInfo()
+        }
     }
     
-    convenience init() {
-        self.init(id: "")
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if presenting {
+            getCryptaneilOrderInfo()
+        }
     }
     
     public init(id: String) {
         self.id = id
         super.init(nibName: nil, bundle: nil)
-        
+    }
+    
+    public init(id: String, delegate: CryptanilViewControllerDelegate) {
+        self.id = id
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -63,27 +88,30 @@ public class CryptanilViewController: UIViewController {
     
     func getCryptaneilOrderInfo() {
         ApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id)) { orderInfo, message, error in
-            if let orderInfo = orderInfo {
-                if orderInfo.status == OrderStatuses.created.rawValue {
-                    let vc = TransactionViewController(id: self.id, orderInfo: orderInfo)
-                    var viewControllers = self.navigationController?.viewControllers ?? []
-                    viewControllers.removeAll(where: {$0 == self})
-                    viewControllers.append(vc)
-                    self.navigationController?.setViewControllers(viewControllers, animated: true)
+            if let orderInfo = orderInfo, let orderStatus = CryptanilOrderStatus(rawValue: orderInfo.status) {
+                self.delegate?.cryptanilTransactionChanged(to: orderStatus, for: orderInfo)
+                var vc: UIViewController!
+                if orderStatus == .created {
+                    vc = TransactionViewController(id: self.id, orderInfo: orderInfo, delegate: self.delegate, presenting: self.presenting)
                 } else {
-                    let vc = PaymentStatusViewController(orderInfo: orderInfo)
-                    var viewControllers = self.navigationController?.viewControllers ?? []
-                    viewControllers.removeAll(where: {$0 == self})
-                    viewControllers.append(vc)
-                    self.navigationController?.setViewControllers(viewControllers, animated: true)
+                    vc = PaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
                 }
-            } else if error?.messageKey == ErrorKeys.reject.rawValue, let message = error?.localizedMessage {
-                let dialog = Dialog.loadFromNib()
-                dialog.setup(type: .error, title: "Oh no!", message: message, neutralButtonTitle: "OK") { _ in
-                    self.navigationController?.popViewController(animated: true)
-                }
-                dialog.makeKeyAndVisible()
+                var viewControllers = self.navigationController?.viewControllers ?? []
+                viewControllers.removeAll(where: {$0 == self})
+                viewControllers.append(vc)
+                self.navigationController?.setViewControllers(viewControllers, animated: true)
             }
+        } cryptaninFailed: { error in
+            self.delegate?.cryptanilTransactionFailed(with: error)
+            self.close()
+        }
+    }
+    
+    func close() {
+        if presenting {
+            dismiss(animated: true)
+        } else {
+            navigationController?.popViewController(animated: true)
         }
     }
     

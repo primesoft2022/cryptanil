@@ -34,7 +34,6 @@ class CryptanilTextField: UIView {
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
-//        setupView()
     }
     
     func setup(placeholder: String, text: String, buttonText: String?, showArrow: Bool) {
@@ -43,6 +42,16 @@ class CryptanilTextField: UIView {
         self.showArrow = showArrow
         self.buttonText = buttonText
         setupView()
+    }
+    
+    override func disable() {
+        textField.isUserInteractionEnabled = false
+        textField.alpha = 0.6
+    }
+    
+    override func enable() {
+        textField.isUserInteractionEnabled = true
+        textField.alpha = 1
     }
     
     private func setupView() {
@@ -117,9 +126,7 @@ class CryptanilTextField: UIView {
     
     @objc private func buttonTapped() {
         UIPasteboard.general.string = text
-        let messageView = Loading.loadFromNib()
-        messageView.showSuccess(message: "Copied")
-        messageView.makeKeyAndVisible()
+        CryptanilTopMessage.show(message: "Copied !")
     }
 }
 

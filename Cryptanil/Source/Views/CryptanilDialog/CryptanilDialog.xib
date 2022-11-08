@@ -12,40 +12,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="ulk-cf-1ga" customClass="Dialog" customModule="Cryptanil" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="ulk-cf-1ga" customClass="CryptanilDialog" customModule="Cryptanil" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ws-3f-Cca" userLabel="cancelBtn">
-                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                </button>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkM-ay-Aay">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="if9-Fq-gvt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0O-qt-khq">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="716"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0O-qt-khq">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1nY-wg-tXm">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="716"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
                                 <vibrancyEffect>
                                     <blurEffect style="regular"/>
                                 </vibrancyEffect>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="separatorColor"/>
+                        <constraints>
+                            <constraint firstItem="f0O-qt-khq" firstAttribute="top" secondItem="if9-Fq-gvt" secondAttribute="top" id="0QG-D8-Ryj"/>
+                            <constraint firstAttribute="bottom" secondItem="f0O-qt-khq" secondAttribute="bottom" id="7gP-w0-U0e"/>
+                            <constraint firstItem="f0O-qt-khq" firstAttribute="leading" secondItem="if9-Fq-gvt" secondAttribute="leading" id="hMZ-K6-9AF"/>
+                            <constraint firstAttribute="trailing" secondItem="f0O-qt-khq" secondAttribute="trailing" id="mPu-wQ-TNT"/>
+                        </constraints>
                     </view>
                     <blurEffect style="systemMaterial"/>
                 </visualEffectView>
                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-rk-5zg">
-                    <rect key="frame" x="60" y="323.33333333333331" width="270" height="197.66666666666669"/>
+                    <rect key="frame" x="60" y="318.33333333333331" width="270" height="207.33333333333331"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djF-BH-yYj" userLabel="alert">
-                            <rect key="frame" x="0.0" y="0.0" width="270" height="197.66666666666666"/>
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="207.33333333333334"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="QGY-UE-mYM">
                                     <rect key="frame" x="108" y="19" width="54" height="54"/>
@@ -56,41 +58,60 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDV-wi-gig" customClass="LocalizedLabel" customModule="Cryptanil" customModuleProvider="target">
-                                    <rect key="frame" x="73.333333333333343" y="83" width="123.66666666666666" height="19.333333333333329"/>
+                                    <rect key="frame" x="73.333333333333343" y="93" width="123.66666666666666" height="19.333333333333329"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                     <color key="textColor" name="black"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account is activated!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSv-cs-ZGv" customClass="LocalizedLabel" customModule="Cryptanil" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="112.33333333333337" width="230" height="19.333333333333343"/>
+                                    <rect key="frame" x="20" y="122.33333333333336" width="230" height="19.333333333333329"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <color key="textColor" name="black"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-Km-fAh">
-                                    <rect key="frame" x="0.0" y="152.66666666666669" width="270" height="45"/>
+                                    <rect key="frame" x="0.0" y="162.66666666666669" width="270" height="44.666666666666657"/>
                                     <subviews>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yag-iC-fKX" customClass="LocalizedButton" customModule="Cryptanil" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="1" width="270" height="44"/>
-                                            <color key="backgroundColor" name="background"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="Ibz-J8-AIq"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <state key="normal" title="Ok">
-                                                <color key="titleColor" name="blue"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="actionTapped:" destination="ulk-cf-1ga" eventType="touchUpInside" id="zSn-VG-BuN"/>
-                                            </connections>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2lD-QY-56M">
+                                            <rect key="frame" x="0.0" y="0.66666666666668561" width="270" height="44"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yag-iC-fKX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="44"/>
+                                                    <color key="backgroundColor" name="background"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Ibz-J8-AIq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" name="red"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="actionTapped:" destination="ulk-cf-1ga" eventType="touchUpInside" id="sRz-jo-lNk"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-8I-j89">
+                                                    <rect key="frame" x="135.33333333333337" y="0.0" width="134.66666666666663" height="44"/>
+                                                    <color key="backgroundColor" name="background"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="exu-8a-3jw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <state key="normal" title="Ok">
+                                                        <color key="titleColor" name="blue"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="actionTapped:" destination="ulk-cf-1ga" eventType="touchUpInside" id="Ufr-M8-Tpk"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="separatorColor"/>
                                     <constraints>
-                                        <constraint firstItem="yag-iC-fKX" firstAttribute="centerX" secondItem="vfs-Km-fAh" secondAttribute="centerX" id="E3J-uv-LOV"/>
-                                        <constraint firstItem="yag-iC-fKX" firstAttribute="top" secondItem="vfs-Km-fAh" secondAttribute="top" constant="1" id="M8K-S2-fRj"/>
-                                        <constraint firstItem="yag-iC-fKX" firstAttribute="leading" secondItem="vfs-Km-fAh" secondAttribute="leading" id="Rsz-Or-vD3"/>
-                                        <constraint firstAttribute="bottom" secondItem="yag-iC-fKX" secondAttribute="bottom" id="dij-iD-AJA"/>
+                                        <constraint firstAttribute="bottom" secondItem="2lD-QY-56M" secondAttribute="bottom" id="4fE-Of-N5H"/>
+                                        <constraint firstItem="2lD-QY-56M" firstAttribute="top" secondItem="vfs-Km-fAh" secondAttribute="top" constant="0.5" id="6sd-ZC-G9t"/>
+                                        <constraint firstAttribute="trailing" secondItem="2lD-QY-56M" secondAttribute="trailing" id="H7d-Ii-5DL"/>
+                                        <constraint firstItem="2lD-QY-56M" firstAttribute="leading" secondItem="vfs-Km-fAh" secondAttribute="leading" id="sIP-dF-6Ip"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -99,7 +120,7 @@
                                 <constraint firstItem="vfs-Km-fAh" firstAttribute="leading" secondItem="djF-BH-yYj" secondAttribute="leading" id="5Wg-d4-5Hm"/>
                                 <constraint firstItem="bDV-wi-gig" firstAttribute="centerX" secondItem="djF-BH-yYj" secondAttribute="centerX" id="BS0-Ap-oqh"/>
                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sSv-cs-ZGv" secondAttribute="bottom" constant="16" id="C2x-Tw-14y"/>
-                                <constraint firstItem="bDV-wi-gig" firstAttribute="top" secondItem="QGY-UE-mYM" secondAttribute="bottom" constant="10" id="Ihi-xg-h4K"/>
+                                <constraint firstItem="bDV-wi-gig" firstAttribute="top" secondItem="QGY-UE-mYM" secondAttribute="bottom" constant="20" id="Ihi-xg-h4K"/>
                                 <constraint firstItem="vfs-Km-fAh" firstAttribute="top" secondItem="sSv-cs-ZGv" secondAttribute="bottom" constant="21" id="PxX-z0-mt2"/>
                                 <constraint firstItem="sSv-cs-ZGv" firstAttribute="top" secondItem="bDV-wi-gig" secondAttribute="bottom" constant="10" id="VEa-Mr-3Cr"/>
                                 <constraint firstItem="QGY-UE-mYM" firstAttribute="top" secondItem="djF-BH-yYj" secondAttribute="top" constant="19" id="XjC-b8-dFp"/>
@@ -144,23 +165,20 @@
             <viewLayoutGuide key="safeArea" id="b2Z-J2-cbh"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="7ws-3f-Cca" firstAttribute="top" secondItem="ulk-cf-1ga" secondAttribute="top" id="MZv-zQ-Sp8"/>
-                <constraint firstItem="7ws-3f-Cca" firstAttribute="leading" secondItem="ulk-cf-1ga" secondAttribute="leading" id="TXo-8L-VvZ"/>
                 <constraint firstItem="jkM-ay-Aay" firstAttribute="leading" secondItem="b2Z-J2-cbh" secondAttribute="leading" id="UWe-uz-TNY"/>
                 <constraint firstItem="tlU-rk-5zg" firstAttribute="centerY" secondItem="ulk-cf-1ga" secondAttribute="centerY" id="WCv-7j-Fbj"/>
                 <constraint firstItem="b2Z-J2-cbh" firstAttribute="trailing" secondItem="jkM-ay-Aay" secondAttribute="trailing" id="WfQ-1L-ko8"/>
                 <constraint firstAttribute="bottom" secondItem="jkM-ay-Aay" secondAttribute="bottom" id="eLw-im-kSb"/>
-                <constraint firstAttribute="trailing" secondItem="7ws-3f-Cca" secondAttribute="trailing" id="iwL-cc-Lee"/>
-                <constraint firstAttribute="bottom" secondItem="7ws-3f-Cca" secondAttribute="bottom" id="kJe-xy-EZR"/>
                 <constraint firstItem="tlU-rk-5zg" firstAttribute="centerX" secondItem="ulk-cf-1ga" secondAttribute="centerX" id="net-Tu-0mh"/>
                 <constraint firstItem="jkM-ay-Aay" firstAttribute="top" secondItem="ulk-cf-1ga" secondAttribute="top" id="qkE-OU-eaC"/>
             </constraints>
             <connections>
-                <outlet property="alertButton" destination="yag-iC-fKX" id="Xj4-yQ-1dN"/>
+                <outlet property="actionButton" destination="tdL-8I-j89" id="P7c-4N-h3l"/>
                 <outlet property="alertImageView" destination="QGY-UE-mYM" id="0dQ-74-JF8"/>
                 <outlet property="alertMessage" destination="sSv-cs-ZGv" id="XPn-JT-zUn"/>
                 <outlet property="alertTitle" destination="bDV-wi-gig" id="vSe-Bp-h8v"/>
                 <outlet property="alertView" destination="djF-BH-yYj" id="qn7-pa-gtY"/>
+                <outlet property="cancelButton" destination="yag-iC-fKX" id="RIV-q1-fv2"/>
                 <outlet property="showingView" destination="tlU-rk-5zg" id="YzS-w9-UOG"/>
                 <outlet property="vev" destination="jkM-ay-Aay" id="OE2-pF-tLY"/>
             </connections>
@@ -176,7 +194,7 @@
             <color red="0.097999997437000275" green="0.10599999874830246" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blue">
-            <color red="0.054999999701976776" green="0.55699998140335083" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22699999809265137" green="0.45100000500679016" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="red">
             <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

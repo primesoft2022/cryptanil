@@ -14,6 +14,7 @@ enum Router: URLRequestConvertible{
     case getCryptanilOrderInfo(param: GetCryptanilOrderInfoRequest)
     case getWalletInfo(param: GetWalletInfoRequest)
     case submitOrder(body: SubmitOrderRequest)
+    case checkMaintenance
     
     var method: HTTPMethod {
         switch self {
@@ -27,13 +28,15 @@ enum Router: URLRequestConvertible{
     var path: String {
         switch self {
         case  .getCoinAddress(let param):
-            return "getCoinAddress" + param.parameters
+            return "company/getCoinAddress" + param.parameters
         case .getCryptanilOrderInfo(let param):
-            return "getCryptanilOrderInfo" + param.parameters
+            return "company/getCryptanilOrderInfo" + param.parameters
         case .getWalletInfo(let param):
-            return "getWalletInfo" + param.parameters
+            return "company/getWalletInfo" + param.parameters
         case .submitOrder:
-            return "submitOrder"
+            return "company/submitOrder"
+        case .checkMaintenance:
+            return "checkMaintenance"
         }
     }
     

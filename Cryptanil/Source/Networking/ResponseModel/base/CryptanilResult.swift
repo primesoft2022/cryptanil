@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PrimeResult<T:Codable>: Codable {
+struct CryptanilResult<T:Codable>: Codable {
     var data: T?
-    var message: PrimeMessage?
+    var message: CryptanilMessage?
 }

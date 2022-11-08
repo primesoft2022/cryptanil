@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - SubmitOrderResponse
-struct CryptanilOrderInfo: Codable {
+public struct CryptanilOrderInfo: Codable {
     let status: Int
     let orderID, convertedCoinType, redirectURL: String
     let isTesting: Bool
@@ -20,18 +20,21 @@ struct CryptanilOrderInfo: Codable {
     let cryptoAmount: String?
     let currencyCode: String?
     
-    var convertedAmountToString: String? {
-        if let convertedAmount = convertedAmount, let convertedAmountCurrency = convertedAmountCurrency, let currencyCode = currencyCode {
-            return "\(convertedAmount) (\(convertedCoinType))\n\(convertedAmountCurrency) (\(currencyCode))"
-        } else if let convertedAmount = convertedAmount {
+    internal var convertedAmountToString: String? {
+        if let convertedAmount = convertedAmount {
             return "\(convertedAmount) (\(convertedCoinType))"
-        }else if let convertedAmountCurrency = convertedAmountCurrency, let currencyCode = currencyCode {
+        }
+        return nil
+    }
+    
+    internal var vonvertedCurrencyToString: String? {
+        if let convertedAmountCurrency = convertedAmountCurrency, let currencyCode = currencyCode {
             return "\(convertedAmountCurrency) (\(currencyCode))"
         }
         return nil
     }
 
-    enum CodingKeys: String, CodingKey {
+    internal enum CodingKeys: String, CodingKey {
         case status
         case orderID = "orderId"
         case convertedCoinType
@@ -42,14 +45,14 @@ struct CryptanilOrderInfo: Codable {
     }
 }
 
-enum OrderStatuses: Int {
+public enum CryptanilOrderStatus: Int {
     
     case created = 1
     case submitted = 2
     case expired = 3
     case completed = 4
     
-    var message: String {
+    internal var message: String {
         switch self {
         case .created:
             return ""
@@ -62,7 +65,7 @@ enum OrderStatuses: Int {
         }
     }
     
-    var title: String {
+    internal var title: String {
         switch self {
         case .created:
             return ""

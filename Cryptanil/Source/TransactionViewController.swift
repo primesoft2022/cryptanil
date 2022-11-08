@@ -14,6 +14,8 @@ final class TransactionViewController: UIViewController {
     private var addressTextField: CryptanilTextField!
     private var memoTextField: CryptanilTextField!
     private var txIDTextField: CryptanilTextField!
+    private var addressStackView: UIStackView!
+    private var addressQrCode: UIImageView!
     private var scrollView: UIScrollView!
     private var contentView: UIView!
     private var headerStackView: UIStackView!
@@ -46,7 +48,13 @@ final class TransactionViewController: UIViewController {
     }
     private var address: String? {
         willSet {
-            addressTextField.text = newValue ?? ""
+            if let address = newValue {
+                addressTextField.text = address
+                addressQrCode.image = address.toQrCode()
+                addressStackView.isHidden = false
+            } else {
+                addressStackView.isHidden = true
+            }
         }
     }
     private var memo: String = "" {
@@ -55,18 +63,30 @@ final class TransactionViewController: UIViewController {
             memoTextField.text = newValue
         }
     }
-    private var id = "bfc73d31-8132-4f03-a05f-9cfc119ff89b"
+    private var id: String
+    var presenting: Bool
+    weak var delegate: CryptanilViewControllerDelegate?
         
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         registerKeyboardNotifications()
         getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
+        
     }
     
-    public init(id: String, orderInfo: CryptanilOrderInfo) {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParentViewController {
+            delegate?.cryptanilTransactionCanceled()
+        }
+    }
+    
+    init(id: String, orderInfo: CryptanilOrderInfo, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
         self.id = id
         self.orderInfo = orderInfo
+        self.presenting = presenting
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -76,12 +96,19 @@ final class TransactionViewController: UIViewController {
     
     func setupUI() {
         view.backgroundColor = Colors.background
-        navigationItem.title = "Transaction"
+        navigationItem.title = "Transaction".localized()
+        if presenting {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTransaction))
+        }
         setupScrollView()
         setupContentView()
         setupHeader()
         setupTextFields()
         setupSubmitButton()
+    }
+    
+    @objc private func cancelTransaction() {
+        self.dismiss(animated: true)
     }
     
     private func setupScrollView() {
@@ -110,19 +137,21 @@ final class TransactionViewController: UIViewController {
         contentView.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
     }
     
+    var iconView = UIImageView()
+    
     private func setupHeader() {
         headerStackView = UIStackView()
         headerStackView.alignment = .center
         headerStackView.distribution = .fillProportionally
         headerStackView.axis = .horizontal
-        headerStackView.spacing = 20
+        headerStackView.spacing = 10
         contentView.addSubview(headerStackView)
         headerStackView.translatesAutoresizingMaskIntoConstraints = false
         headerStackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         headerStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         headerStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         headerStackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        let iconView = UIImageView()
+        iconView = UIImageView()
         iconView.image = Images.logo
         iconView.contentMode = .scaleAspectFit
         headerStackView.addArrangedSubview(iconView)
@@ -130,7 +159,7 @@ final class TransactionViewController: UIViewController {
         iconView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         iconView.widthAnchor.constraint(equalToConstant: 60).isActive = true
         let headerTitle = UILabel()
-        headerTitle.text = "Cryptanil Address to which trnsaction should be made"
+        headerTitle.text = "Cryptanil Address to which trnsaction should be made".localized()
         headerTitle.textColor = Colors.black
         headerTitle.numberOfLines = 0
         headerTitle.font = UIFont.systemFont(ofSize: 14)
@@ -147,19 +176,32 @@ final class TransactionViewController: UIViewController {
         textFieldsStackView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 20).isActive = true
         textFieldsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         textFieldsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        cryptoTypeTextField = textField(placeholder: "Crypto type", showArrow: true)
-        networkTextField = textField(placeholder: "Network", showArrow: true)
-        addressTextField = textField(placeholder: "Address", buttonText: "copy address")
-        memoTextField = textField(placeholder: "Memo", buttonText: "copy memo")
-        txIDTextField = textField(placeholder: "TxID")
+        cryptoTypeTextField = textField(placeholder: "Crypto type".localized(), showArrow: true)
+        networkTextField = textField(placeholder: "Network".localized(), showArrow: true)
+        addressTextField = textField(placeholder: "Address".localized(), buttonText: "copy address".localized())
+        memoTextField = textField(placeholder: "Memo".localized(), buttonText: "copy memo".localized())
+        txIDTextField = textField(placeholder: "TxID".localized())
+        addressTextField.disable()
+        memoTextField.disable()
         memoTextField.isHidden = true
         memoTextField.textField.isUserInteractionEnabled = false
         addressTextField.textField.isUserInteractionEnabled = false
+        addressStackView = UIStackView()
+        addressStackView.alignment = .fill
+        addressStackView.distribution = .fillProportionally
+        addressStackView.axis = .horizontal
+        addressStackView.spacing = 10
+        addressStackView.isHidden = true
+        addressQrCode = UIImageView()
+        addressStackView.addArrangedSubview(addressTextField)
+        addressStackView.addArrangedSubview(addressQrCode)
         textFieldsStackView.addArrangedSubview(cryptoTypeTextField)
         textFieldsStackView.addArrangedSubview(networkTextField)
-        textFieldsStackView.addArrangedSubview(addressTextField)
+        textFieldsStackView.addArrangedSubview(addressStackView)
         textFieldsStackView.addArrangedSubview(memoTextField)
         textFieldsStackView.addArrangedSubview(txIDTextField)
+        addressQrCode.translatesAutoresizingMaskIntoConstraints = false
+        addressQrCode.widthAnchor.constraint(equalToConstant: 100).isActive = true
         setupPicker()
     }
     
@@ -180,6 +222,7 @@ final class TransactionViewController: UIViewController {
     
     @objc func cancel() {
         view.endEditing(true)
+        delegate?.cryptanilTransactionCanceled()
     }
     
     @objc func done() {
@@ -195,7 +238,7 @@ final class TransactionViewController: UIViewController {
         submitButton = UIButton()
         submitButton.disable()
         submitButton.backgroundColor = Colors.blue
-        submitButton.setTitle("Submit", for: .normal)
+        submitButton.setTitle("Submit".localized(), for: .normal)
         submitButton.setTitleColor(.white, for: .normal)
         submitButton.layer.cornerRadius = 10
         submitButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
@@ -211,14 +254,20 @@ final class TransactionViewController: UIViewController {
     
     @objc private func submitTapped() {
         let submitOrderRequest = SubmitOrderRequest(txId: txIDTextField.text, auth: id)
-        ApiClient.submitOrder(body: submitOrderRequest) { submitOrderResponse, message, error in
-            if let submitOrderResponse = submitOrderResponse {
-                let vc = PaymentStatusViewController(orderInfo: submitOrderResponse)
+        ApiClient.submitOrder(body: submitOrderRequest) { orderInfo, message, error in
+            if let orderInfo = orderInfo, let status = CryptanilOrderStatus(rawValue: orderInfo.status) {
+                self.delegate?.cryptanilTransactionChanged(to: status, for: orderInfo)
+                let vc = PaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
                 var viewControllers = self.navigationController?.viewControllers ?? []
                 viewControllers.removeAll(where: {$0 == self})
                 viewControllers.append(vc)
                 self.navigationController?.setViewControllers(viewControllers, animated: true)
+            } else if let error = error {
+                self.delegate?.cryptanilTransactionFailed(with: error)
             }
+        } cryptaninFailed: { error in
+            self.delegate?.cryptanilTransactionFailed(with: error)
+            self.close()
         }
     }
     
@@ -240,7 +289,12 @@ final class TransactionViewController: UIViewController {
                 if self.selectedNetwork != nil {
                     self.getCoinAddresses()
                 }
+            } else if let error = error {
+                self.delegate?.cryptanilTransactionFailed(with: error)
             }
+        } cryptaninFailed: { error in
+            self.delegate?.cryptanilTransactionFailed(with: error)
+            self.close()
         }
     }
 
@@ -254,7 +308,18 @@ final class TransactionViewController: UIViewController {
                     self.selectedWallet = self.wallets.first(where: {$0.coin.uppercased() == "usdt"})
                     self.getCoinAddresses()
                 }
+            } cryptaninFailed: { error in
+                self.delegate?.cryptanilTransactionFailed(with: error)
+                self.close()
             }
+        }
+    }
+    
+    func close() {
+        if presenting {
+            dismiss(animated: true)
+        } else {
+            navigationController?.popViewController(animated: true)
         }
     }
 }

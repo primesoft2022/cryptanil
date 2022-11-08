@@ -28,4 +28,8 @@ class Colors {
     static var red: UIColor {
         UIColor(named: "red", in: Bundle(for: self), compatibleWith: nil) ?? UIColor.red
     }
+    
+    static var loading_background: UIColor {
+        UIColor(named: "loading_background", in: Bundle(for: self), compatibleWith: nil) ?? UIColor.gray
+    }
 }

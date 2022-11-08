@@ -39,12 +39,15 @@ final class SearchViewController: UIViewController {
     
     private func setupNavigationBar() {
         navBar = UINavigationBar()
+        navBar.backgroundColor = Colors.background
         view.addSubview(navBar)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         navBar.translatesAutoresizingMaskIntoConstraints = false
         navBar.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        let navItem = UINavigationItem(title: "SomeTitle")
+        let navItem = UINavigationItem(title: "Crypto types")
         navItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: #selector(close))
         navBar.setItems([navItem], animated: false)
     }
@@ -55,14 +58,22 @@ final class SearchViewController: UIViewController {
     
     private func setupSearchBar() {
         searchBar = UISearchBar()
-        searchBar.isTranslucent = true
-        searchBar.showsCancelButton = true
+        searchBar.placeholder = "Search crypto type"
+        searchBar.backgroundImage = UIImage()
         searchBar.delegate = self
         view.addSubview(searchBar)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.topAnchor.constraint(equalTo: navBar.bottomAnchor).isActive = true
         searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         searchBar.trailingAnchor.constraint(equalTo: navBar.trailingAnchor).isActive = true
+        let separatorView = UIView()
+        separatorView.backgroundColor = .separator
+        searchBar.addSubview(separatorView)
+        separatorView.translatesAutoresizingMaskIntoConstraints = false
+        separatorView.heightAnchor.constraint(equalToConstant: 0.33).isActive = true
+        separatorView.leadingAnchor.constraint(equalTo: searchBar.leadingAnchor).isActive = true
+        separatorView.trailingAnchor.constraint(equalTo: searchBar.trailingAnchor).isActive = true
+        separatorView.bottomAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
     }
     
     private func setupTableView() {
@@ -139,5 +150,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         searchWallets = wallets
         updateUI()
         view.endEditing(true)
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.setShowsCancelButton(true, animated: true)
+        return true
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.setShowsCancelButton(false, animated: true)
+        return true
     }
 }

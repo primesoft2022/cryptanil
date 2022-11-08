@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct PrimeResponse<T:Codable>:Codable {
-    var result: PrimeResult<T>?
-    var error: PrimeError?
+struct CryptanilResponse<T: Codable>: Codable {
+    var result: CryptanilResult<T>?
+    var error: CryptanilError?
     
     func hasError() -> Bool{
         return error != nil

@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by Hayk Movsesyan on 18.10.22.
+  
+*/
+"Submit" = "Enviar";
+"Crypto type" = "Tipo de cripto ";
+"Network" = "Red";
+"Address" = "Dirección";
+"Memo" = "Memo";
+"TxID" = "ID de la transacción ";
+"copy address" = "Copiar dirección ";
+"copy memo" = "Copiar memo";
+"Transaction status" = "Estado de la transacción";
+"Coin amount" = "Cantidad de monedas";
+"Converted amount" = "Cantidad convertida";
+"TxID" = "ID de la transacción ";
+"Company name" = "Nombre de la empresa";
+"Converted Currency" = "Moneda convertida";
+"Search crypto type" = "Buscar el tipo de cripto";
+"Crypto types" ="Tipos de cripto ";
