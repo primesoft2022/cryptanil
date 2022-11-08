@@ -120,7 +120,7 @@ extension Bundle {
     
     private static var cryptanilBundle: Bundle!
     
-    public static func localizedCryptanilBundle() -> Bundle! {
+    public static func localizedCryptanilBundle() -> Bundle {
         if cryptanilBundle == nil {
             let appLang = CryptanilLanguage.current
             let path = Bundle(identifier: "org.cocoapods.Cryptanil")?.path(forResource: appLang.rawValue, ofType: "lproj")

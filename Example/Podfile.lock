@@ -3,7 +3,7 @@ PODS:
   - Bagel (1.4.0):
     - CocoaAsyncSocket
   - CocoaAsyncSocket (7.6.5)
-  - Cryptanil (0.1.1):
+  - Cryptanil (0.1.4):
     - Alamofire (~> 4.7)
 
 DEPENDENCIES:
@@ -24,7 +24,7 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Bagel: c3fa6bcbd52db9ca976edbafd7638f0553ded101
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  Cryptanil: bc4b5e3384723a768cd9c40b3c3cc499f7e66bc2
+  Cryptanil: de22e1322dd07c5b839f3ddc844d6b3e80703cca
 
 PODFILE CHECKSUM: 830d70e956f0fe6b44f923b875e12af7d836e911
 
