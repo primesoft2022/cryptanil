@@ -1,6 +1,6 @@
 {
   "name": "Cryptanil",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "summary": "Cryptanils is good thing.",
   "description": "\"CRYPTANIL IS GOOD THING .\"",
   "homepage": "https://github.com/primesoft2022/cryptanil",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/primesoft2022/cryptanil.git",
-    "tag": "0.1.4"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "13.0"
@@ -23,7 +23,7 @@
   "resource_bundles": {
     "Cryptanil": [
       "Cryptanil/Resource/*",
-      "Cryptanil/CryptanilLocalizations/*.lproj/*.strings"
+      "Cryptanil/CryptanilLocalizations/*.lproj"
     ]
   },
   "resources": [
