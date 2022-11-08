@@ -83,11 +83,11 @@ public enum CryptanilOrderStatus: Int {
         case .created:
             return UIImage()
         case .submitted:
-            return Images.submitted
+            return CryptanilImages.submitted
         case .expired:
-            return Images.expired
+            return CryptanilImages.expired
         case .completed:
-            return Images.complited
+            return CryptanilImages.complited
         }
     }
 }
