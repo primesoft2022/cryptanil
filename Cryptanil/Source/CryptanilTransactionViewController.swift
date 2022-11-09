@@ -94,9 +94,9 @@ final class CryptanilTransactionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
+    private func setupUI() {
         view.backgroundColor = CryptanilColors.background
-        navigationItem.title = "Transaction".cryptanilLocalized()
+        setupNavigation()
         if presenting {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTransaction))
         }
@@ -105,6 +105,30 @@ final class CryptanilTransactionViewController: UIViewController {
         setupHeader()
         setupTextFields()
         setupSubmitButton()
+    }
+    
+    private func setupNavigation() {
+        let navigationView = UIView()
+        navigationView.backgroundColor = .gray
+        let iconView = UIImageView(image: CryptanilImages.logo)
+        iconView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        iconView.contentMode = .scaleAspectFit
+        let titleLabel = UILabel()
+        titleLabel.text = "Cryptanil"
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        titleLabel.numberOfLines = 0
+        navigationView.addSubview(iconView)
+        navigationView.addSubview(titleLabel)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconView.leadingAnchor.constraint(equalTo: navigationView.leadingAnchor).isActive = true
+        iconView.centerYAnchor.constraint(equalTo: navigationView.centerYAnchor).isActive = true
+        iconView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 10).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: navigationView.trailingAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: navigationView.centerYAnchor).isActive = true
+        navigationItem.titleView = navigationView
     }
     
     @objc private func cancelTransaction() {
@@ -150,19 +174,18 @@ final class CryptanilTransactionViewController: UIViewController {
         headerStackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         headerStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         headerStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        headerStackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         iconView = UIImageView()
-        iconView.image = CryptanilImages.logo
+        iconView.image = CryptanilImages.warning
         iconView.contentMode = .scaleAspectFit
         headerStackView.addArrangedSubview(iconView)
         iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        iconView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        iconView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         let headerTitle = UILabel()
-        headerTitle.text = "Cryptanil Address to which trnsaction should be made".cryptanilLocalized()
-        headerTitle.textColor = CryptanilColors.black
+        headerTitle.text = "Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete.".cryptanilLocalized()
+        headerTitle.textColor = CryptanilColors.yellow
         headerTitle.numberOfLines = 0
-        headerTitle.font = UIFont.systemFont(ofSize: 14)
+        headerTitle.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         headerStackView.addArrangedSubview(headerTitle)
     }
     

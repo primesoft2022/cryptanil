@@ -121,11 +121,17 @@ extension Bundle {
     private static var cryptanilBundle: Bundle!
     
     public static func localizedCryptanilBundle() -> Bundle {
-        if cryptanilBundle == nil {
-            let appLang = CryptanilLanguage.current
-            let path = Bundle(identifier: "org.cocoapods.Cryptanil")?.path(forResource: appLang.rawValue, ofType: "lproj")
-            cryptanilBundle = Bundle(path: path!)
+        guard let moduleName = String(reflecting: CryptanilViewController.self).components(separatedBy: ".").first else {
+            fatalError("Couldn't determine module name from class \(CryptanilViewController.self)")
         }
-        return cryptanilBundle
+        let frameworkBundle = Bundle(for: CryptanilViewController.self)
+        guard let resourceBundleURL = frameworkBundle.url(forResource: moduleName, withExtension: "bundle"),
+              var resourceBundle = Bundle(url: resourceBundleURL) else {
+            fatalError("\(moduleName).bundle not found in \(frameworkBundle)")
+        }
+        let appLang = CryptanilLanguage.current
+        let path = resourceBundle.path(forResource: appLang.rawValue, ofType: "lproj")
+        resourceBundle = Bundle(path: path!)!
+        return resourceBundle
     }
 }

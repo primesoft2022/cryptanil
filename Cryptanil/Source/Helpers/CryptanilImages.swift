@@ -21,11 +21,15 @@ class CryptanilImages {
         UIImage(named: "complited", in: Bundle(for: self), with: nil) ?? UIImage()
     }
     
-    static var warning: UIImage {
-        UIImage(named: "warning", in: Bundle(for: self), with: nil) ?? UIImage()
+    static var error: UIImage {
+        UIImage(named: "error", in: Bundle(for: self), with: nil) ?? UIImage()
     }
     
     static var expired: UIImage {
         UIImage(named: "expired", in: Bundle(for: self), with: nil) ?? UIImage()
+    }
+    
+    static var warning: UIImage {
+        UIImage(named: "warning", in: Bundle(for: self), with: nil) ?? UIImage()
     }
 }

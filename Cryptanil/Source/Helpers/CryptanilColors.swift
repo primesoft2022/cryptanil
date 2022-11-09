@@ -32,4 +32,8 @@ class CryptanilColors {
     static var loading_background: UIColor {
         UIColor(named: "loading_background", in: Bundle(for: self), compatibleWith: nil) ?? UIColor.gray
     }
+    
+    static var yellow: UIColor {
+        UIColor(named: "yellow", in: Bundle(for: self), compatibleWith: nil) ?? UIColor.gray
+    }
 }

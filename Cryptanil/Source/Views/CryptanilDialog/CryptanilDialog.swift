@@ -89,7 +89,7 @@ class CryptanilDialog: UIView {
 extension CryptanilDialog {
     
     private func setupErrorDialog(error: CryptanilError) {
-        alertImageView.image = CryptanilImages.warning
+        alertImageView.image = CryptanilImages.error
         actionButton.setTitle("Ok", for: .normal)
         cancelButton.removeFromSuperview()
         alertTitle.text = "Oh no!"
@@ -97,14 +97,14 @@ extension CryptanilDialog {
     }
     
     private func setupInternetConnectionDialog() {
-        alertImageView.image = CryptanilImages.warning
+        alertImageView.image = CryptanilImages.error
         actionButton.setTitle("Try again", for: .normal)
         alertTitle.text = "No Internet Connection"
         alertMessage.text = "Connect to internet and try again"
     }
     
     private func setupUndefinedDialog() {
-        alertImageView.image = CryptanilImages.warning
+        alertImageView.image = CryptanilImages.error
         actionButton.setTitle("Ok", for: .normal)
         cancelButton.removeFromSuperview()
         alertTitle.text = "Oh no!"
@@ -112,7 +112,7 @@ extension CryptanilDialog {
     }
     
     private func setupMaintenanceDialog() {
-        alertImageView.image = CryptanilImages.warning
+        alertImageView.image = CryptanilImages.error
         actionButton.removeFromSuperview()
         alertTitle.text = "Under construction"
         alertMessage.text = "Sorry, the website is under construction.\nPlease wait few seconds."
