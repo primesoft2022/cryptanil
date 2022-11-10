@@ -47,8 +47,8 @@ final class CryptanilSearchViewController: UIViewController {
         navBar.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        let navItem = UINavigationItem(title: "Crypto types")
-        navItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: #selector(close))
+        let navItem = UINavigationItem(title: "Crypto types".cryptanilLocalized())
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel".cryptanilLocalized(), style: .done, target: self, action: #selector(close))
         navBar.setItems([navItem], animated: false)
     }
     
@@ -58,7 +58,7 @@ final class CryptanilSearchViewController: UIViewController {
     
     private func setupSearchBar() {
         searchBar = UISearchBar()
-        searchBar.placeholder = "Search crypto type"
+        searchBar.placeholder = "Search crypto type".cryptanilLocalized()
         searchBar.backgroundImage = UIImage()
         searchBar.delegate = self
         view.addSubview(searchBar)
@@ -107,11 +107,12 @@ extension CryptanilSearchViewController {
         var contentInset: UIEdgeInsets = self.tableView.contentInset
         contentInset.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
         tableView.contentInset = contentInset
-        print(keyboardFrame.height)
+        tableView.verticalScrollIndicatorInsets.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        tableView.verticalScrollIndicatorInsets.bottom = 0
         tableView.contentInset = contentInset
     }
 }
@@ -133,7 +134,6 @@ extension CryptanilSearchViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.selected(wallet: searchWallets[indexPath.row])
         self.dismiss(animated: true)
-        print("dssddsdssddsds")
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

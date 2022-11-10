@@ -48,9 +48,9 @@ final class CryptanilPaymentStatusViewController: UIViewController {
     
     func setupUI() {
         view.backgroundColor = CryptanilColors.background
-        navigationItem.title = "Transaction status"
+        navigationItem.title = "Transaction status".cryptanilLocalized()
         if presenting {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done".cryptanilLocalized(), style: .done, target: self, action: #selector(done))
         }
         setupScrollView()
         setupContentView()
@@ -203,7 +203,7 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         titleLabel.text = CryptanilOrderStatus(rawValue: orderInfo.status)?.title
         messageLabel.text = CryptanilOrderStatus(rawValue: orderInfo.status)?.message
         for view in infoStackView.arrangedSubviews {
-            infoStackView.removeArrangedSubview(view)
+            view.removeFromSuperview()
         }
         let coinAmount = setupInfoView(title: "Coin amount".cryptanilLocalized(), info: orderInfo.cryptoAmount ?? "-", previousInfoView: nil, for: infoStackView)
         if let convertedAmount = orderInfo.convertedAmountToString {
@@ -248,6 +248,8 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         infoLabel.topAnchor.constraint(equalTo: infoView.topAnchor).isActive = true
         infoLabel.trailingAnchor.constraint(equalTo: infoView.trailingAnchor).isActive = true
         infoLabel.bottomAnchor.constraint(equalTo: infoView.bottomAnchor).isActive = true
+        infoLabel.setContentHuggingPriority(.required, for: .vertical)
+        infoLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         return infoLabel
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - SubmitOrderResponse
 public struct CryptanilOrderInfo: Codable {
-    let status: Int
+    var status: Int
     let orderID, convertedCoinType, redirectURL: String
     let isTesting: Bool
     let companyName: String
@@ -57,11 +57,11 @@ public enum CryptanilOrderStatus: Int {
         case .created:
             return ""
         case .submitted:
-            return "Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)."
+            return "Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes).".cryptanilLocalized()
         case .expired:
-            return "The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction."
+            return "The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction.".cryptanilLocalized()
         case .completed:
-            return "Your order successfully complited."
+            return "Your order successfully complited.".cryptanilLocalized()
         }
     }
     
@@ -70,11 +70,11 @@ public enum CryptanilOrderStatus: Int {
         case .created:
             return ""
         case .submitted:
-            return "Payment submitted"
+            return "Payment submitted".cryptanilLocalized()
         case .expired:
-            return "Payment Expired"
+            return "Payment Expired".cryptanilLocalized()
         case .completed:
-            return "Payment completed"
+            return "Payment completed".cryptanilLocalized()
         }
     }
     

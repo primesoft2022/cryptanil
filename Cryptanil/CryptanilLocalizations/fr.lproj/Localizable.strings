@@ -21,3 +21,13 @@
 "Converted Currency" = "Devise convertie";
 "Search crypto type" = "Recherche du type de Crypto";
 "Crypto types" = "Types de Crypto";
+"Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)." = "Votre commande a été soumise avec succès, nous attendons la fin de la transaction (cela prend généralement 5 à 10 minutes).";
+"The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction." = "Le délai pour soumettre la transaction a expiré.Vous ne pouvez plus payer avec cette commande, veuillez retourner sur votre page marchand et créer une nouvelle transaction.";
+"Your order successfully completed." = "Votre commande s'est déroulée avec succès.";
+"Payment submitted" = "Paiement soumis";
+"Payment Expired" = "Paiement expiré";
+"Payment completed" = "Paiement effectué";
+"Done" = "Fait";
+"Cancel" = "Annuler";
+"Go to merchant page" = "Aller à la page du marchand";
+"Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete." = "Veuillez ne pas payer par Binance Pay. Parce que nous ne pouvons pas voir cette transaction dans notre système, votre transaction peut ne pas être complète.";

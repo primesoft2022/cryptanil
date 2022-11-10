@@ -10,8 +10,13 @@ import Foundation
 class CryptanilTopMessage {
     
     static func show(message: String) {
-        if let viewController = UIApplication.shared.keyWindow?.rootViewController?.topMostViewController(), let view = viewController.view {
+        guard let window = UIApplication.shared.windows.first else { return }
+        if let viewController = window.rootViewController?.topMostViewController(), let view = viewController.view {
+            if let oldMessageView = view.subviews.first(where: {$0.tag == 122}) {
+                oldMessageView.removeFromSuperview()
+            }
             let messageView = UIView()
+            messageView.tag = 122
             messageView.layer.cornerRadius = 8
             messageView.backgroundColor = CryptanilColors.loading_background
             view.addSubview(messageView)

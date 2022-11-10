@@ -21,3 +21,13 @@
 "Converted Currency" = "Конвертированная валюта";
 "Search crypto type" = "Искать тип крипто";
 "Crypto types" = "Типы криптовалюты";
+"Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)." = "Ваш заказ успешно отправлен, ожидайте завершения транзакции (обычно это занимает 5-10 минут).";
+"The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction." = "Время для отправки транзакции истекло. Вы больше не можете оплатить этот заказ, пожалуйста, вернитесь на страницу торгового счета и создайте новую транзакцию";
+"Your order successfully complited." = "Ваш заказ успешно выполнен ";
+"Payment submitted" = "Оплата получена";
+"Payment Expired" = "Срок исполнения платежа истек" ;
+"Payment completed" = " Платеж выполнен";
+"Done" = "Выполнено";
+"Cancel" = "Отменa";
+"Go to merchant page" = "Перейти на страницу торгового счета";
+"Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete." = "Пожалуйста, не оплачивайте через Binance Pay. Поскольку мы не видим эту транзакцию в нашей системе, ваша транзакция может быть не завершена.";

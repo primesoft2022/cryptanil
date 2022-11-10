@@ -98,7 +98,7 @@ final class CryptanilTransactionViewController: UIViewController {
         view.backgroundColor = CryptanilColors.background
         setupNavigation()
         if presenting {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTransaction))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel".cryptanilLocalized(), style: .done, target: self, action: #selector(cancelTransaction))
         }
         setupScrollView()
         setupContentView()
@@ -185,7 +185,7 @@ final class CryptanilTransactionViewController: UIViewController {
         headerTitle.text = "Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete.".cryptanilLocalized()
         headerTitle.textColor = CryptanilColors.yellow
         headerTitle.numberOfLines = 0
-        headerTitle.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        headerTitle.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         headerStackView.addArrangedSubview(headerTitle)
     }
     

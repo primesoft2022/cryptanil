@@ -59,7 +59,7 @@ enum CryptanilRouter: URLRequestConvertible{
         urlRequest.timeoutInterval = 80
         urlRequest.httpMethod = method.rawValue
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue("en", forHTTPHeaderField: "Language")
+        urlRequest.addValue(CryptanilLanguage.current.rawValue, forHTTPHeaderField: "Language")
         if body != nil {
              urlRequest.httpBody = body
         }
