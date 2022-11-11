@@ -7,10 +7,15 @@
 
 import Foundation
 
-public struct CryptanilError: Codable {
+@objc public class CryptanilError: NSObject, Codable {
     
     public var localizedMessage: String?
     public var messageKey: String?
+    
+    init(localizedMessage: String, messageKey: String) {
+        self.localizedMessage = localizedMessage
+        self.messageKey = messageKey
+    }
     
     static var undefined: CryptanilError {
         return CryptanilError(localizedMessage: "undefined problem with network", messageKey: CryptanilErrorKeys.undefined.rawValue)

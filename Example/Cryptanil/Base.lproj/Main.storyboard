@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,31 +21,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81h-Kq-cnu">
-                                <rect key="frame" x="141.5" y="316" width="92.5" height="35"/>
+                                <rect key="frame" x="94.5" y="316" width="186" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cryptanil"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cryptanil Transaction"/>
                                 <connections>
                                     <action selector="show" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vhs-Ud-RzO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-KR-XML">
-                                <rect key="frame" x="36" y="371" width="303" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Transaction order ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-KR-XML">
+                                <rect key="frame" x="20" y="256" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mY0-MS-gL4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="19C-jO-VU1">
-                                <rect key="frame" x="112" y="153" width="150" height="5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c3l-KR-XML" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Rsf-3V-CXz"/>
-                            <constraint firstItem="c3l-KR-XML" firstAttribute="top" secondItem="81h-Kq-cnu" secondAttribute="bottom" constant="20" id="Xpn-Fy-WRa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c3l-KR-XML" secondAttribute="trailing" constant="20" id="lY1-qO-DlD"/>
+                            <constraint firstItem="c3l-KR-XML" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Rsf-3V-CXz"/>
+                            <constraint firstItem="81h-Kq-cnu" firstAttribute="top" secondItem="c3l-KR-XML" secondAttribute="bottom" constant="20" id="Xpn-Fy-WRa"/>
+                            <constraint firstAttribute="trailing" secondItem="c3l-KR-XML" secondAttribute="trailing" constant="20" id="lY1-qO-DlD"/>
                             <constraint firstItem="81h-Kq-cnu" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="nea-xn-b8u"/>
                             <constraint firstItem="81h-Kq-cnu" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="xcA-y6-g5w"/>
                         </constraints>
@@ -58,10 +55,11 @@
             </objects>
             <point key="canvasLocation" x="1076" y="-0.44977511244377816"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="b6q-dW-xN3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QGD-rh-hq9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6FP-of-Mxz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rzW-XR-MhW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -77,4 +75,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="-0.44977511244377816"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

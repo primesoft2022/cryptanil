@@ -8,7 +8,7 @@
 import UIKit
 
 final class CryptanilPaymentStatusViewController: UIViewController {
-    
+
     private var scrollView: UIScrollView!
     private var contentView: UIView!
     private var headerView: UIView!
@@ -19,9 +19,9 @@ final class CryptanilPaymentStatusViewController: UIViewController {
     private var progressView: UIView?
     private var doneButton: UIButton!
     
-    var orderInfo: CryptanilOrderInfo
-    private var id: String
-    private var timer: Timer!
+    private var orderInfo: CryptanilOrderInfo
+    private var orderId: String
+    private var timer: Timer?
     var presenting: Bool
     weak var delegate: CryptanilViewControllerDelegate?
 
@@ -30,16 +30,19 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         setupUI()
         setupInfo()
         if CryptanilOrderStatus(rawValue: orderInfo.status) == .submitted {
-            timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(getOrderInfo), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
+                self?.getOrderInfo()
+            }
         }
     }
     
-    init(orderInfo: CryptanilOrderInfo, id: String, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
+    init(orderInfo: CryptanilOrderInfo, orderId: String, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
         self.orderInfo = orderInfo
-        self.id = id
+        self.orderId = orderId
         self.presenting = presenting
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
+        hidesBottomBarWhenPushed = true
     }
     
     required init?(coder: NSCoder) {
@@ -64,16 +67,16 @@ final class CryptanilPaymentStatusViewController: UIViewController {
     }
     
     @objc private func getOrderInfo() {
-        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: id), isSilent: true) { orderInfo, message, error in
+        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: orderId), isSilent: true) { orderInfo, message, error in 
             if let orderInfo = orderInfo {
                 if CryptanilOrderStatus(rawValue: orderInfo.status) == .expired || CryptanilOrderStatus(rawValue: orderInfo.status) == .completed {
                     self.orderInfo = orderInfo
                     self.setupInfo()
-                    self.timer.invalidate()
+                    self.timer?.invalidate()
                 }
             }
         } cryptaninFailed: { error in
-            self.delegate?.cryptanilTransactionFailed(with: error)
+            self.delegate?.cryptanilTransactionFailed?(with: error)
             self.close()
         }
     }

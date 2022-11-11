@@ -63,7 +63,7 @@ final class CryptanilTransactionViewController: UIViewController {
             memoTextField.text = newValue
         }
     }
-    private var id: String
+    private var orderId: String
     var presenting: Bool
     weak var delegate: CryptanilViewControllerDelegate?
         
@@ -78,16 +78,17 @@ final class CryptanilTransactionViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.isMovingFromParentViewController {
-            delegate?.cryptanilTransactionCanceled()
+            delegate?.cryptanilTransactionCanceled?()
         }
     }
     
-    init(id: String, orderInfo: CryptanilOrderInfo, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
-        self.id = id
+    init(orderId: String, orderInfo: CryptanilOrderInfo, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
+        self.orderId = orderId
         self.orderInfo = orderInfo
         self.presenting = presenting
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
+        hidesBottomBarWhenPushed = true
     }
     
     required init?(coder: NSCoder) {
@@ -230,11 +231,14 @@ final class CryptanilTransactionViewController: UIViewController {
     
     func setupPicker() {
         networkPicker = UIPickerView()
+        let pickerHeight = networkPicker.frame.height + (UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0)
+        networkPicker.frame.size = CGSize(width: view.frame.width, height: pickerHeight)
         networkTextField.tintColor = .clear
         networkTextField.textField?.inputView = networkPicker
         networkPicker.delegate = self
         networkPicker.dataSource = self
         let toolBar = UIToolbar()
+        toolBar.frame.size = CGSize(width: view.frame.width, height: 40)
         toolBar.sizeToFit()
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -245,7 +249,7 @@ final class CryptanilTransactionViewController: UIViewController {
     
     @objc func cancel() {
         view.endEditing(true)
-        delegate?.cryptanilTransactionCanceled()
+        delegate?.cryptanilTransactionCanceled?()
     }
     
     @objc func done() {
@@ -276,20 +280,20 @@ final class CryptanilTransactionViewController: UIViewController {
     }
     
     @objc private func submitTapped() {
-        let submitOrderRequest = SubmitOrderRequest(txId: txIDTextField.text, auth: id)
+        let submitOrderRequest = SubmitOrderRequest(txId: txIDTextField.text, auth: orderId)
         CryptanilApiClient.submitOrder(body: submitOrderRequest) { orderInfo, message, error in
             if let orderInfo = orderInfo, let status = CryptanilOrderStatus(rawValue: orderInfo.status) {
                 self.delegate?.cryptanilTransactionChanged(to: status, for: orderInfo)
-                let vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, id: self.id, delegate: self.delegate, presenting: self.presenting)
+                let vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, orderId: self.orderId, delegate: self.delegate, presenting: self.presenting)
                 var viewControllers = self.navigationController?.viewControllers ?? []
                 viewControllers.removeAll(where: {$0 == self})
                 viewControllers.append(vc)
                 self.navigationController?.setViewControllers(viewControllers, animated: true)
             } else if let error = error {
-                self.delegate?.cryptanilTransactionFailed(with: error)
+                self.delegate?.cryptanilTransactionFailed?(with: error)
             }
         } cryptaninFailed: { error in
-            self.delegate?.cryptanilTransactionFailed(with: error)
+            self.delegate?.cryptanilTransactionFailed?(with: error)
             self.close()
         }
     }
@@ -305,7 +309,7 @@ final class CryptanilTransactionViewController: UIViewController {
     }
     
     func getWalletInfo(convertedCoinType: String) {
-        CryptanilApiClient.getWalletInfo(parameter: GetWalletInfoRequest(auth: id)) { walletInfo, message, error in
+        CryptanilApiClient.getWalletInfo(parameter: GetWalletInfoRequest(auth: orderId)) { walletInfo, message, error in
             if let walletInfo = walletInfo {
                 self.wallets = walletInfo
                 self.selectedWallet = self.wallets.first(where: {$0.coin == convertedCoinType})
@@ -313,17 +317,17 @@ final class CryptanilTransactionViewController: UIViewController {
                     self.getCoinAddresses()
                 }
             } else if let error = error {
-                self.delegate?.cryptanilTransactionFailed(with: error)
+                self.delegate?.cryptanilTransactionFailed?(with: error)
             }
         } cryptaninFailed: { error in
-            self.delegate?.cryptanilTransactionFailed(with: error)
+            self.delegate?.cryptanilTransactionFailed?(with: error)
             self.close()
         }
     }
 
     func getCoinAddresses() {
         if let coin = selectedWallet?.coin, let network = selectedNetwork?.network {
-            CryptanilApiClient.getCoinAddress(parameter: GetCoinAddressRequest(auth: id, coin: coin, network: network)) { coinAddress, message, error in
+            CryptanilApiClient.getCoinAddress(parameter: GetCoinAddressRequest(auth: orderId, coin: coin, network: network)) { coinAddress, message, error in
                 if let coinAddress = coinAddress {
                     self.address = coinAddress.address
                     self.memo = coinAddress.tag
@@ -332,7 +336,7 @@ final class CryptanilTransactionViewController: UIViewController {
                     self.getCoinAddresses()
                 }
             } cryptaninFailed: { error in
-                self.delegate?.cryptanilTransactionFailed(with: error)
+                self.delegate?.cryptanilTransactionFailed?(with: error)
                 self.close()
             }
         }

@@ -30,16 +30,16 @@ class CryptanilProgress: UIView {
     func setupProgressViews() -> UIView {
         let progressView = UIView()
         progressView.backgroundColor = CryptanilColors.blue
-        progressView.layer.cornerRadius = (frame.size.height - 2) / 2
         addSubview(progressView)
         progressView.translatesAutoresizingMaskIntoConstraints = false
         progressView.topAnchor.constraint(equalTo: topAnchor, constant: 1).isActive = true
         progressView.widthAnchor.constraint(equalToConstant: progressWidth).isActive = true
         progressView.heightAnchor.constraint(equalTo: heightAnchor, constant: -2).isActive = true
+        progressView.layer.cornerRadius = (frame.size.height - 2) / 2
         return progressView
     }
     
-    func startAnimation() {
+    @objc func startAnimation() {
         let progressView = setupProgressViews()
         let progressLeading = progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -progressWidth)
         progressLeading.isActive = true
@@ -50,8 +50,9 @@ class CryptanilProgress: UIView {
         } completion: { _ in
             progressView.removeFromSuperview()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.startAnimation()
+        let timeInterval = subviews.count <= 1 ? 0 : 1.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval) { [weak self] in
+            self?.startAnimation()
         }
     }
 }

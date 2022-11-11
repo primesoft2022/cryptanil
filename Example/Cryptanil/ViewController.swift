@@ -11,7 +11,6 @@ import Cryptanil
 import Alamofire
 
 class ViewController: UIViewController, CryptanilViewControllerDelegate {
-
     @IBOutlet weak var idTF: UITextField!
     
     override func viewDidLoad() {
@@ -25,25 +24,13 @@ class ViewController: UIViewController, CryptanilViewControllerDelegate {
     }
     
     @IBAction func show() {
-        let vc = CryptanilViewController(id: idTF.text!, delegate: self)
+        let vc = CryptanilViewController(orderId: idTF.text!, delegate: self)
         vc.language = .ru
-        let navigation = UINavigationController()
-        navigation.viewControllers = [vc]
-//        self.navigationController?.pushViewController(vc, animated: true)
-        self.navigationController?.present(navigation, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func cryptanilTransactionChanged(to status: Cryptanil.CryptanilOrderStatus, for orderInfo: Cryptanil.CryptanilOrderInfo) {
         
     }
-    
-    func cryptanilTransactionFailed(with error: Cryptanil.CryptanilError) {
-        
-    }
-    
-    func cryptanilTransactionCanceled() {
-        
-    }
-    
 }
 

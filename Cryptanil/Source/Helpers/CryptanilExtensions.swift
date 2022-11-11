@@ -121,10 +121,10 @@ extension Bundle {
     private static var cryptanilBundle: Bundle!
     
     public static func localizedCryptanilBundle() -> Bundle {
-        guard let moduleName = String(reflecting: CryptanilViewController.self).components(separatedBy: ".").first else {
-            fatalError("Couldn't determine module name from class \(CryptanilViewController.self)")
+        guard let moduleName = String(reflecting: CryptanilSplashViewController.self).components(separatedBy: ".").first else {
+            fatalError("Couldn't determine module name from class \(CryptanilSplashViewController.self)")
         }
-        let frameworkBundle = Bundle(for: CryptanilViewController.self)
+        let frameworkBundle = Bundle(for: CryptanilSplashViewController.self)
         guard let resourceBundleURL = frameworkBundle.url(forResource: moduleName, withExtension: "bundle"),
               var resourceBundle = Bundle(url: resourceBundleURL) else {
             fatalError("\(moduleName).bundle not found in \(frameworkBundle)")

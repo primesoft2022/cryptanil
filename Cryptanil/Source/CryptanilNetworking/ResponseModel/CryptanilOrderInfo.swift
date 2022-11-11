@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - SubmitOrderResponse
-public struct CryptanilOrderInfo: Codable {
+@objc public class CryptanilOrderInfo: NSObject, Codable {
     var status: Int
     let orderID, convertedCoinType, redirectURL: String
     let isTesting: Bool
@@ -45,7 +45,7 @@ public struct CryptanilOrderInfo: Codable {
     }
 }
 
-public enum CryptanilOrderStatus: Int {
+@objc public enum CryptanilOrderStatus: Int {
     
     case created = 1
     case submitted = 2

@@ -2,37 +2,40 @@
 //  CryptanilViewController.swift
 //  Cryptanil
 //
-//  Created by Hayk Movsesyan on 11.11.22.
+//  Created by Hayk Movsesyan on 06.10.22.
 //
 
-import Foundation
+import UIKit
 
-@objc public protocol CryptanilViewControllerDelegate: class {
-    func cryptanilTransactionChanged(to status: CryptanilOrderStatus, for orderInfo: CryptanilOrderInfo)
-    @objc optional func cryptanilTransactionFailed(with error: CryptanilError)
-    @objc optional func cryptanilTransactionCanceled()
-}
-
-public class CryptanilViewController: UIViewController {
-    
+class CryptanilSplashViewController: UIViewController {
+   
     private var orderId: String
-    public weak var delegate: CryptanilViewControllerDelegate?
+    private weak var delegate: CryptanilViewControllerDelegate?
     private var presenting: Bool {
-        return presentingViewController != nil
+        return presentingViewController != nil && navigationController?.viewControllers == [self]
     }
-    public var language: CryptanilLanguage = .en {
+    private var language: CryptanilLanguage = .en {
         willSet {
             CryptanilLanguage.current = newValue
         }
     }
-    
-    public init(orderId: String) {
-        self.orderId = orderId
-        super.init(nibName: nil, bundle: nil)
-        hidesBottomBarWhenPushed = true
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        if !presenting {
+            getCryptaneilOrderInfo()
+        }
     }
     
-    public init(orderId: String, delegate: CryptanilViewControllerDelegate) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if presenting {
+            getCryptaneilOrderInfo()
+        }
+    }
+    
+    init(orderId: String, delegate: CryptanilViewControllerDelegate?) {
         self.orderId = orderId
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
@@ -41,28 +44,6 @@ public class CryptanilViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        setupNavigation()
-    }
-    
-    private func setupNavigation() {
-        let spashVC = CryptanilSplashViewController(orderId: orderId, delegate: delegate)
-        if presenting {
-            let navigation = UINavigationController(rootViewController: spashVC)
-            self.addChildViewController(navigation)
-            navigation.view.frame = view.bounds
-            navigation.isNavigationBarHidden = true
-            view.addSubview(navigation.view)
-        } else {
-            var viewControllers = self.navigationController?.viewControllers ?? []
-            viewControllers.removeAll(where: {$0 == self})
-            viewControllers.append(spashVC)
-            self.navigationController?.setViewControllers(viewControllers, animated: false)
-        }
     }
     
     private func setupUI() {
@@ -95,7 +76,36 @@ public class CryptanilViewController: UIViewController {
         cryptalinLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     
-    public override func viewWillDisappear(_ animated: Bool) {
+    func getCryptaneilOrderInfo() {
+        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: orderId)) { orderInfo, message, error in
+            if let orderInfo = orderInfo, let orderStatus = CryptanilOrderStatus(rawValue: orderInfo.status) {
+                self.delegate?.cryptanilTransactionChanged(to: orderStatus, for: orderInfo)
+                var vc: UIViewController!
+                if orderStatus == .created {
+                    vc = CryptanilTransactionViewController(orderId: self.orderId, orderInfo: orderInfo, delegate: self.delegate, presenting: self.presenting)
+                } else {
+                    vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, orderId: self.orderId, delegate: self.delegate, presenting: self.presenting)
+                }
+                var viewControllers = self.navigationController?.viewControllers ?? []
+                viewControllers.removeAll(where: {$0 == self})
+                viewControllers.append(vc)
+                self.navigationController?.setViewControllers(viewControllers, animated: true)
+            }
+        } cryptaninFailed: { error in
+            self.delegate?.cryptanilTransactionFailed?(with: error)
+            self.close()
+        }
+    }
+    
+    func close() {
+        if presenting {
+            dismiss(animated: true)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }

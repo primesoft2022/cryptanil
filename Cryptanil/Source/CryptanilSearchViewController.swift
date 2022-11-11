@@ -30,6 +30,15 @@ final class CryptanilSearchViewController: UIViewController {
         registerKeyboardNotifications()
     }
     
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        hidesBottomBarWhenPushed = true
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupUI() {
         view.backgroundColor = CryptanilColors.background
         setupNavigationBar()
