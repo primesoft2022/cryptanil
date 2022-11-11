@@ -110,9 +110,9 @@ final class CryptanilTransactionViewController: UIViewController {
     
     private func setupNavigation() {
         let navigationView = UIView()
-        navigationView.backgroundColor = .gray
+        navigationView.translatesAutoresizingMaskIntoConstraints = false
+        navigationView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         let iconView = UIImageView(image: CryptanilImages.logo)
-        iconView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         iconView.contentMode = .scaleAspectFit
         let titleLabel = UILabel()
         titleLabel.text = "Cryptanil"
