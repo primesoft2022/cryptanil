@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by Hayk Movsesyan on 12.11.22.
+  
+*/
+
+"Submit" = "Submit";
+"Crypto type" = "Crypto type";
+"Network" = "Network";
+"Address" = "Address";
+"Memo" = "Memo";
+"TxID" = "TxID";
+"copy address" = "copy address";
+"copy memo" = "copy memo";
+"Transaction status" = "Transaction status";
+"Coin amount" = "Coin amount";
+"Converted amount" = "Converted amount";
+"TxID" = "TxID";
+"Company name" = "Company name";
+"Converted Currency" = "Converted Currency";
+"Search crypto type" = "Search crypto type";
+"Crypto types" = "Crypto types";
+"Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)." = "Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes).";
+"The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction." = "The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction.";
+"Your order successfully complited." = "Your order successfully complited.";
+"Payment submitted" = "Payment submitted";
+"Payment Expired" = "Payment Expired";
+"Payment completed" = "Payment completed";
+"Done" = "Done";
+"Cancel" = "Cancel";
+"Go to merchant page" = "Go to merchant page";
+"Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete." = "Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete.";

@@ -365,11 +365,13 @@ extension CryptanilTransactionViewController {
         var contentInset: UIEdgeInsets = self.scrollView.contentInset
         contentInset.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
         scrollView.contentInset = contentInset
+        scrollView.verticalScrollIndicatorInsets = contentInset
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         let contentInset: UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
+        scrollView.verticalScrollIndicatorInsets = contentInset
     }
 }
 

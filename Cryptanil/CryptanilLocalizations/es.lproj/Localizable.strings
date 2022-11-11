@@ -6,21 +6,21 @@
   
 */
 "Submit" = "Enviar";
-"Crypto type" = "Tipo de cripto ";
+"Crypto type" = "Tipo de cripto";
 "Network" = "Red";
 "Address" = "Dirección";
 "Memo" = "Memo";
-"TxID" = "ID de la transacción ";
-"copy address" = "Copiar dirección ";
+"TxID" = "ID de la transacción";
+"copy address" = "Copiar dirección";
 "copy memo" = "Copiar memo";
 "Transaction status" = "Estado de la transacción";
 "Coin amount" = "Cantidad de monedas";
 "Converted amount" = "Cantidad convertida";
-"TxID" = "ID de la transacción ";
+"TxID" = "ID de la transacción";
 "Company name" = "Nombre de la empresa";
 "Converted Currency" = "Moneda convertida";
 "Search crypto type" = "Buscar el tipo de cripto";
-"Crypto types" ="Tipos de cripto ";
+"Crypto types" = "Tipos de cripto";
 "Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)." = "Votre commande a été soumise avec succès, nous attendons la fin de la transaction (cela prend généralement 5 à 10 minutes).";
 "The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction." = "Le délai pour soumettre la transaction a expiré.Vous ne pouvez plus payer avec cette commande, veuillez retourner sur votre page marchand et créer une nouvelle transaction.";
 "Your order successfully completed." = "Votre commande s'est déroulée avec succès.";

@@ -10,12 +10,12 @@
 "Network" = "Сеть";
 "Address" = "Адрес";
 "Memo" = "Мемо";
-"TxID" = "ID транзакции, ";
+"TxID" = "ID транзакции";
 "copy address" = "Kопирования адреса";
 "copy memo" = "Kопирования мeмо";
 "Transaction status" = "Статус транзакции";
-"Coin amount" = "Сумма монеты ";
-"Converted amount" = "Конвертированная сумма ";
+"Coin amount" = "Сумма монеты";
+"Converted amount" = "Конвертированная сумма";
 "TxID" = "ID транзакции";
 "Company name" = "Название компании";
 "Converted Currency" = "Конвертированная валюта";
@@ -23,9 +23,9 @@
 "Crypto types" = "Типы криптовалюты";
 "Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)." = "Ваш заказ успешно отправлен, ожидайте завершения транзакции (обычно это занимает 5-10 минут).";
 "The time to submit the transaction has expired. You can no longer pay with this order, please go back to your merchant page and create a new transaction." = "Время для отправки транзакции истекло. Вы больше не можете оплатить этот заказ, пожалуйста, вернитесь на страницу торгового счета и создайте новую транзакцию";
-"Your order successfully complited." = "Ваш заказ успешно выполнен ";
+"Your order successfully complited." = "Ваш заказ успешно выполнен";
 "Payment submitted" = "Оплата получена";
-"Payment Expired" = "Срок исполнения платежа истек" ;
+"Payment Expired" = "Срок исполнения платежа истек";
 "Payment completed" = " Платеж выполнен";
 "Done" = "Выполнено";
 "Cancel" = "Отменa";
