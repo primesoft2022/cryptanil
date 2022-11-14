@@ -69,10 +69,13 @@ final class CryptanilTransactionViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         registerKeyboardNotifications()
         getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupUI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -280,6 +283,7 @@ final class CryptanilTransactionViewController: UIViewController {
     }
     
     @objc private func submitTapped() {
+        view.endEditing(true)
         let submitOrderRequest = SubmitOrderRequest(txId: txIDTextField.text, auth: orderId)
         CryptanilApiClient.submitOrder(body: submitOrderRequest) { orderInfo, message, error in
             if let orderInfo = orderInfo, let status = CryptanilOrderStatus(rawValue: orderInfo.status) {
