@@ -27,7 +27,6 @@ final class CryptanilPaymentStatusViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupInfo()
         if CryptanilOrderStatus(rawValue: orderInfo.status) == .submitted {
             timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
                 self?.getOrderInfo()
@@ -38,6 +37,7 @@ final class CryptanilPaymentStatusViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUI()
+        setupInfo()
     }
     
     init(orderInfo: CryptanilOrderInfo, orderId: String, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
