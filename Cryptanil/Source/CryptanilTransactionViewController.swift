@@ -70,12 +70,8 @@ final class CryptanilTransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerKeyboardNotifications()
-        getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setupUI()
+        getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

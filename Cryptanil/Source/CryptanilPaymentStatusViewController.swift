@@ -32,10 +32,6 @@ final class CryptanilPaymentStatusViewController: UIViewController {
                 self?.getOrderInfo()
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setupUI()
         setupInfo()
     }
