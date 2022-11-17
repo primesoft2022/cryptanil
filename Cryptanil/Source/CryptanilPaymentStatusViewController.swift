@@ -36,6 +36,11 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         setupInfo()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentView.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
+    }
+    
     init(orderInfo: CryptanilOrderInfo, orderId: String, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
         self.orderInfo = orderInfo
         self.orderId = orderId

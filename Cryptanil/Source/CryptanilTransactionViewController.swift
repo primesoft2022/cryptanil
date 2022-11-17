@@ -74,6 +74,11 @@ final class CryptanilTransactionViewController: UIViewController {
         getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentView.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.isMovingFromParentViewController {

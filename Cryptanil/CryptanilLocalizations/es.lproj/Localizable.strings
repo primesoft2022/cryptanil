@@ -18,7 +18,7 @@
 "Converted amount" = "Cantidad convertida";
 "TxID" = "ID de la transacción";
 "Company name" = "Nombre de la empresa";
-"Converted Currency" = "Moneda convertida";
+"Converted Currency" = "Importe convertida";
 "Search crypto type" = "Buscar el tipo de cripto";
 "Crypto types" = "Tipos de cripto";
 "Your order successfully submitted, waiting for the completion of the transaction (usually it takes 5-10 minutes)." = "Votre commande a été soumise avec succès, nous attendons la fin de la transaction (cela prend généralement 5 à 10 minutes).";
@@ -32,6 +32,6 @@
 "Go to merchant page" = "Ir a la página de comercio";
 "Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete." = "Por favor, no pague con Binance Pay. Debido a que no podemos ver esa transacción en nuestro sistema, su transacción puede no estar completa";
 "Merchant %" = "Comerciante %";
-"Merchant % Currency" = "El Comerciante % Importe";
+"Merchant % Currency" = "El Comerciante % importe";
 "Amount" = "Importe";
 "Amount Currency" = "La moneda del importe";
