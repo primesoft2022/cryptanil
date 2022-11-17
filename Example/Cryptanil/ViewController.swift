@@ -25,7 +25,7 @@ class ViewController: UIViewController, CryptanilViewControllerDelegate {
     
     @IBAction func show() {
         let vc = CryptanilViewController(orderId: idTF.text!, delegate: self)
-        vc.language = .ru
+        vc.language = .es
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

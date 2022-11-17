@@ -101,6 +101,22 @@ extension String {
             return nil
         }
     }
+    
+    func cryptanilDouble() -> String {
+        if self.contains(".") {
+            var numbers = self.split(separator: ".")
+            if numbers.count == 2 {
+                var floating = numbers[1]
+                if floating.count == 1 {
+                    numbers[1] =  floating + "0"
+                    return numbers.joined(separator: ".")
+                } else {
+                    return self
+                }
+            }
+        }
+        return self + ".00"
+    }
 }
 
 extension UIViewController {

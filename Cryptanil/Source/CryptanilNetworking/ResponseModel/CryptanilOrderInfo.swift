@@ -19,17 +19,50 @@ import Foundation
     let convertedAmount: Double?
     let cryptoAmount: String?
     let currencyCode: String?
+    let amountToShow: Double?
+    let amountToShowCurrency: Double?
+    let merchantCommission: Double?
+    let merchantCommissionCurrency: Double?
+    let depositCoinType: String?
     
     internal var convertedAmountToString: String? {
         if let convertedAmount = convertedAmount {
-            return "\(convertedAmount) (\(convertedCoinType))"
+            return "\(convertedAmount)".cryptanilDouble() + " \(convertedCoinType)"
         }
         return nil
     }
     
-    internal var vonvertedCurrencyToString: String? {
+    internal var convertedCurrencyToString: String? {
         if let convertedAmountCurrency = convertedAmountCurrency, let currencyCode = currencyCode {
-            return "\(convertedAmountCurrency) (\(currencyCode))"
+            return "\(convertedAmountCurrency)".cryptanilDouble() + " \(currencyCode)"
+        }
+        return nil
+    }
+    
+    internal var amountToShowString: String? {
+        if let amountToShow = amountToShow {
+            return "\(amountToShow)".cryptanilDouble() + " \(convertedCoinType)"
+        }
+        return nil
+    }
+    
+    internal var amountToShowCurrencyString: String? {
+        if let amountToShowCurrency = amountToShowCurrency, let currencyCode = currencyCode {
+            return "\(amountToShowCurrency)".cryptanilDouble() + " \(currencyCode)"
+        }
+        return nil
+    }
+    
+    internal var merchantCommissionString: String? {
+        if let merchantCommission = merchantCommission, let depositCoinType = depositCoinType {
+            return "\(merchantCommission)".cryptanilDouble() + " \(depositCoinType)"
+        }
+        return nil
+    }
+    
+    internal var merchantCommissionCurrencyString: String? {
+        if let merchantCommissionCurrency = merchantCommissionCurrency, let currencyCode = currencyCode {
+            return "\(merchantCommissionCurrency)".cryptanilDouble() + " \(currencyCode)"
         }
         return nil
     }
@@ -41,7 +74,7 @@ import Foundation
         case redirectURL = "redirectUrl"
         case isTesting, companyName
         case txID = "txId"
-        case callBackFail, convertedAmountCurrency, convertedAmount, cryptoAmount, currencyCode
+        case callBackFail, convertedAmountCurrency, convertedAmount, cryptoAmount, currencyCode, amountToShow, amountToShowCurrency, merchantCommission, merchantCommissionCurrency, depositCoinType
     }
 }
 

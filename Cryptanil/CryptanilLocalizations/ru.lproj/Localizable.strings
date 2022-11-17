@@ -31,3 +31,7 @@
 "Cancel" = "Отменa";
 "Go to merchant page" = "Перейти на страницу торгового счета";
 "Please don't pay by Binance Pay. Because we can't see that transaction in our system, your transaction may not be complete." = "Пожалуйста, не оплачивайте через Binance Pay. Поскольку мы не видим эту транзакцию в нашей системе, ваша транзакция может быть не завершена.";
+"Merchant %" = "Мерчант %";
+"Merchant % Currency" = "Merчант % Валюта";
+"Amount" = "Сумма";
+"Amount Currency" = "Валюта суммы";

@@ -212,8 +212,20 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         if let convertedAmount = orderInfo.convertedAmountToString {
             let _ = setupInfoView(title: "Converted amount".cryptanilLocalized(), info: "\(convertedAmount)", previousInfoView: coinAmount, for: infoStackView)
         }
-        if let convertedCurrency = orderInfo.vonvertedCurrencyToString {
+        if let convertedCurrency = orderInfo.convertedCurrencyToString {
             let _ = setupInfoView(title: "Converted Currency".cryptanilLocalized(), info: "\(convertedCurrency)", previousInfoView: coinAmount, for: infoStackView)
+        }
+        if let merchantCommision = orderInfo.merchantCommissionString {
+            let _ = setupInfoView(title: "Merchant %".cryptanilLocalized(), info: "\(merchantCommision)", previousInfoView: coinAmount, for: infoStackView)
+        }
+        if let merchantCommisionCurrency = orderInfo.merchantCommissionCurrencyString {
+            let _ = setupInfoView(title: "Merchant % Currency".cryptanilLocalized(), info: "\(merchantCommisionCurrency)", previousInfoView: coinAmount, for: infoStackView)
+        }
+        if let amountToShow = orderInfo.amountToShowString {
+            let _ = setupInfoView(title: "Amount".cryptanilLocalized(), info: "\(amountToShow)", previousInfoView: coinAmount, for: infoStackView)
+        }
+        if let amountToShowCurrency = orderInfo.amountToShowCurrencyString {
+            let _ = setupInfoView(title: "Amount Currency".cryptanilLocalized(), info: "\(amountToShowCurrency)", previousInfoView: coinAmount, for: infoStackView)
         }
         let _ = setupInfoView(title: "TxID".cryptanilLocalized(), info: orderInfo.txID ?? "", previousInfoView: coinAmount, for: infoStackView)
         let _ = setupInfoView(title: "Company name".cryptanilLocalized(), info: orderInfo.companyName, previousInfoView: coinAmount, for: infoStackView)
