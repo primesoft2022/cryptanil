@@ -27,7 +27,7 @@ class CryptanilApiClient {
     
     static func getWalletInfo(parameter: GetWalletInfoRequest,
                               isSilent: Bool = false,
-                              completion: @escaping([WalletInfo]?, CryptanilMessage?, CryptanilError?) -> Void,
+                              completion: @escaping(WalletInfoResponse?, CryptanilMessage?, CryptanilError?) -> Void,
                               cryptaninFailed: @escaping (CryptanilError) -> Void) {
         performRequest(route: CryptanilRouter.getWalletInfo(param: parameter), isSilent: isSilent, completion: completion, cryptaninFailed: cryptaninFailed)
     }

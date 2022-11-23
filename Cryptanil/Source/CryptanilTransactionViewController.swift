@@ -71,7 +71,7 @@ final class CryptanilTransactionViewController: UIViewController {
         super.viewDidLoad()
         registerKeyboardNotifications()
         setupUI()
-        getWalletInfo(convertedCoinType: orderInfo.convertedCoinType)
+        getWalletInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -313,11 +313,12 @@ final class CryptanilTransactionViewController: UIViewController {
         return textField
     }
     
-    func getWalletInfo(convertedCoinType: String) {
-        CryptanilApiClient.getWalletInfo(parameter: GetWalletInfoRequest(auth: orderId)) { walletInfo, message, error in
-            if let walletInfo = walletInfo {
-                self.wallets = walletInfo
-                self.selectedWallet = self.wallets.first(where: {$0.coin == convertedCoinType})
+    func getWalletInfo() {
+        CryptanilApiClient.getWalletInfo(parameter: GetWalletInfoRequest(auth: orderId)) { walletInfoResponse, message, error in
+            if let walletInfoResponse = walletInfoResponse {
+                self.wallets = walletInfoResponse.coins
+                self.selectedWallet = self.wallets.first(where: {$0.coin == walletInfoResponse.defaultCoin})
+                self.selectedNetwork = self.coinNetworks.first(where: {$0.network == walletInfoResponse.defaultNetwork}) ?? self.coinNetworks.first(where: {$0.isDefault})
                 if self.selectedNetwork != nil {
                     self.getCoinAddresses()
                 }

@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct WalletInfoResponse: Codable {
+    
+    let coins: [WalletInfo]
+    let defaultNetwork: String
+    let defaultCoin: String
+}
+
 struct WalletInfo: Codable {
     
     let coin: String
