@@ -15,7 +15,7 @@ import Foundation
 
 public class CryptanilViewController: UIViewController {
     
-    private var orderId: String
+    private var orderKey: String
     public weak var delegate: CryptanilViewControllerDelegate?
     private var presenting: Bool {
         return presentingViewController != nil
@@ -26,14 +26,14 @@ public class CryptanilViewController: UIViewController {
         }
     }
     
-    public init(orderId: String) {
-        self.orderId = orderId
+    public init(orderKey: String) {
+        self.orderKey = orderKey
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
     }
     
-    public init(orderId: String, delegate: CryptanilViewControllerDelegate) {
-        self.orderId = orderId
+    public init(orderKey: String, delegate: CryptanilViewControllerDelegate) {
+        self.orderKey = orderKey
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
@@ -50,7 +50,7 @@ public class CryptanilViewController: UIViewController {
     }
     
     private func setupNavigation() {
-        let spashVC = CryptanilSplashViewController(orderId: orderId, delegate: delegate)
+        let spashVC = CryptanilSplashViewController(orderKey: orderKey, delegate: delegate)
         if presenting {
             let navigation = UINavigationController(rootViewController: spashVC)
             self.addChildViewController(navigation)
@@ -68,31 +68,12 @@ public class CryptanilViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = CryptanilColors.background
         navigationController?.isNavigationBarHidden = true
-        let contentView = UIView()
-        view.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        let iconView = UIImageView()
-        iconView.image = CryptanilImages.logo
-        contentView.addSubview(iconView)
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        iconView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        iconView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        iconView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        let cryptalinLabel = UILabel()
-        cryptalinLabel.text = "Cryptanil"
-        cryptalinLabel.font = UIFont.systemFont(ofSize: 24)
-        cryptalinLabel.textColor = CryptanilColors.black
-        cryptalinLabel.textAlignment = .center
-        contentView.addSubview(cryptalinLabel)
-        cryptalinLabel.translatesAutoresizingMaskIntoConstraints = false
-        cryptalinLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: 20).isActive = true
-        cryptalinLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        cryptalinLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        cryptalinLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        let cryptanilView = CryptanilView()
+        view.addSubview(cryptanilView)
+        cryptanilView.translatesAutoresizingMaskIntoConstraints = false
+        cryptanilView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        cryptanilView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        cryptanilView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
     }
     
     public override func viewWillDisappear(_ animated: Bool) {

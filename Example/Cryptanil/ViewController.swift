@@ -24,9 +24,10 @@ class ViewController: UIViewController, CryptanilViewControllerDelegate {
     }
     
     @IBAction func show() {
-        let vc = CryptanilViewController(orderId: idTF.text!, delegate: self)
+        let vc = CryptanilViewController(orderKey: idTF.text!, delegate: self)
         vc.language = .en
-        self.navigationController?.pushViewController(vc, animated: true)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true)
     }
     
     func cryptanilTransactionChanged(to status: Cryptanil.CryptanilOrderStatus, for orderInfo: Cryptanil.CryptanilOrderInfo) {

@@ -1,16 +1,18 @@
 //
-//  PaymentStatusViewController.swift
+//  CryptanilPaymentStatusView.swift
 //  Cryptanil
 //
-//  Created by Hayk Movsesyan on 05.10.22.
+//  Created by Hayk Movsesyan on 16.12.22.
 //
 
-import UIKit
+import Foundation
 
-final class CryptanilPaymentStatusViewController: UIViewController {
-
-    private var scrollView: UIScrollView!
-    private var contentView: UIView!
+protocol CryptanilPaymentStatusViewDelegate: AnyObject {
+    func doneTapped()
+}
+ 
+final class CryptanilPaymentStatusView: UIView {
+    
     private var headerView: UIView!
     private var infoStackView: UIStackView!
     private var imageView: UIImageView!
@@ -19,109 +21,29 @@ final class CryptanilPaymentStatusViewController: UIViewController {
     private var progressView: UIView?
     private var doneButton: UIButton!
     
-    private var orderInfo: CryptanilOrderInfo
-    private var orderId: String
-    private var timer: Timer?
-    var presenting: Bool
-    weak var delegate: CryptanilViewControllerDelegate?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if CryptanilOrderStatus(rawValue: orderInfo.status) == .submitted {
-            timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
-                self?.getOrderInfo()
-            }
-        }
-        setupUI()
-        setupInfo()
-    }
+    var orderInfo: CryptanilOrderInfo!
+        
+    weak var delegate: CryptanilPaymentStatusViewDelegate!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        contentView.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
-    }
-    
-    init(orderInfo: CryptanilOrderInfo, orderId: String, delegate: CryptanilViewControllerDelegate?, presenting: Bool) {
+    init(orderInfo: CryptanilOrderInfo) {
+        super.init(frame: .zero)
         self.orderInfo = orderInfo
-        self.orderId = orderId
-        self.presenting = presenting
-        self.delegate = delegate
-        super.init(nibName: nil, bundle: nil)
-        hidesBottomBarWhenPushed = true
+        setupHeader()
+        setupInfoStackView()
+        setupSubmitButton()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
-        view.backgroundColor = CryptanilColors.background
-        navigationItem.title = "Transaction status".cryptanilLocalized()
-        if presenting {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done".cryptanilLocalized(), style: .done, target: self, action: #selector(done))
-        }
-        setupScrollView()
-        setupContentView()
-        setupHeader()
-        setupInfoStackView()
-        setupSubmitButton()
-    }
-    
-    @objc private func done() {
-        self.dismiss(animated: true)
-    }
-    
-    @objc private func getOrderInfo() {
-        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: orderId), isSilent: true) { orderInfo, message, error in 
-            if let orderInfo = orderInfo {
-                if CryptanilOrderStatus(rawValue: orderInfo.status) == .expired || CryptanilOrderStatus(rawValue: orderInfo.status) == .completed {
-                    self.orderInfo = orderInfo
-                    self.setupInfo()
-                    self.timer?.invalidate()
-                }
-            }
-        } cryptaninFailed: { error in
-            self.delegate?.cryptanilTransactionFailed?(with: error)
-            self.close()
-        }
-    }
-    
-    func close() {
-        if presenting {
-            dismiss(animated: true)
-        } else {
-            navigationController?.popViewController(animated: true)
-        }
-    }
-    
-    private func setupScrollView() {
-        scrollView = UIScrollView()
-        view.addSubview(scrollView)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-    }
-    
-    private func setupContentView() {
-        contentView = UIView()
-        scrollView.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 20).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20).isActive = true
-        contentView.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
-    }
-    
     private func setupHeader() {
         headerView = UIView()
-        contentView.addSubview(headerView)
+        addSubview(headerView)
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        headerView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        headerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        headerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        headerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         headerView.addSubview(imageView)
@@ -136,9 +58,9 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         titleLabel.textAlignment = .center
         headerView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         messageLabel = UILabel()
         messageLabel.font = UIFont.systemFont(ofSize: 14)
         if orderInfo.status == CryptanilOrderStatus.expired.rawValue {
@@ -150,9 +72,9 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         messageLabel.textAlignment = .center
         headerView.addSubview(messageLabel)
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        messageLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
-        messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        messageLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         if CryptanilOrderStatus(rawValue: orderInfo.status) == .submitted {
             progressView = CryptanilProgress()
             headerView.addSubview(progressView!)
@@ -174,11 +96,11 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         infoStackView.distribution = .fillProportionally
         infoStackView.axis = .vertical
         infoStackView.spacing = 14
-        contentView.addSubview(infoStackView)
+        addSubview(infoStackView)
         infoStackView.translatesAutoresizingMaskIntoConstraints = false
-        infoStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        infoStackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         infoStackView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 30).isActive = true
-        infoStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        infoStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
     
     private func setupSubmitButton() {
@@ -189,24 +111,20 @@ final class CryptanilPaymentStatusViewController: UIViewController {
         doneButton.layer.cornerRadius = 10
         doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         doneButton.addTarget(self, action: #selector(doneTapped), for: .touchUpInside)
-        contentView.addSubview(doneButton)
+        addSubview(doneButton)
         doneButton.translatesAutoresizingMaskIntoConstraints = false
-        doneButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        doneButton.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         doneButton.topAnchor.constraint(equalTo: infoStackView.bottomAnchor, constant: 20).isActive = true
-        doneButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        doneButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        doneButton.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        doneButton.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         doneButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
     }
     
     @objc private func doneTapped() {
-        if presenting {
-            self.dismiss(animated: true)
-        } else {
-            self.navigationController?.popViewController(animated: true)
-        }
+        delegate?.doneTapped()
     }
     
-    private func setupInfo() {
+    func setupInfo() {
         imageView.image = CryptanilOrderStatus(rawValue: orderInfo.status)?.image
         titleLabel.text = CryptanilOrderStatus(rawValue: orderInfo.status)?.title
         messageLabel.text = CryptanilOrderStatus(rawValue: orderInfo.status)?.message

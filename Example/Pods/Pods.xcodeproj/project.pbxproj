@@ -7,320 +7,328 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00358E517E25C35B72F73DB32680655E /* GetWalletInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F1C26A7F5F917F3BD59719A41F476A /* GetWalletInfoRequest.swift */; };
-		046DB13E1B5AC1B063AE1A8CF5F4FD42 /* CryptanilLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB59FD1A67C079BD718B93CDDA41E49F /* CryptanilLoading.swift */; };
+		0197D6BEE8D4BDA4B4EB5F3B54585891 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E861B52EF779D601E5CB6A2DD6A166FD /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		065C43566EC04943CC2DD2825AE89D8D /* CryptanilLoading.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E9C788577F5DF598017A3DEEFF343 /* CryptanilLoading.xib */; };
 		0AC03EE63F2DFD338003748EA63D5A01 /* BagelController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5DDB7456D67DAD62E74C898DEEBCCC /* BagelController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CA65191525C93B932B2F5209C3C248A /* CryptanilApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6931B679CC524AC528E59D2BA4440DE /* CryptanilApiClient.swift */; };
-		0D9DAA819235BF143ED57C1BA7CCA95D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58792C597B7FAF598B3C02E2547FAD8 /* Assets.xcassets */; };
 		0F3CBF82AFD77465573210C74C007E47 /* BagelProjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E618D0B97A0CB5F0B82572991EF354BB /* BagelProjectModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		108765429B57B13931DB63A9939B3179 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5FC8A531C399987C38CE8D5060EC3946 /* fr.lproj */; };
-		10977FA5A219BEC6C192BF4F20BBDC6B /* CryptanilExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85022D08BF99CB0FCCFE325E0AADD511 /* CryptanilExtensions.swift */; };
 		119B37D7E7D3A59C6685FC0EFEE881CE /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF39BF290E3C4A5C8E195C64B71F8A6 /* TaskDelegate.swift */; };
-		120907DD0A0CD70A2C4DCB7249F63C90 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F5E56BCCB5D45F903A88120DF8140201 /* en.lproj */; };
-		1702D32F312507F10F1F3ED22467DA4C /* CryptanilLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018DAB77791EE0F6AF3656E157BFE98 /* CryptanilLanguage.swift */; };
+		13F5DA15676B7CDD288E6D13C94921C5 /* CoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10FEE6C4160611904F34A0378249C3 /* CoinAddress.swift */; };
+		179081A3AB86A0DC6ED51C1632E28FDF /* Cryptanil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38FF39F32B3A306C5689B37AA7B313 /* Cryptanil-dummy.m */; };
+		17ECE2DEFB4B6C4D7E619838476B60CA /* CryptanilResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DDD6F19B5C668B99D464C7A8DE91CB /* CryptanilResponse.swift */; };
 		18FEA631CBE041E988BEA16C58A2C622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
 		191FCF7A74DFC413451DDC4A09394C5E /* BagelRequestInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED0EEC684DEEA58A99365130A4A68F5 /* BagelRequestInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		196063F495238CF8883B90764BE6D984 /* Alamofire+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A702A7F1BE59F0C2B68B6D04358786 /* Alamofire+Codable.swift */; };
-		19E2AA416C56E63F894B5D0D6FB340BB /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E3DE67C89218C728B35A0FC149587E9 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B9F7DE79A119463605C594C249F6FEA /* Pods-Cryptanil_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3370467F65B4AC06B18D4F64A67EE863 /* Pods-Cryptanil_Tests-dummy.m */; };
+		1C849F6E618F5365975A78AAA9020953 /* CryptanilTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD346729DF30602369004D4B902BE28 /* CryptanilTextField.swift */; };
+		1CE340FFF3FC5E2DB918AD46533A74FB /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B8397DFF72025D6DD3084D19EE6C3 /* CocoaAsyncSocket-dummy.m */; };
+		1E501BC9B615FEB4CD8ED45948E13A9A /* CryptanilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C241D923C33E60C6B1745CBFCAC065 /* CryptanilViewController.swift */; };
+		202ABD909F81A2C685978BFB06F1A293 /* CryptanilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DC3484DA2B4AC5AE141AAAC5DCCD0 /* CryptanilView.swift */; };
 		2119BBBDD76C9B182007C9E8D3BD8DDA /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE49B9F4787FAA8A5BAC3B54D26C58F /* Timeline.swift */; };
+		21973BA79749EA08857BD015C6D60A1B /* CryptanilMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32912C73A8E673A5B4F27B0B6F240641 /* CryptanilMessage.swift */; };
 		222BEAC470D012517D6881982E93F7A7 /* BagelConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAB74C483F65C704C5574EC0335D3B /* BagelConfiguration.m */; };
-		23FC9494A1E5D3EF657E3F4E1DB26320 /* CryptanilPaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7F2FC3D155178192AF65DE1CEFEFF /* CryptanilPaymentStatusViewController.swift */; };
+		235369FA26CB79065DE63E3ABCD38DC6 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F078C69FE7AC20EEA082F70EEB0C6AAF /* GCDAsyncUdpSocket.m */; };
+		282CC23769478EAC6CAC5E156B608E7C /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DCE231C7DF737987A9C3DE16C1AAFA /* WalletInfo.swift */; };
 		286BC118258B071F81761E1FA39258E0 /* BagelDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E241BBBD7FF36FABE02224FD3D45916B /* BagelDeviceModel.m */; };
 		28DF30ABD839C54043223503A7A3AA9C /* BagelRequestPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2D49D1AD15A90E3F6EA6AE532A103A /* BagelRequestPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2AF8DEBBE641685C73652383C5C41592 /* CryptanilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8509759D2001F67330D0878F5DC73 /* CryptanilViewController.swift */; };
+		2AD4B257FE9815E47BE4837494CB4B0B /* CryptanilDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33505660B498ABDDC7C6FB4543A2770 /* CryptanilDialog.swift */; };
+		2AD5E19A337079C3CED6CECD39EED35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A62D5BB8BE9A8D3EFC227B5DDA8EF1B /* Assets.xcassets */; };
+		2D0F067ECE2AE7B02DA07DE8350FE425 /* CryptanilSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EC471290E5A2DB2CDD994939B6506 /* CryptanilSplashViewController.swift */; };
 		30EC8F153CE48D8A8545AE8C210B03F3 /* BagelRequestCarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2E66AA9DD50B763FD0C5E4BF2139B /* BagelRequestCarrier.m */; };
-		313695E8CFFE56533B55EF5DE218F0E9 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 32CD77DDCA7BAA7267DCD3E916C39DBF /* de.lproj */; };
 		332F72B66FD828BDF0F9C989F94D17E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
-		3509313E7A841AC7CC66356A22D6D19A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */; };
 		3792A3336B25BA9C9AD572D5655CF074 /* BagelBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 75DF4038E58876EDD6BBCE5A81685BA0 /* BagelBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C60B662012BD361ABA260598546B828 /* CryptanilError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58496685B7FC25163D0F3D61BC139EF2 /* CryptanilError.swift */; };
-		3C9B986B006EA5D9696F216CD2767CBE /* CryptanilTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D511BDFC1CD96B660F235018A894CF60 /* CryptanilTextField.swift */; };
+		3BC6FF2B0700825FC3D282054C3AF488 /* GetWalletInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3DD03B40BC612C70191A0E081D5F8 /* GetWalletInfoRequest.swift */; };
+		3C27F75053D643BBB8691F4FBBC59E95 /* Alamofire+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AACE4E84ACCD4676DE6F433DC9A358 /* Alamofire+Codable.swift */; };
 		3DE8AA12C52787A0BA570717BB27AAB0 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F222F41CE7D777ADC94E6F1C51A1E /* ServerTrustPolicy.swift */; };
 		3E35767F74D982C00AFB29E6CDABBC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
 		3E48B11BE13EBFF2CD6BA1BF8B1220EB /* BagelRequestCarrier.h in Headers */ = {isa = PBXBuildFile; fileRef = 754201052BCA6A056CB3EFC2D7919DAD /* BagelRequestCarrier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F051FC6154E2D254A6427B2EFEFF437 /* CryptanilOrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905BD6DD50D8D9D2B43EBBB0018925F3 /* CryptanilOrderInfo.swift */; };
-		3F13EC8D881F0240C3A1FB4CD5014197 /* Cryptanil.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 963F65FB5D127C267F87C3F0FF34E5E3 /* Cryptanil.bundle */; };
 		41CCF36E110F1BF5479321B89147144E /* Pods-Cryptanil_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68522CF7F6E1E05404BB656B735B1444 /* Pods-Cryptanil_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C3C17BFDFD71F45C5A7AFB0C0BEF45 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0990FC5685BBE5D3EE4D959E5FA7 /* ResponseSerialization.swift */; };
-		46E3F9E9157E3FE30A20D5BB3A4AD3CE /* CryptanilApiClient+Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1610F047902BE59D14FAA25675FFB48 /* CryptanilApiClient+Execution.swift */; };
-		47D4E822A412DEE55D421A4E00DB6962 /* CryptanilLoading.xib in Sources */ = {isa = PBXBuildFile; fileRef = 505BB63B9D1B844998A10AD0F6162BAB /* CryptanilLoading.xib */; };
-		48E21CAB0A8143BFA94C63543A3297DD /* CryptanilSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A38ACB5FB785983C03B926CC00608C /* CryptanilSearchViewController.swift */; };
-		4B2B6BA864F6FA4755F60C489A315B30 /* GetCoinAddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C86F0B349C348E04DD33C22D4AD1C1 /* GetCoinAddressRequest.swift */; };
+		46B89F868399342CCBC69A6F3BEF5462 /* CryptanilError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5049FC7098B21799564B0BBEB105F5F /* CryptanilError.swift */; };
+		4B18C2F162DCEE6029C9E0CB21787FCA /* GetCryptanilOrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565069E396C8EC552B3A1AEC57F8368 /* GetCryptanilOrderInfo.swift */; };
 		4C301CCA81AAFB4453B6B827F846E0AC /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201CF32AEE6938007C58EEACF60B956 /* Validation.swift */; };
-		4DAA1B8BE80F312A52E3EA6C0845ABAF /* CryptanilColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF75D0629A32E364D0E92D303FFE91EF /* CryptanilColors.swift */; };
-		5271F0350F527A2B09BC9F2ED95081FA /* CryptanilMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE999B28ACE705D036BE3520EC8A052 /* CryptanilMessage.swift */; };
+		4C58D3A762A75097CF98FAE35E9DD5A9 /* CryptanilImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EFF0761A4FA82163E7E85754A4A08E /* CryptanilImages.swift */; };
 		537D7452E6C8C82D9C1908EA29706E35 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67604C8E45E1975F9114BB2F51EE43 /* Notifications.swift */; };
 		567E438813A0FC41444B36FF33E2A8AB /* BagelConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = E934CE8490EFEC544F60D466A991A1A3 /* BagelConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A22251AA23AF59F8F99DCD285C49956 /* BagelUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E6FE8D1CDE797EEA59EF10CCA24EE5 /* BagelUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A3E66ECE2045686F1E2AB7BFC7FCF1B /* Pods-Cryptanil_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0749EEEE4E2CCF361243E8F21AA721F2 /* Pods-Cryptanil_Example-dummy.m */; };
 		5AE6D21CB6C70CB6CD5A970A1EFB55FC /* BagelURLSessionInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8587BF5465ECA5C56870CD91A60EC8 /* BagelURLSessionInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C795B8B5A2D613DB42000256480E08D /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 079F439B352FB79880DA6AC5529B4D29 /* es.lproj */; };
 		5CECD168465CF59B489253695D3FB51F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68B20E4BC1CE77A76525AD547FA562 /* NetworkReachabilityManager.swift */; };
-		5E6183D742BC5BB62AA1E50F4C879D5F /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2F9281AC19EB7AB1DE56D8B729478 /* WalletInfo.swift */; };
 		60422F297C2EE6F45F5B639781F6A3D4 /* BagelRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C529F4DC85C843CE8F4F82F23A3124A /* BagelRequestInfo.m */; };
-		62CE622F83782D22C28006D027947869 /* CryptanilTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0CD7618B8B7083E02D1513005F441C /* CryptanilTransactionViewController.swift */; };
-		633D941CA127DC0CBD6DCDF68FE9A5AB /* CryptanilProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237511C828D7167F96071A254406174 /* CryptanilProgress.swift */; };
-		66333E8F3419CCC81CD2D382D265F5E6 /* Cryptanil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4374FC4F5E897EE7893F0F900EE4288 /* Cryptanil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		683FD2E5268B444D64108CE0CFF505FD /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B8397DFF72025D6DD3084D19EE6C3 /* CocoaAsyncSocket-dummy.m */; };
-		694BE4A7A5D258B8C9502A13C91D6A54 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD637C714EBB51667BCAD1008467F7F /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		621B5351E662B69AE0AE530C68896A38 /* Cryptanil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7F7FCFA6A772D2225EA745D7B43EFB /* Cryptanil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D0464BDCD6CE52FE613303A5558DE30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		6D8EF5ADF166FCB0E6262B1EB0F0E669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A62D5BB8BE9A8D3EFC227B5DDA8EF1B /* Assets.xcassets */; };
 		6DF154F51210D4C446AA021F2DBA34A4 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A484E4144607EAD1892CE4BD3A8895 /* MultipartFormData.swift */; };
 		700CA26DBFBF06FA792940686132346A /* Bagel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A197DE23BBBB555DEB4A42B4921D177 /* Bagel.m */; };
+		708949B1E36D99DDFF59D1824EA8274C /* CryptanilTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286159CE65BD2A6908C85201D034E73 /* CryptanilTransactionViewController.swift */; };
+		70BD29EF06A60954A1F05674718CEA0C /* CryptanilApiClient+Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFF2391B3F74C991CED8623915B9B3 /* CryptanilApiClient+Execution.swift */; };
 		70EA6F068498CEC1B273D6BB1E74EB4E /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68917E569E618CA6FB3D2A89F95E2407 /* Alamofire.swift */; };
-		717CE2124EC92C8894A3392BACBF6A43 /* CryptanilDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12947C8C60E106B1E357B61CABCA2B /* CryptanilDialog.swift */; };
+		72037C2C89520FFDCA8FFB2DCAEEDD75 /* CryptanilLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8CCC3BFF12C9E4F073E136D1166DA2 /* CryptanilLanguage.swift */; };
+		73161DF349D416EE9D758293C04E3AC0 /* CryptanilTopMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC926BDCC966FACCDB1A4010839B028D /* CryptanilTopMessage.swift */; };
+		73A0968DE51B064B69E6FEABA46939B4 /* CryptanilPaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11399D5E376313D963BE43825F74CB1 /* CryptanilPaymentStatusViewController.swift */; };
+		7424355199D0F7E60BD01F7B51D49563 /* CryptanilResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9453AAE2BA846957AC980939156BA /* CryptanilResult.swift */; };
+		7CB34E7FCD0FE5242D798FEB87AB733B /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD637C714EBB51667BCAD1008467F7F /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8023EECE8437F0311A065A9C2F420E2E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40F7900A2C7CF2A88233CA3150CF4AE /* SessionManager.swift */; };
 		8234F1BDF03269119BFBD73C674EDDC2 /* BagelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3305BC8E963E48D04AFFFF6CB8255F3F /* BagelController.m */; };
-		847E085A478D9D0B3302D669E4BCB09C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		831431AA000744062809301B12B8B364 /* CryptanilSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001CBE9B51C7E926328138FE24F1DA6 /* CryptanilSplashView.swift */; };
 		85379CCF081FC9C36F082E71D2DF4D2F /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0ECACCB1935344BE0D7F4DE6873B8A /* SessionDelegate.swift */; };
 		894BB979C5084A37A39368A2972467C3 /* BagelURLSessionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1F4415EC160F34A053DEA1CAA6992B /* BagelURLSessionInjector.m */; };
+		89B025ABC138AA6CEF1674C0B348F62B /* CryptanilApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674D2AC63382D6AB378B286559DE6E68 /* CryptanilApiClient.swift */; };
+		8D709E97C1984126D9EA1A33C6B1D9D0 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E3DE67C89218C728B35A0FC149587E9 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EA28E73DF9C9474C1E52E7D2BAA51FF /* CryptanilApiClient+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F4DBEDB8C75AF6EF324B6B16D7F56 /* CryptanilApiClient+UI.swift */; };
+		8F1EBD426908FFFA1CCD95912B4AA659 /* CryptanilDialog.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1623176B7E8624E586A3D4B015665175 /* CryptanilDialog.xib */; };
 		90E42B43904F2F22CA3A8BBD0155D9A2 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8AE8335D9A22215AF7554A1B87D7F /* AFError.swift */; };
 		9146510540C8DAF109CC4BCCB0CA74A9 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B116521E73905D66D7A7D5F17A46CF6D /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		914F266DE5F96B1961662F9A65C8DDAE /* CryptanilApiClient+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC561ED239C98C8C75CF8EE165BC9B0 /* CryptanilApiClient+UI.swift */; };
-		92D96031DA0B437480AC71E897B4F481 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A24A80228D3A8AACC97D07A7C5B4E63 /* GCDAsyncSocket.m */; };
 		9724EF7A789318FAB238AE1D46849AC7 /* Bagel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1F0921153C9651B90D363F45AE9B8E /* Bagel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97C7650AED4F241BED25958E758A681F /* CryptanilRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15577094DA2C96D49667AF91842D29B3 /* CryptanilRouter.swift */; };
+		9A1088873D51861953FB16AB11D19ED1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5A663615D21FBE80B50E6F0A4E7BDE9D /* en.lproj */; };
 		9BCBBFE03318F5DD172F9E1F3100F67B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3308A311F2BAE7FC4CB155BD9060FD6 /* Response.swift */; };
+		9DD4B9B315513D98AD4F921CD9020B2B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A24A80228D3A8AACC97D07A7C5B4E63 /* GCDAsyncSocket.m */; };
+		9DD5E19053BFA6981DDC6ABF76AEF50C /* CryptanilOrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D21DD58420D91FF08CF7C5F5484CA7 /* CryptanilOrderInfo.swift */; };
 		9DFB08C71FED20F78BC4FA4BC45EF1F9 /* Bagel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFCBA50AD5528962DE335482AA35505 /* Bagel-dummy.m */; };
-		9FB4FBE1ED2DC80A764BB8D9BCB85345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
-		A1B72747D3B14CEEE2C0BD6C3A4F4357 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E861B52EF779D601E5CB6A2DD6A166FD /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A393C65537586C0E2BBCBF29EAFBB117 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */; };
 		A69D3941F5B777622A483B97D055F19D /* BagelURLConnectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A4385529D8BFC87CE5E194D1D83E22 /* BagelURLConnectionInjector.m */; };
 		A804BD363ED775C5323A55C60C3ADB66 /* BagelRequestPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = F69D5D8848EFB2F7EACA7D7F4828996F /* BagelRequestPacket.m */; };
-		B055495E17B5833958EEEA11EE68D2D3 /* SubmitOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56553976D0495F9AF17BF0386C44288 /* SubmitOrderRequest.swift */; };
-		B0AA112D4A50DCC5D7DE212FF58441AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58792C597B7FAF598B3C02E2547FAD8 /* Assets.xcassets */; };
+		ABDE8ADA1E3C726231CFB50038E77469 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */; };
 		B19F52413FB1D6ACB63B7EC045E2BFA3 /* Pods-Cryptanil_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E6DDB75681723C186CA453BA7EBC16 /* Pods-Cryptanil_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B991D61E1E60B0669B2C0684FFE205B9 /* CryptanilImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D12FA42D3E14D8CA50C0675EE7D05E4 /* CryptanilImages.swift */; };
+		B1A0CB9DC5B5D1BBF58142A27291EF67 /* CryptanilColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4066A99C1CB75685BF16B0B03B41E /* CryptanilColors.swift */; };
+		B7BC322553582B1611F652140961FFBA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */; };
 		B9C80D493CAB0C46DD7D7A556CB67129 /* BagelURLConnectionInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 1058E5670DC61DD17AAA13F75BB9ADCA /* BagelURLConnectionInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9EAC966F145E843F3780842A023E44B /* BagelUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C140AE3C12D5056F1E7B615B1155F963 /* BagelUtility.m */; };
+		BED48F68FF95910D9B6076D4FE8EA94C /* CryptanilProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EAEA4A0CF08FEBB9D6584F503F4FB /* CryptanilProgress.swift */; };
 		C2048CE1629A2008A0CA257D69A71EA8 /* BagelCarrierDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F21A841D7AEFC152A6AAECEB189956D7 /* BagelCarrierDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C27C72B2D755F3A7B2D97089CA75146F /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FD04D331855FF894C57E86142B155C /* Alamofire-dummy.m */; };
-		C3848642012DCCBEA9877657B21E0D54 /* CoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81ADB52498E970473880F8F42848CA6 /* CoinAddress.swift */; };
 		C4CAE2C21B357EB291BA69F0084E5ED3 /* Bagel.h in Headers */ = {isa = PBXBuildFile; fileRef = 234D860A35B9E28993E3DE173B2ECBFA /* Bagel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5A71D45332111D43A528EFD0002822C /* CryptanilPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB752C5399FF536D847FDD44AFA0E4 /* CryptanilPaymentStatusView.swift */; };
 		C699B53AF7D2DA41A2D4C184451169E1 /* BagelProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A81104229FB2A49CC0C384151D85B4BC /* BagelProjectModel.m */; };
+		C7DCC4D5CFC133D3F620AF72A370D8FA /* CryptanilLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A73DAC51524CFF4D4573AE567975B6 /* CryptanilLoading.swift */; };
+		C8FB97559DCAE30C708C64155D51C9A1 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5984A48AC99F25B2B71275F0199DDE20 /* de.lproj */; };
 		CDE7F1F43D9278C370B2AE2F3CC32123 /* BagelDeviceModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2408B0AC914B80DF30C22CEA51E11441 /* BagelDeviceModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E2D057D15363D3DDC2321363D8A3BB /* CryptanilSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F244AA6CD7CD6644D9DA93B6BD17F3 /* CryptanilSearchViewController.swift */; };
 		D46CB5AF7BE345C5D27ABF9DCF692881 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CBC83AB08281A547FB43167D06D8F4 /* Result.swift */; };
 		D593E5BEB4221FF272DBF69E51945319 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960847A31154CAC8E0CADDCCFD13CA76 /* Request.swift */; };
-		DA7B5D97AFC53EDAC08E50A73A2660E3 /* CryptanilResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E19DF6D96DA469C6E0669F6B451228 /* CryptanilResponse.swift */; };
+		D63028F87F81108D3896F32DDD6417F4 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 572D34D745FC2F735C5D84BBC9876C41 /* ru.lproj */; };
+		D780B69424D2C5C2A0AAB28CF91DC806 /* Cryptanil.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 963F65FB5D127C267F87C3F0FF34E5E3 /* Cryptanil.bundle */; };
 		DBA367BC382BF1D8DB0DA27A29FB91D7 /* BagelBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C411577EA1A3CA9D8F48661E804C3 /* BagelBrowser.m */; };
+		DBAAF65EB69C7E32E7BB4755BD2F9B1D /* SubmitOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D3DB9B845E6F627DED46A581C6C68 /* SubmitOrderRequest.swift */; };
+		DE75B9CB087DD60CF10A8CB3983CEDA7 /* CryptanilTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF41ADAEC540B877767773748423F2 /* CryptanilTransactionView.swift */; };
 		DE7E8878F14985024EBECCDD7A81326B /* BagelBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C4887E382BF21235392C620E04640 /* BagelBaseModel.m */; };
-		DFCBD23DE819B082E0E796C79191DC64 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1E1F4447A6E26FFBCDCBB0DA94F8EB99 /* es.lproj */; };
-		E5D1DB976032B01EECF398387154755F /* GetCryptanilOrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7AEB07F734D18FA884C66E0844662 /* GetCryptanilOrderInfo.swift */; };
-		E668089CCA81CCC88C77608DC16A726F /* CryptanilDialog.xib in Sources */ = {isa = PBXBuildFile; fileRef = 52AF669F00710F8A09B4A22792AA62A1 /* CryptanilDialog.xib */; };
 		E6E152FE5A45560FE0E68F1059B608ED /* BagelBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB9E3B9E3773775FE5DB2A503F84E01 /* BagelBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA2B434F67C1C9FDFCB3F4F21B17A219 /* CryptanilTopMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDA32C0F00DD08968FE1473B06B69D /* CryptanilTopMessage.swift */; };
-		EA47D5DAC0D21E27E089D0D233BAEF2E /* CryptanilRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631543583776A5AAF643B729E097A1EB /* CryptanilRouter.swift */; };
-		EC4FFDBF51627F351BA1D5C03D610E1B /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FACAA226DAB52A2D788035A5385FDA04 /* ru.lproj */; };
-		ED93F44F23E91DF32A7663FEF5B8B268 /* CryptanilSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2708061F9A357714EE5D01720FC124 /* CryptanilSplashViewController.swift */; };
+		F3DE296E8D29FBD4AA7269D7C46B5FB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		F48A3CC0E800FF6CEE35B556D0065993 /* CryptanilExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF15EC929431D5F5B84F7AB081865E /* CryptanilExtensions.swift */; };
 		F5C92DC8E274C4FC541267A97575BC05 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC179658735B55E39E09554598D094F5 /* ParameterEncoding.swift */; };
 		F93AEAF3659818E2308E0E5C70B66423 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49F0FD554BE392726C063D606C5BD5D /* DispatchQueue+Alamofire.swift */; };
-		FA6029D6282EA32309F275B2718A64FC /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F078C69FE7AC20EEA082F70EEB0C6AAF /* GCDAsyncUdpSocket.m */; };
-		FD3F5101B1A869D6594CAFF1609B2594 /* CryptanilResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758CDE5BA95A87B199C86E99E2DC8970 /* CryptanilResult.swift */; };
-		FF821E0D94E62D57B37E3130C9A24CA0 /* Cryptanil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 293103DC4AFD00BF21C6509545BEA8B4 /* Cryptanil-dummy.m */; };
+		FB8A3773A6D3709664083A397DDC7DD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		FD9F6C49665E846133B26232ADCF3B99 /* GetCoinAddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E879D7B9086DB933EE1CDF38E413 /* GetCoinAddressRequest.swift */; };
+		FF31099F233690EBD99594616448F197 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F0D163BCF8DC39C81F9E9D12445B2705 /* fr.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0337C4BFC47114D4B51E5D109A38B6EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
-			remoteInfo = CocoaAsyncSocket;
-		};
-		0B8837A388369B913DE467C1AC39FA45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3DD427D43D57AF1299B4775D5D37E44;
-			remoteInfo = "Cryptanil-Cryptanil";
-		};
-		16E977A0E33F9C96B7C97961FF6E3B11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		410C78201EDF9CFBCD486E82EA2394DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
-			remoteInfo = CocoaAsyncSocket;
-		};
-		643DC185F274A9A8EC90F9EC4FD36DBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		7DD9E964A5864192F824C58AAACDD77B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F34CA09687202E5E857F745389C78F5B;
-			remoteInfo = "Pods-Cryptanil_Example";
-		};
-		807584CE42C4302F5497727601E48E57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92077976CB3E088351E515981DC39115;
-			remoteInfo = Bagel;
-		};
-		8F80B45EBA7F21773FE89710D1AFD171 /* PBXContainerItemProxy */ = {
+		3CBBB81A7A256BCAB1EF0664B28E4EC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 76125DD0BE4CD07C4B187C14D0E656B3;
 			remoteInfo = Cryptanil;
 		};
+		537AC88E21FB0CCA3FD3289A342F613C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F34CA09687202E5E857F745389C78F5B;
+			remoteInfo = "Pods-Cryptanil_Example";
+		};
+		65AC2DEF4D15B7C14D8A7C594B96331F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3DD427D43D57AF1299B4775D5D37E44;
+			remoteInfo = "Cryptanil-Cryptanil";
+		};
+		8EE7F77A2D4F5E242C218BA9875F38E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		AE3155B05ED0C56D054B9A559D3BDBE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		E3E51B54EF22929E97E27F45E2FD1402 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		E74C6BA0EADA5A9511107E285DB0F541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92077976CB3E088351E515981DC39115;
+			remoteInfo = Bagel;
+		};
+		ED4E64A45BBEF1B45547439A5E0D7BB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072F4DBEDB8C75AF6EF324B6B16D7F56 /* CryptanilApiClient+UI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CryptanilApiClient+UI.swift"; sourceTree = "<group>"; };
 		0749EEEE4E2CCF361243E8F21AA721F2 /* Pods-Cryptanil_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cryptanil_Example-dummy.m"; sourceTree = "<group>"; };
+		079F439B352FB79880DA6AC5529B4D29 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = es.lproj; sourceTree = "<group>"; };
+		0A62D5BB8BE9A8D3EFC227B5DDA8EF1B /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Cryptanil/Resource/Assets.xcassets; sourceTree = "<group>"; };
+		0BE87E916BDE0053C76CF8774E1450F2 /* Cryptanil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cryptanil.debug.xcconfig; sourceTree = "<group>"; };
+		0D80CBB3CE270164F1E403E1FCB97E2E /* Cryptanil.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Cryptanil.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0ED0EEC684DEEA58A99365130A4A68F5 /* BagelRequestInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelRequestInfo.h; path = iOS/Source/BagelRequestInfo.h; sourceTree = "<group>"; };
 		1058E5670DC61DD17AAA13F75BB9ADCA /* BagelURLConnectionInjector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelURLConnectionInjector.h; path = iOS/Source/BagelURLConnectionInjector.h; sourceTree = "<group>"; };
 		10646809DA9608E9699CFD3172792D37 /* Pods-Cryptanil_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptanil_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1237511C828D7167F96071A254406174 /* CryptanilProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilProgress.swift; sourceTree = "<group>"; };
+		12DE33C60078293F77ADCCF63E75C95D /* Cryptanil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cryptanil.release.xcconfig; sourceTree = "<group>"; };
+		1331E879D7B9086DB933EE1CDF38E413 /* GetCoinAddressRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetCoinAddressRequest.swift; sourceTree = "<group>"; };
 		154F222F41CE7D777ADC94E6F1C51A1E /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		19F7AEB07F734D18FA884C66E0844662 /* GetCryptanilOrderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetCryptanilOrderInfo.swift; sourceTree = "<group>"; };
+		15577094DA2C96D49667AF91842D29B3 /* CryptanilRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilRouter.swift; sourceTree = "<group>"; };
+		15EFF0761A4FA82163E7E85754A4A08E /* CryptanilImages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilImages.swift; sourceTree = "<group>"; };
+		1623176B7E8624E586A3D4B015665175 /* CryptanilDialog.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CryptanilDialog.xib; sourceTree = "<group>"; };
 		1AF39BF290E3C4A5C8E195C64B71F8A6 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		1B60381ED4CF9E610D8B72BA87274C4B /* Cryptanil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cryptanil.release.xcconfig; sourceTree = "<group>"; };
-		1E1F4447A6E26FFBCDCBB0DA94F8EB99 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = es.lproj; sourceTree = "<group>"; };
+		1DDF15EC929431D5F5B84F7AB081865E /* CryptanilExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilExtensions.swift; sourceTree = "<group>"; };
 		234D860A35B9E28993E3DE173B2ECBFA /* Bagel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bagel.h; path = iOS/Source/Bagel.h; sourceTree = "<group>"; };
 		2408B0AC914B80DF30C22CEA51E11441 /* BagelDeviceModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelDeviceModel.h; path = iOS/Source/BagelDeviceModel.h; sourceTree = "<group>"; };
 		263370137E1D913C528046776CBDF410 /* Pods-Cryptanil_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cryptanil_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2734F295499A0AD1E3EDA0A704D81ABA /* Cryptanil-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cryptanil-Info.plist"; sourceTree = "<group>"; };
 		278B7C23FBAB43499373E3C6BF4E954B /* Bagel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bagel; path = Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		293103DC4AFD00BF21C6509545BEA8B4 /* Cryptanil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cryptanil-dummy.m"; sourceTree = "<group>"; };
+		29FF41ADAEC540B877767773748423F2 /* CryptanilTransactionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilTransactionView.swift; sourceTree = "<group>"; };
 		2A197DE23BBBB555DEB4A42B4921D177 /* Bagel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bagel.m; path = iOS/Source/Bagel.m; sourceTree = "<group>"; };
 		2A4F8082F77BE4155E1DB40102559985 /* Bagel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Bagel-Info.plist"; sourceTree = "<group>"; };
-		2E46DDA738BDEAC56FF83F5EC61DC3D0 /* Cryptanil.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Cryptanil.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2EA4B3E2E191B09A3D2387B1BFFF6F6D /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
-		32CD77DDCA7BAA7267DCD3E916C39DBF /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
+		32912C73A8E673A5B4F27B0B6F240641 /* CryptanilMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilMessage.swift; sourceTree = "<group>"; };
 		3305BC8E963E48D04AFFFF6CB8255F3F /* BagelController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelController.m; path = iOS/Source/BagelController.m; sourceTree = "<group>"; };
 		3370467F65B4AC06B18D4F64A67EE863 /* Pods-Cryptanil_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cryptanil_Tests-dummy.m"; sourceTree = "<group>"; };
 		360F090B611DD2582AF8DA71944F3EFF /* Pods-Cryptanil_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cryptanil_Example-frameworks.sh"; sourceTree = "<group>"; };
 		37BAB9BED830F57D0140A517C3B8D933 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
+		39CA245750605657917BF799299EB9AD /* ResourceBundle-Cryptanil-Cryptanil-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Cryptanil-Cryptanil-Info.plist"; sourceTree = "<group>"; };
+		3B3DC3484DA2B4AC5AE141AAAC5DCCD0 /* CryptanilView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilView.swift; sourceTree = "<group>"; };
+		3C3EAEA4A0CF08FEBB9D6584F503F4FB /* CryptanilProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilProgress.swift; sourceTree = "<group>"; };
 		3DC8CEE619C34E23D6BAB81B19E37485 /* Pods-Cryptanil_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cryptanil_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		40ABFD76CA23B0B36EF0F7EE1141514F /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
-		4911E2D0288AFF4D9F90E6C404732229 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		43D21DD58420D91FF08CF7C5F5484CA7 /* CryptanilOrderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilOrderInfo.swift; sourceTree = "<group>"; };
 		4A68B20E4BC1CE77A76525AD547FA562 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		4B0C411577EA1A3CA9D8F48661E804C3 /* BagelBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelBrowser.m; path = iOS/Source/BagelBrowser.m; sourceTree = "<group>"; };
+		4B38FF39F32B3A306C5689B37AA7B313 /* Cryptanil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cryptanil-dummy.m"; sourceTree = "<group>"; };
 		4BD637C714EBB51667BCAD1008467F7F /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
 		4C529F4DC85C843CE8F4F82F23A3124A /* BagelRequestInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelRequestInfo.m; path = iOS/Source/BagelRequestInfo.m; sourceTree = "<group>"; };
-		4C5C96E1B7215DFCEB342D6AAEB9E12D /* Cryptanil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cryptanil.debug.xcconfig; sourceTree = "<group>"; };
 		4DE49B9F4787FAA8A5BAC3B54D26C58F /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		505BB63B9D1B844998A10AD0F6162BAB /* CryptanilLoading.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CryptanilLoading.xib; sourceTree = "<group>"; };
 		519C50EAD9426719387B047B0F4C5C56 /* Pods-Cryptanil_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cryptanil_Example.modulemap"; sourceTree = "<group>"; };
-		52AF669F00710F8A09B4A22792AA62A1 /* CryptanilDialog.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CryptanilDialog.xib; sourceTree = "<group>"; };
+		52FDB1A9F7FE94A5CF16817CB846E6C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		53007F4D31F69AE997537CE3E8AE133E /* Pods-Cryptanil_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptanil_Example.release.xcconfig"; sourceTree = "<group>"; };
-		58496685B7FC25163D0F3D61BC139EF2 /* CryptanilError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilError.swift; sourceTree = "<group>"; };
+		53C241D923C33E60C6B1745CBFCAC065 /* CryptanilViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilViewController.swift; sourceTree = "<group>"; };
+		54A73DAC51524CFF4D4573AE567975B6 /* CryptanilLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilLoading.swift; sourceTree = "<group>"; };
+		54F0DECD4DD3C6930CA5062FEA27F926 /* Cryptanil-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cryptanil-Info.plist"; sourceTree = "<group>"; };
+		56B5C4B07B1BC51C1DCB1A428FE8B1EE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		572D34D745FC2F735C5D84BBC9876C41 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ru.lproj; sourceTree = "<group>"; };
 		596C4887E382BF21235392C620E04640 /* BagelBaseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelBaseModel.m; path = iOS/Source/BagelBaseModel.m; sourceTree = "<group>"; };
+		5984A48AC99F25B2B71275F0199DDE20 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
+		5A663615D21FBE80B50E6F0A4E7BDE9D /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		5AF8BA0BFFE9EB359B13732D54505FE5 /* Pods-Cryptanil_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cryptanil_Tests.modulemap"; sourceTree = "<group>"; };
-		5B0CD7618B8B7083E02D1513005F441C /* CryptanilTransactionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptanilTransactionViewController.swift; path = Cryptanil/Source/CryptanilTransactionViewController.swift; sourceTree = "<group>"; };
-		5BC2F9281AC19EB7AB1DE56D8B729478 /* WalletInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
-		5C24EEE28FCE5E993D9F23CAA9133F89 /* ResourceBundle-Cryptanil-Cryptanil-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Cryptanil-Cryptanil-Info.plist"; sourceTree = "<group>"; };
 		5CFCBA50AD5528962DE335482AA35505 /* Bagel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bagel-dummy.m"; sourceTree = "<group>"; };
 		5D1F0921153C9651B90D363F45AE9B8E /* Bagel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bagel-umbrella.h"; sourceTree = "<group>"; };
+		5D5E9C788577F5DF598017A3DEEFF343 /* CryptanilLoading.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CryptanilLoading.xib; sourceTree = "<group>"; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFAB74C483F65C704C5574EC0335D3B /* BagelConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelConfiguration.m; path = iOS/Source/BagelConfiguration.m; sourceTree = "<group>"; };
-		5FA8509759D2001F67330D0878F5DC73 /* CryptanilViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptanilViewController.swift; path = Cryptanil/Source/CryptanilViewController.swift; sourceTree = "<group>"; };
-		5FC8A531C399987C38CE8D5060EC3946 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = fr.lproj; sourceTree = "<group>"; };
-		60E19DF6D96DA469C6E0669F6B451228 /* CryptanilResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilResponse.swift; sourceTree = "<group>"; };
-		631543583776A5AAF643B729E097A1EB /* CryptanilRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilRouter.swift; sourceTree = "<group>"; };
-		65A702A7F1BE59F0C2B68B6D04358786 /* Alamofire+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Alamofire+Codable.swift"; sourceTree = "<group>"; };
 		665675675C382C48CA821DEF41FD3CE1 /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
+		674D2AC63382D6AB378B286559DE6E68 /* CryptanilApiClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilApiClient.swift; sourceTree = "<group>"; };
 		68522CF7F6E1E05404BB656B735B1444 /* Pods-Cryptanil_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cryptanil_Tests-umbrella.h"; sourceTree = "<group>"; };
 		68917E569E618CA6FB3D2A89F95E2407 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		69BB752C5399FF536D847FDD44AFA0E4 /* CryptanilPaymentStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilPaymentStatusView.swift; sourceTree = "<group>"; };
 		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E1C4177551CF73DA89CD1165B8E6DCD /* Cryptanil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cryptanil-prefix.pch"; sourceTree = "<group>"; };
 		6E5DDB7456D67DAD62E74C898DEEBCCC /* BagelController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelController.h; path = iOS/Source/BagelController.h; sourceTree = "<group>"; };
-		6ED7F2FC3D155178192AF65DE1CEFEFF /* CryptanilPaymentStatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptanilPaymentStatusViewController.swift; path = Cryptanil/Source/CryptanilPaymentStatusViewController.swift; sourceTree = "<group>"; };
 		71E2E66AA9DD50B763FD0C5E4BF2139B /* BagelRequestCarrier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelRequestCarrier.m; path = iOS/Source/BagelRequestCarrier.m; sourceTree = "<group>"; };
 		7286696A0FD4F873892141069EF85AAC /* Cryptanil */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cryptanil; path = Cryptanil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A4385529D8BFC87CE5E194D1D83E22 /* BagelURLConnectionInjector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelURLConnectionInjector.m; path = iOS/Source/BagelURLConnectionInjector.m; sourceTree = "<group>"; };
+		73DCE231C7DF737987A9C3DE16C1AAFA /* WalletInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
 		754201052BCA6A056CB3EFC2D7919DAD /* BagelRequestCarrier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelRequestCarrier.h; path = iOS/Source/BagelRequestCarrier.h; sourceTree = "<group>"; };
 		756B8397DFF72025D6DD3084D19EE6C3 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		758CDE5BA95A87B199C86E99E2DC8970 /* CryptanilResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilResult.swift; sourceTree = "<group>"; };
 		75DF4038E58876EDD6BBCE5A81685BA0 /* BagelBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelBrowser.h; path = iOS/Source/BagelBrowser.h; sourceTree = "<group>"; };
-		76A38ACB5FB785983C03B926CC00608C /* CryptanilSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptanilSearchViewController.swift; path = Cryptanil/Source/CryptanilSearchViewController.swift; sourceTree = "<group>"; };
+		7A7D3DB9B845E6F627DED46A581C6C68 /* SubmitOrderRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubmitOrderRequest.swift; sourceTree = "<group>"; };
 		7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		7ADFF2391B3F74C991CED8623915B9B3 /* CryptanilApiClient+Execution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CryptanilApiClient+Execution.swift"; sourceTree = "<group>"; };
 		7B38CC995DF41E92A1BF16BC19097063 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
 		7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7D12FA42D3E14D8CA50C0675EE7D05E4 /* CryptanilImages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilImages.swift; sourceTree = "<group>"; };
+		7FD346729DF30602369004D4B902BE28 /* CryptanilTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilTextField.swift; sourceTree = "<group>"; };
+		7FD7B31FDAE4B1BEB08C5AFD1557B1BE /* Cryptanil.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cryptanil.modulemap; sourceTree = "<group>"; };
 		8201CF32AEE6938007C58EEACF60B956 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		82A484E4144607EAD1892CE4BD3A8895 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		85022D08BF99CB0FCCFE325E0AADD511 /* CryptanilExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilExtensions.swift; sourceTree = "<group>"; };
-		8D03C2F4F9EEBBE0C0099B6B19F87558 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		86F244AA6CD7CD6644D9DA93B6BD17F3 /* CryptanilSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilSearchViewController.swift; sourceTree = "<group>"; };
+		8CE21F018D3C562B779A2EA5C0CEA2FE /* Cryptanil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cryptanil-prefix.pch"; sourceTree = "<group>"; };
+		8E10FEE6C4160611904F34A0378249C3 /* CoinAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoinAddress.swift; sourceTree = "<group>"; };
 		8E3DE67C89218C728B35A0FC149587E9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		905BD6DD50D8D9D2B43EBBB0018925F3 /* CryptanilOrderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilOrderInfo.swift; sourceTree = "<group>"; };
 		91361C6CC47D23531983B474B68ACC7F /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		91A20EAC74DE39BF339B4B70FC0E934D /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		92AACE4E84ACCD4676DE6F433DC9A358 /* Alamofire+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Alamofire+Codable.swift"; sourceTree = "<group>"; };
 		960847A31154CAC8E0CADDCCFD13CA76 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		963F65FB5D127C267F87C3F0FF34E5E3 /* Cryptanil.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cryptanil.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		97C86F0B349C348E04DD33C22D4AD1C1 /* GetCoinAddressRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetCoinAddressRequest.swift; sourceTree = "<group>"; };
+		96DDD6F19B5C668B99D464C7A8DE91CB /* CryptanilResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilResponse.swift; sourceTree = "<group>"; };
 		9A24A80228D3A8AACC97D07A7C5B4E63 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		9A7F7FCFA6A772D2225EA745D7B43EFB /* Cryptanil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cryptanil-umbrella.h"; sourceTree = "<group>"; };
 		9B0ECACCB1935344BE0D7F4DE6873B8A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		9BE999B28ACE705D036BE3520EC8A052 /* CryptanilMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilMessage.swift; sourceTree = "<group>"; };
 		9D8587BF5465ECA5C56870CD91A60EC8 /* BagelURLSessionInjector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelURLSessionInjector.h; path = iOS/Source/BagelURLSessionInjector.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EE8AE8335D9A22215AF7554A1B87D7F /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		A3308A311F2BAE7FC4CB155BD9060FD6 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		A49F0FD554BE392726C063D606C5BD5D /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		A5049FC7098B21799564B0BBEB105F5F /* CryptanilError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilError.swift; sourceTree = "<group>"; };
 		A54CD4ED80A5F7C5764A067970DB9E82 /* Pods-Cryptanil_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Cryptanil_Tests"; path = Pods_Cryptanil_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		A81104229FB2A49CC0C384151D85B4BC /* BagelProjectModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelProjectModel.m; path = iOS/Source/BagelProjectModel.m; sourceTree = "<group>"; };
 		A8B98809F63B11E02D4DAEF64EFC00A6 /* Pods-Cryptanil_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cryptanil_Example-Info.plist"; sourceTree = "<group>"; };
 		ACC0488A6A588F2CB241B36880FD904F /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
-		B018DAB77791EE0F6AF3656E157BFE98 /* CryptanilLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilLanguage.swift; sourceTree = "<group>"; };
 		B116521E73905D66D7A7D5F17A46CF6D /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		B21D3F4CAF978D3A3EC48893D4BFED82 /* Bagel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bagel-prefix.pch"; sourceTree = "<group>"; };
-		BB59FD1A67C079BD718B93CDDA41E49F /* CryptanilLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilLoading.swift; sourceTree = "<group>"; };
+		B33505660B498ABDDC7C6FB4543A2770 /* CryptanilDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilDialog.swift; sourceTree = "<group>"; };
+		BC2EC471290E5A2DB2CDD994939B6506 /* CryptanilSplashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilSplashViewController.swift; sourceTree = "<group>"; };
 		BE1F4415EC160F34A053DEA1CAA6992B /* BagelURLSessionInjector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelURLSessionInjector.m; path = iOS/Source/BagelURLSessionInjector.m; sourceTree = "<group>"; };
 		BEE1451A6C8E0652CA1E33F6C5641CAF /* Pods-Cryptanil_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cryptanil_Tests-Info.plist"; sourceTree = "<group>"; };
 		C0E6FE8D1CDE797EEA59EF10CCA24EE5 /* BagelUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelUtility.h; path = iOS/Source/BagelUtility.h; sourceTree = "<group>"; };
 		C140AE3C12D5056F1E7B615B1155F963 /* BagelUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelUtility.m; path = iOS/Source/BagelUtility.m; sourceTree = "<group>"; };
+		C286159CE65BD2A6908C85201D034E73 /* CryptanilTransactionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilTransactionViewController.swift; sourceTree = "<group>"; };
 		C466CD0983D68643F46186AA058686AA /* Pods-Cryptanil_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cryptanil_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C56553976D0495F9AF17BF0386C44288 /* SubmitOrderRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubmitOrderRequest.swift; sourceTree = "<group>"; };
 		C5E6DDB75681723C186CA453BA7EBC16 /* Pods-Cryptanil_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cryptanil_Example-umbrella.h"; sourceTree = "<group>"; };
-		C6F1C26A7F5F917F3BD59719A41F476A /* GetWalletInfoRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetWalletInfoRequest.swift; sourceTree = "<group>"; };
-		C81ADB52498E970473880F8F42848CA6 /* CoinAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoinAddress.swift; sourceTree = "<group>"; };
 		C9AA0990FC5685BBE5D3EE4D959E5FA7 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		C9E22C1E7C5A743B748211EF5327AEDE /* Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Bagel.release.xcconfig; sourceTree = "<group>"; };
-		CDC561ED239C98C8C75CF8EE165BC9B0 /* CryptanilApiClient+UI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CryptanilApiClient+UI.swift"; sourceTree = "<group>"; };
-		D2919E0BA68EDA7A3BC07AF59C6A711F /* Cryptanil.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cryptanil.modulemap; sourceTree = "<group>"; };
+		CC926BDCC966FACCDB1A4010839B028D /* CryptanilTopMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilTopMessage.swift; sourceTree = "<group>"; };
+		D11399D5E376313D963BE43825F74CB1 /* CryptanilPaymentStatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilPaymentStatusViewController.swift; sourceTree = "<group>"; };
 		D3FD04D331855FF894C57E86142B155C /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		D4374FC4F5E897EE7893F0F900EE4288 /* Cryptanil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cryptanil-umbrella.h"; sourceTree = "<group>"; };
-		D511BDFC1CD96B660F235018A894CF60 /* CryptanilTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilTextField.swift; sourceTree = "<group>"; };
+		D565069E396C8EC552B3A1AEC57F8368 /* GetCryptanilOrderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetCryptanilOrderInfo.swift; sourceTree = "<group>"; };
 		D6BDD7D0CBBF3180431B843B1C58342C /* Pods-Cryptanil_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cryptanil_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		DA12947C8C60E106B1E357B61CABCA2B /* CryptanilDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilDialog.swift; sourceTree = "<group>"; };
-		DF75D0629A32E364D0E92D303FFE91EF /* CryptanilColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilColors.swift; sourceTree = "<group>"; };
+		DD8CCC3BFF12C9E4F073E136D1166DA2 /* CryptanilLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilLanguage.swift; sourceTree = "<group>"; };
 		E0CBC83AB08281A547FB43167D06D8F4 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		E241BBBD7FF36FABE02224FD3D45916B /* BagelDeviceModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelDeviceModel.m; path = iOS/Source/BagelDeviceModel.m; sourceTree = "<group>"; };
 		E37A2834272A47AE1B44E5C228D59D20 /* Pods-Cryptanil_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptanil_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F4066A99C1CB75685BF16B0B03B41E /* CryptanilColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilColors.swift; sourceTree = "<group>"; };
 		E48CF53DA5A0D1CF9E18CC0331E12EEC /* Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Bagel.debug.xcconfig; sourceTree = "<group>"; };
 		E618D0B97A0CB5F0B82572991EF354BB /* BagelProjectModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelProjectModel.h; path = iOS/Source/BagelProjectModel.h; sourceTree = "<group>"; };
-		E6931B679CC524AC528E59D2BA4440DE /* CryptanilApiClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilApiClient.swift; sourceTree = "<group>"; };
 		E861B52EF779D601E5CB6A2DD6A166FD /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		E88B91222558FDE205D68EFC4092BBA2 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
 		E934CE8490EFEC544F60D466A991A1A3 /* BagelConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelConfiguration.h; path = iOS/Source/BagelConfiguration.h; sourceTree = "<group>"; };
 		EB726C28CB4F4A64A92B9ADA93D45807 /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
+		F001CBE9B51C7E926328138FE24F1DA6 /* CryptanilSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilSplashView.swift; sourceTree = "<group>"; };
 		F078C69FE7AC20EEA082F70EEB0C6AAF /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		F1610F047902BE59D14FAA25675FFB48 /* CryptanilApiClient+Execution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CryptanilApiClient+Execution.swift"; sourceTree = "<group>"; };
+		F0D163BCF8DC39C81F9E9D12445B2705 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = fr.lproj; sourceTree = "<group>"; };
 		F21A841D7AEFC152A6AAECEB189956D7 /* BagelCarrierDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelCarrierDelegate.h; path = iOS/Source/BagelCarrierDelegate.h; sourceTree = "<group>"; };
 		F40F7900A2C7CF2A88233CA3150CF4AE /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		F4DDA32C0F00DD08968FE1473B06B69D /* CryptanilTopMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilTopMessage.swift; sourceTree = "<group>"; };
-		F58792C597B7FAF598B3C02E2547FAD8 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Cryptanil/Resource/Assets.xcassets; sourceTree = "<group>"; };
-		F5E56BCCB5D45F903A88120DF8140201 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		F69D5D8848EFB2F7EACA7D7F4828996F /* BagelRequestPacket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BagelRequestPacket.m; path = iOS/Source/BagelRequestPacket.m; sourceTree = "<group>"; };
+		F8F9453AAE2BA846957AC980939156BA /* CryptanilResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptanilResult.swift; sourceTree = "<group>"; };
 		FA2D49D1AD15A90E3F6EA6AE532A103A /* BagelRequestPacket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelRequestPacket.h; path = iOS/Source/BagelRequestPacket.h; sourceTree = "<group>"; };
 		FA4DEDFCDBE18579DFD127A4407A950E /* Pods-Cryptanil_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Cryptanil_Example"; path = Pods_Cryptanil_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FACAA226DAB52A2D788035A5385FDA04 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ru.lproj; sourceTree = "<group>"; };
 		FB67604C8E45E1975F9114BB2F51EE43 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		FBB9E3B9E3773775FE5DB2A503F84E01 /* BagelBaseModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BagelBaseModel.h; path = iOS/Source/BagelBaseModel.h; sourceTree = "<group>"; };
+		FBD3DD03B40BC612C70191A0E081D5F8 /* GetWalletInfoRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetWalletInfoRequest.swift; sourceTree = "<group>"; };
 		FC179658735B55E39E09554598D094F5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		FD2708061F9A357714EE5D01720FC124 /* CryptanilSplashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptanilSplashViewController.swift; path = Cryptanil/Source/CryptanilSplashViewController.swift; sourceTree = "<group>"; };
 		FDF416F665FC4699D01297B6A9A914E9 /* Pods-Cryptanil_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cryptanil_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FEEA51CF1EBE6D2B42D115B296996600 /* Bagel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Bagel.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -342,11 +350,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C0F29EF0D068DC3D803E12060861514 /* Frameworks */ = {
+		6350FF58AB9D99CB5B6B009FEBB70813 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FB4FBE1ED2DC80A764BB8D9BCB85345 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +365,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DB0C62F78E144F42610E935547BCB49 /* Frameworks */ = {
+		78C45434D15DD0A5BCC0D67EA008C9AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DE296E8D29FBD4AA7269D7C46B5FB6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,13 +381,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3730F86CC7D6478A94A26A94CF4E007 /* Frameworks */ = {
+		BD069357E27B9E65193139627655D28A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3509313E7A841AC7CC66356A22D6D19A /* CFNetwork.framework in Frameworks */,
-				847E085A478D9D0B3302D669E4BCB09C /* Foundation.framework in Frameworks */,
-				A393C65537586C0E2BBCBF29EAFBB117 /* Security.framework in Frameworks */,
+				ABDE8ADA1E3C726231CFB50038E77469 /* CFNetwork.framework in Frameworks */,
+				FB8A3773A6D3709664083A397DDC7DD9 /* Foundation.framework in Frameworks */,
+				B7BC322553582B1611F652140961FFBA /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,21 +400,6 @@
 				D5B250C191F0E4C7AD947CD0C88A0F4B /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0A1B77CE11CFAF099F85BF46278B3AD9 /* CryptanilNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				65A702A7F1BE59F0C2B68B6D04358786 /* Alamofire+Codable.swift */,
-				E6931B679CC524AC528E59D2BA4440DE /* CryptanilApiClient.swift */,
-				F1610F047902BE59D14FAA25675FFB48 /* CryptanilApiClient+Execution.swift */,
-				CDC561ED239C98C8C75CF8EE165BC9B0 /* CryptanilApiClient+UI.swift */,
-				631543583776A5AAF643B729E097A1EB /* CryptanilRouter.swift */,
-				4C01DECD9F1859742004F9F6B1708861 /* RequestModel */,
-				17B4045B9138E7C2528FF7C7869EC932 /* ResponseModel */,
-			);
-			name = CryptanilNetworking;
-			path = Cryptanil/Source/CryptanilNetworking;
 			sourceTree = "<group>";
 		};
 		0B78638A1AB92ACFB622738820C4C278 /* Pods-Cryptanil_Example */ = {
@@ -441,51 +434,95 @@
 			path = "../Target Support Files/Bagel";
 			sourceTree = "<group>";
 		};
-		17B4045B9138E7C2528FF7C7869EC932 /* ResponseModel */ = {
+		27C0B351F58572BA7588F0A0CC2779DB /* CryptanilHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				C81ADB52498E970473880F8F42848CA6 /* CoinAddress.swift */,
-				905BD6DD50D8D9D2B43EBBB0018925F3 /* CryptanilOrderInfo.swift */,
-				5BC2F9281AC19EB7AB1DE56D8B729478 /* WalletInfo.swift */,
-				EC1F5C43D033D717D4D47FF136B2BD4E /* base */,
+				E3F4066A99C1CB75685BF16B0B03B41E /* CryptanilColors.swift */,
+				1DDF15EC929431D5F5B84F7AB081865E /* CryptanilExtensions.swift */,
+				15EFF0761A4FA82163E7E85754A4A08E /* CryptanilImages.swift */,
+				DD8CCC3BFF12C9E4F073E136D1166DA2 /* CryptanilLanguage.swift */,
 			);
-			path = ResponseModel;
+			name = CryptanilHelpers;
+			path = Cryptanil/Source/CryptanilHelpers;
 			sourceTree = "<group>";
 		};
-		4C01DECD9F1859742004F9F6B1708861 /* RequestModel */ = {
+		2BDD034ED3054C9F43A89AB5D00F6F7A /* CryptanilViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				97C86F0B349C348E04DD33C22D4AD1C1 /* GetCoinAddressRequest.swift */,
-				19F7AEB07F734D18FA884C66E0844662 /* GetCryptanilOrderInfo.swift */,
-				C6F1C26A7F5F917F3BD59719A41F476A /* GetWalletInfoRequest.swift */,
-				C56553976D0495F9AF17BF0386C44288 /* SubmitOrderRequest.swift */,
+				86F244AA6CD7CD6644D9DA93B6BD17F3 /* CryptanilSearchViewController.swift */,
+				8F00BBE28997E115F8849B8BB8D3539C /* CryptanilPaymentStatusViewController */,
+				A67037771D4A6F9239A18B4843935500 /* CryptanilSplashViewController */,
+				B637BE4EFE2A954535E66E1F8B22CB13 /* CryptanilTransactionViewController */,
+				F7637E3697FBF7FFE4D28A8CC5712143 /* CryptanilViewController */,
+			);
+			name = CryptanilViewControllers;
+			path = Cryptanil/Source/CryptanilViewControllers;
+			sourceTree = "<group>";
+		};
+		3F2B20D9EBF1E489D607536AFD2364F0 /* Cryptanil */ = {
+			isa = PBXGroup;
+			children = (
+				0A62D5BB8BE9A8D3EFC227B5DDA8EF1B /* Assets.xcassets */,
+				27C0B351F58572BA7588F0A0CC2779DB /* CryptanilHelpers */,
+				74951837084A99D6656CDD9EE3238542 /* CryptanilLocalizations */,
+				EE3B7B29B4A6C30A2DE6CB1CE6E309E1 /* CryptanilNetworking */,
+				2BDD034ED3054C9F43A89AB5D00F6F7A /* CryptanilViewControllers */,
+				3FBB02DAA94CF6E134926FBFBDF6830E /* CryptanilViews */,
+				5C4ABF1BB51CFFE432ED5F4A0E467A08 /* Pod */,
+				5F0C52B457ECA708AF385A21F2C1D605 /* Support Files */,
+			);
+			name = Cryptanil;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3FBB02DAA94CF6E134926FBFBDF6830E /* CryptanilViews */ = {
+			isa = PBXGroup;
+			children = (
+				3C3EAEA4A0CF08FEBB9D6584F503F4FB /* CryptanilProgress.swift */,
+				7FD346729DF30602369004D4B902BE28 /* CryptanilTextField.swift */,
+				CC926BDCC966FACCDB1A4010839B028D /* CryptanilTopMessage.swift */,
+				9972A3D6A8A67059E5776B661651F72B /* CryptanilDialog */,
+				7F36EDBCDF17D225FC3251923B0A777F /* CryptanilLoading */,
+			);
+			name = CryptanilViews;
+			path = Cryptanil/Source/CryptanilViews;
+			sourceTree = "<group>";
+		};
+		4D6E46C0847B2F92DF3E2D93CE1E2D35 /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				1331E879D7B9086DB933EE1CDF38E413 /* GetCoinAddressRequest.swift */,
+				D565069E396C8EC552B3A1AEC57F8368 /* GetCryptanilOrderInfo.swift */,
+				FBD3DD03B40BC612C70191A0E081D5F8 /* GetWalletInfoRequest.swift */,
+				7A7D3DB9B845E6F627DED46A581C6C68 /* SubmitOrderRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
 		};
-		537EEF1BE139EF641A276D04044EA42E /* CryptanilLocalizations */ = {
+		5C4ABF1BB51CFFE432ED5F4A0E467A08 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				32CD77DDCA7BAA7267DCD3E916C39DBF /* de.lproj */,
-				F5E56BCCB5D45F903A88120DF8140201 /* en.lproj */,
-				1E1F4447A6E26FFBCDCBB0DA94F8EB99 /* es.lproj */,
-				5FC8A531C399987C38CE8D5060EC3946 /* fr.lproj */,
-				FACAA226DAB52A2D788035A5385FDA04 /* ru.lproj */,
+				0D80CBB3CE270164F1E403E1FCB97E2E /* Cryptanil.podspec */,
+				52FDB1A9F7FE94A5CF16817CB846E6C2 /* LICENSE */,
+				56B5C4B07B1BC51C1DCB1A428FE8B1EE /* README.md */,
 			);
-			name = CryptanilLocalizations;
-			path = Cryptanil/CryptanilLocalizations;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		6492E311A6AF163B91B704D9CEAC0634 /* Helpers */ = {
+		5F0C52B457ECA708AF385A21F2C1D605 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DF75D0629A32E364D0E92D303FFE91EF /* CryptanilColors.swift */,
-				85022D08BF99CB0FCCFE325E0AADD511 /* CryptanilExtensions.swift */,
-				7D12FA42D3E14D8CA50C0675EE7D05E4 /* CryptanilImages.swift */,
-				B018DAB77791EE0F6AF3656E157BFE98 /* CryptanilLanguage.swift */,
+				7FD7B31FDAE4B1BEB08C5AFD1557B1BE /* Cryptanil.modulemap */,
+				4B38FF39F32B3A306C5689B37AA7B313 /* Cryptanil-dummy.m */,
+				54F0DECD4DD3C6930CA5062FEA27F926 /* Cryptanil-Info.plist */,
+				8CE21F018D3C562B779A2EA5C0CEA2FE /* Cryptanil-prefix.pch */,
+				9A7F7FCFA6A772D2225EA745D7B43EFB /* Cryptanil-umbrella.h */,
+				0BE87E916BDE0053C76CF8774E1450F2 /* Cryptanil.debug.xcconfig */,
+				12DE33C60078293F77ADCCF63E75C95D /* Cryptanil.release.xcconfig */,
+				39CA245750605657917BF799299EB9AD /* ResourceBundle-Cryptanil-Cryptanil-Info.plist */,
 			);
-			name = Helpers;
-			path = Cryptanil/Source/Helpers;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Cryptanil";
 			sourceTree = "<group>";
 		};
 		670080262DB6F4997029AA723CDEDFCC /* Pods */ = {
@@ -528,31 +565,48 @@
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		70C3365CC3D5FC6EF345D043B24320CC /* Pod */ = {
+		74951837084A99D6656CDD9EE3238542 /* CryptanilLocalizations */ = {
 			isa = PBXGroup;
 			children = (
-				2E46DDA738BDEAC56FF83F5EC61DC3D0 /* Cryptanil.podspec */,
-				4911E2D0288AFF4D9F90E6C404732229 /* LICENSE */,
-				8D03C2F4F9EEBBE0C0099B6B19F87558 /* README.md */,
+				5984A48AC99F25B2B71275F0199DDE20 /* de.lproj */,
+				5A663615D21FBE80B50E6F0A4E7BDE9D /* en.lproj */,
+				079F439B352FB79880DA6AC5529B4D29 /* es.lproj */,
+				F0D163BCF8DC39C81F9E9D12445B2705 /* fr.lproj */,
+				572D34D745FC2F735C5D84BBC9876C41 /* ru.lproj */,
 			);
-			name = Pod;
+			name = CryptanilLocalizations;
+			path = Cryptanil/CryptanilLocalizations;
 			sourceTree = "<group>";
 		};
-		7FCE0046689162044A1FC2342EDEE256 /* Development Pods */ = {
+		7708064BFF81387ED3DDCB4DBB577082 /* ResponseModel */ = {
 			isa = PBXGroup;
 			children = (
-				ADA37B26FAE123A43A1A93C56714ADB1 /* Cryptanil */,
+				8E10FEE6C4160611904F34A0378249C3 /* CoinAddress.swift */,
+				43D21DD58420D91FF08CF7C5F5484CA7 /* CryptanilOrderInfo.swift */,
+				73DCE231C7DF737987A9C3DE16C1AAFA /* WalletInfo.swift */,
+				7FDD22B7E1B33D0431CBA91DFC65E0AF /* base */,
 			);
-			name = "Development Pods";
+			path = ResponseModel;
 			sourceTree = "<group>";
 		};
-		847CEED11BE1BCA9DC2530AF3423F4D7 /* CryptanilDialog */ = {
+		7F36EDBCDF17D225FC3251923B0A777F /* CryptanilLoading */ = {
 			isa = PBXGroup;
 			children = (
-				DA12947C8C60E106B1E357B61CABCA2B /* CryptanilDialog.swift */,
-				52AF669F00710F8A09B4A22792AA62A1 /* CryptanilDialog.xib */,
+				54A73DAC51524CFF4D4573AE567975B6 /* CryptanilLoading.swift */,
+				5D5E9C788577F5DF598017A3DEEFF343 /* CryptanilLoading.xib */,
 			);
-			path = CryptanilDialog;
+			path = CryptanilLoading;
+			sourceTree = "<group>";
+		};
+		7FDD22B7E1B33D0431CBA91DFC65E0AF /* base */ = {
+			isa = PBXGroup;
+			children = (
+				A5049FC7098B21799564B0BBEB105F5F /* CryptanilError.swift */,
+				32912C73A8E673A5B4F27B0B6F240641 /* CryptanilMessage.swift */,
+				96DDD6F19B5C668B99D464C7A8DE91CB /* CryptanilResponse.swift */,
+				F8F9453AAE2BA846957AC980939156BA /* CryptanilResult.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		87D2FE65EAF6C532E119B661B0BF3287 /* Bagel */ = {
@@ -590,6 +644,24 @@
 			path = Bagel;
 			sourceTree = "<group>";
 		};
+		8F00BBE28997E115F8849B8BB8D3539C /* CryptanilPaymentStatusViewController */ = {
+			isa = PBXGroup;
+			children = (
+				69BB752C5399FF536D847FDD44AFA0E4 /* CryptanilPaymentStatusView.swift */,
+				D11399D5E376313D963BE43825F74CB1 /* CryptanilPaymentStatusViewController.swift */,
+			);
+			path = CryptanilPaymentStatusViewController;
+			sourceTree = "<group>";
+		};
+		9972A3D6A8A67059E5776B661651F72B /* CryptanilDialog */ = {
+			isa = PBXGroup;
+			children = (
+				B33505660B498ABDDC7C6FB4543A2770 /* CryptanilDialog.swift */,
+				1623176B7E8624E586A3D4B015665175 /* CryptanilDialog.xib */,
+			);
+			path = CryptanilDialog;
+			sourceTree = "<group>";
+		};
 		9CEB2AB9F242F5BD754DAD6BE5C12E2A /* Pods-Cryptanil_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,33 +678,13 @@
 			path = "Target Support Files/Pods-Cryptanil_Tests";
 			sourceTree = "<group>";
 		};
-		A182F90C46B676BEE5649F19612CF917 /* Support Files */ = {
+		A67037771D4A6F9239A18B4843935500 /* CryptanilSplashViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D2919E0BA68EDA7A3BC07AF59C6A711F /* Cryptanil.modulemap */,
-				293103DC4AFD00BF21C6509545BEA8B4 /* Cryptanil-dummy.m */,
-				2734F295499A0AD1E3EDA0A704D81ABA /* Cryptanil-Info.plist */,
-				6E1C4177551CF73DA89CD1165B8E6DCD /* Cryptanil-prefix.pch */,
-				D4374FC4F5E897EE7893F0F900EE4288 /* Cryptanil-umbrella.h */,
-				4C5C96E1B7215DFCEB342D6AAEB9E12D /* Cryptanil.debug.xcconfig */,
-				1B60381ED4CF9E610D8B72BA87274C4B /* Cryptanil.release.xcconfig */,
-				5C24EEE28FCE5E993D9F23CAA9133F89 /* ResourceBundle-Cryptanil-Cryptanil-Info.plist */,
+				F001CBE9B51C7E926328138FE24F1DA6 /* CryptanilSplashView.swift */,
+				BC2EC471290E5A2DB2CDD994939B6506 /* CryptanilSplashViewController.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Cryptanil";
-			sourceTree = "<group>";
-		};
-		A84CF2BEC221DDA5E398B6D6FF50D15E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1237511C828D7167F96071A254406174 /* CryptanilProgress.swift */,
-				D511BDFC1CD96B660F235018A894CF60 /* CryptanilTextField.swift */,
-				F4DDA32C0F00DD08968FE1473B06B69D /* CryptanilTopMessage.swift */,
-				847CEED11BE1BCA9DC2530AF3423F4D7 /* CryptanilDialog */,
-				AC10229649EB154B8FBEB8FCC658B201 /* CryptanilLoading */,
-			);
-			name = Views;
-			path = Cryptanil/Source/Views;
+			path = CryptanilSplashViewController;
 			sourceTree = "<group>";
 		};
 		A8FE143123E9F2641B7C11347E265CAA /* Targets Support Files */ = {
@@ -642,35 +694,6 @@
 				9CEB2AB9F242F5BD754DAD6BE5C12E2A /* Pods-Cryptanil_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		AC10229649EB154B8FBEB8FCC658B201 /* CryptanilLoading */ = {
-			isa = PBXGroup;
-			children = (
-				BB59FD1A67C079BD718B93CDDA41E49F /* CryptanilLoading.swift */,
-				505BB63B9D1B844998A10AD0F6162BAB /* CryptanilLoading.xib */,
-			);
-			path = CryptanilLoading;
-			sourceTree = "<group>";
-		};
-		ADA37B26FAE123A43A1A93C56714ADB1 /* Cryptanil */ = {
-			isa = PBXGroup;
-			children = (
-				F58792C597B7FAF598B3C02E2547FAD8 /* Assets.xcassets */,
-				6ED7F2FC3D155178192AF65DE1CEFEFF /* CryptanilPaymentStatusViewController.swift */,
-				76A38ACB5FB785983C03B926CC00608C /* CryptanilSearchViewController.swift */,
-				FD2708061F9A357714EE5D01720FC124 /* CryptanilSplashViewController.swift */,
-				5B0CD7618B8B7083E02D1513005F441C /* CryptanilTransactionViewController.swift */,
-				5FA8509759D2001F67330D0878F5DC73 /* CryptanilViewController.swift */,
-				537EEF1BE139EF641A276D04044EA42E /* CryptanilLocalizations */,
-				0A1B77CE11CFAF099F85BF46278B3AD9 /* CryptanilNetworking */,
-				6492E311A6AF163B91B704D9CEAC0634 /* Helpers */,
-				70C3365CC3D5FC6EF345D043B24320CC /* Pod */,
-				A182F90C46B676BEE5649F19612CF917 /* Support Files */,
-				A84CF2BEC221DDA5E398B6D6FF50D15E /* Views */,
-			);
-			name = Cryptanil;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		ADCC22707ACE860E4CF85C56EF46BB18 /* Products */ = {
@@ -687,6 +710,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B637BE4EFE2A954535E66E1F8B22CB13 /* CryptanilTransactionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				29FF41ADAEC540B877767773748423F2 /* CryptanilTransactionView.swift */,
+				C286159CE65BD2A6908C85201D034E73 /* CryptanilTransactionViewController.swift */,
+			);
+			path = CryptanilTransactionViewController;
+			sourceTree = "<group>";
+		};
 		C2CF4CD8A3BB1CFC9BFFE334C1F9502B /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,11 +731,19 @@
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
+		C4F87EC7EB98A145422EBE5D07989286 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F2B20D9EBF1E489D607536AFD2364F0 /* Cryptanil */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				7FCE0046689162044A1FC2342EDEE256 /* Development Pods */,
+				C4F87EC7EB98A145422EBE5D07989286 /* Development Pods */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				670080262DB6F4997029AA723CDEDFCC /* Pods */,
 				ADCC22707ACE860E4CF85C56EF46BB18 /* Products */,
@@ -746,33 +786,48 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EC1F5C43D033D717D4D47FF136B2BD4E /* base */ = {
+		EE3B7B29B4A6C30A2DE6CB1CE6E309E1 /* CryptanilNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				58496685B7FC25163D0F3D61BC139EF2 /* CryptanilError.swift */,
-				9BE999B28ACE705D036BE3520EC8A052 /* CryptanilMessage.swift */,
-				60E19DF6D96DA469C6E0669F6B451228 /* CryptanilResponse.swift */,
-				758CDE5BA95A87B199C86E99E2DC8970 /* CryptanilResult.swift */,
+				92AACE4E84ACCD4676DE6F433DC9A358 /* Alamofire+Codable.swift */,
+				674D2AC63382D6AB378B286559DE6E68 /* CryptanilApiClient.swift */,
+				7ADFF2391B3F74C991CED8623915B9B3 /* CryptanilApiClient+Execution.swift */,
+				072F4DBEDB8C75AF6EF324B6B16D7F56 /* CryptanilApiClient+UI.swift */,
+				15577094DA2C96D49667AF91842D29B3 /* CryptanilRouter.swift */,
+				4D6E46C0847B2F92DF3E2D93CE1E2D35 /* RequestModel */,
+				7708064BFF81387ED3DDCB4DBB577082 /* ResponseModel */,
 			);
-			path = base;
+			name = CryptanilNetworking;
+			path = Cryptanil/Source/CryptanilNetworking;
+			sourceTree = "<group>";
+		};
+		F7637E3697FBF7FFE4D28A8CC5712143 /* CryptanilViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B3DC3484DA2B4AC5AE141AAAC5DCCD0 /* CryptanilView.swift */,
+				53C241D923C33E60C6B1745CBFCAC065 /* CryptanilViewController.swift */,
+			);
+			path = CryptanilViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		049A8C45888F4252DCCCD38A949CE6A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CB34E7FCD0FE5242D798FEB87AB733B /* CocoaAsyncSocket-umbrella.h in Headers */,
+				0197D6BEE8D4BDA4B4EB5F3B54585891 /* GCDAsyncSocket.h in Headers */,
+				8D709E97C1984126D9EA1A33C6B1D9D0 /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FDABB6A0F8491060D159EF00D205CEF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				41CCF36E110F1BF5479321B89147144E /* Pods-Cryptanil_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A7DD5DBB3D36A4BCE76BDAD0FEC90DF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66333E8F3419CCC81CD2D382D265F5E6 /* Cryptanil-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,13 +869,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA56341FCD536E78456FF52C806AD117 /* Headers */ = {
+		D4C4B3FDEC4C35637C38BF36601AEFC6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				694BE4A7A5D258B8C9502A13C91D6A54 /* CocoaAsyncSocket-umbrella.h in Headers */,
-				A1B72747D3B14CEEE2C0BD6C3A4F4357 /* GCDAsyncSocket.h in Headers */,
-				19E2AA416C56E63F894B5D0D6FB340BB /* GCDAsyncUdpSocket.h in Headers */,
+				621B5351E662B69AE0AE530C68896A38 /* Cryptanil-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +892,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				CF57C3C1BEC50E539DBF17F2759B6E29 /* PBXTargetDependency */,
+				13359FCC81AB2C711213686AF2138B37 /* PBXTargetDependency */,
 			);
 			name = "Pods-Cryptanil_Tests";
 			productName = Pods_Cryptanil_Tests;
@@ -848,12 +901,12 @@
 		};
 		6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A911142C7AFC30E12B85D649868F7CEA /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildConfigurationList = B25B829B63D3BA00C4BF3354622A6D3F /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
 			buildPhases = (
-				AA56341FCD536E78456FF52C806AD117 /* Headers */,
-				4CB15090DB7235585A149451A532175C /* Sources */,
-				C3730F86CC7D6478A94A26A94CF4E007 /* Frameworks */,
-				F815B257FF7DF3E37CE023D5579ADDAF /* Resources */,
+				049A8C45888F4252DCCCD38A949CE6A1 /* Headers */,
+				ECC4079293C48E303A4A0652429DE8F9 /* Sources */,
+				BD069357E27B9E65193139627655D28A /* Frameworks */,
+				8A60144F392E9C6A30D6CC50595F3C12 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -866,18 +919,18 @@
 		};
 		76125DD0BE4CD07C4B187C14D0E656B3 /* Cryptanil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDBD1E9463952971CE13368BCB92BD53 /* Build configuration list for PBXNativeTarget "Cryptanil" */;
+			buildConfigurationList = FEAF5E7951D9419D872FBA0DC9A5B445 /* Build configuration list for PBXNativeTarget "Cryptanil" */;
 			buildPhases = (
-				1A7DD5DBB3D36A4BCE76BDAD0FEC90DF /* Headers */,
-				BAAE84638BCE3696007BB873E54E8A1E /* Sources */,
-				2C0F29EF0D068DC3D803E12060861514 /* Frameworks */,
-				F2E6361EBEA1C91EE95CFB53F1785552 /* Resources */,
+				D4C4B3FDEC4C35637C38BF36601AEFC6 /* Headers */,
+				F3D1621D5387AA46E2B45D301F4F5BBE /* Sources */,
+				78C45434D15DD0A5BCC0D67EA008C9AA /* Frameworks */,
+				9156C7C7B647965AAF90E334AA57C5EE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5AD48CF42FB3CCF47E95A924B91F5060 /* PBXTargetDependency */,
-				99BE191ED727467FDF708B5E59CEF462 /* PBXTargetDependency */,
+				137497111B238D447B6ED2B0C2FD4C15 /* PBXTargetDependency */,
+				BEAC3FBA9638C3F330448F9B407BC9A6 /* PBXTargetDependency */,
 			);
 			name = Cryptanil;
 			productName = Cryptanil;
@@ -896,7 +949,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0F269BBF5F2ACBFDDBBCE0FDD9A14F25 /* PBXTargetDependency */,
+				D66B67B3BB0380271C651501D06DC6F7 /* PBXTargetDependency */,
 			);
 			name = Bagel;
 			productName = Bagel;
@@ -933,10 +986,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				48876C23BF3D1582B20C14F234B8B337 /* PBXTargetDependency */,
-				41172EBE80794A17A4B14ADB3E3BAF08 /* PBXTargetDependency */,
-				23502B0F8CA429FAAAE80125C2C2D059 /* PBXTargetDependency */,
-				C6C1E6E34F5B95A4E4A46A3ABD583924 /* PBXTargetDependency */,
+				C93CD35813E63C9771A9A888B61624A8 /* PBXTargetDependency */,
+				2E5CF1D794891D902298AFE6A6BA5A7C /* PBXTargetDependency */,
+				47A1286701FD812704F2AD222FFDCA6A /* PBXTargetDependency */,
+				FE9181C3A3F061D6A39D56C6C4388F55 /* PBXTargetDependency */,
 			);
 			name = "Pods-Cryptanil_Example";
 			productName = Pods_Cryptanil_Example;
@@ -945,11 +998,11 @@
 		};
 		F3DD427D43D57AF1299B4775D5D37E44 /* Cryptanil-Cryptanil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56D36BBB419A99AC839E95AE62C7FB36 /* Build configuration list for PBXNativeTarget "Cryptanil-Cryptanil" */;
+			buildConfigurationList = B59CBB11A0B9E1F2CA9C04CE0EB09B85 /* Build configuration list for PBXNativeTarget "Cryptanil-Cryptanil" */;
 			buildPhases = (
-				5BB2173461EF54F0F2671FFBEEAFC97B /* Sources */,
-				7DB0C62F78E144F42610E935547BCB49 /* Frameworks */,
-				7AA815EA716142C3E1BA657B3B0B665A /* Resources */,
+				ACFA14832E2588511CDA5D86B3185F91 /* Sources */,
+				6350FF58AB9D99CB5B6B009FEBB70813 /* Frameworks */,
+				FA5AACE3DE3270B3C7D6C2EE31546033 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1010,16 +1063,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AA815EA716142C3E1BA657B3B0B665A /* Resources */ = {
+		8A60144F392E9C6A30D6CC50595F3C12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0AA112D4A50DCC5D7DE212FF58441AD /* Assets.xcassets in Resources */,
-				313695E8CFFE56533B55EF5DE218F0E9 /* de.lproj in Resources */,
-				120907DD0A0CD70A2C4DCB7249F63C90 /* en.lproj in Resources */,
-				DFCBD23DE819B082E0E796C79191DC64 /* es.lproj in Resources */,
-				108765429B57B13931DB63A9939B3179 /* fr.lproj in Resources */,
-				EC4FFDBF51627F351BA1D5C03D610E1B /* ru.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9156C7C7B647965AAF90E334AA57C5EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD5E19A337079C3CED6CECD39EED35F /* Assets.xcassets in Resources */,
+				D780B69424D2C5C2A0AAB28CF91DC806 /* Cryptanil.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,47 +1100,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2E6361EBEA1C91EE95CFB53F1785552 /* Resources */ = {
+		FA5AACE3DE3270B3C7D6C2EE31546033 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D9DAA819235BF143ED57C1BA7CCA95D /* Assets.xcassets in Resources */,
-				3F13EC8D881F0240C3A1FB4CD5014197 /* Cryptanil.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F815B257FF7DF3E37CE023D5579ADDAF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				6D8EF5ADF166FCB0E6262B1EB0F0E669 /* Assets.xcassets in Resources */,
+				C8FB97559DCAE30C708C64155D51C9A1 /* de.lproj in Resources */,
+				9A1088873D51861953FB16AB11D19ED1 /* en.lproj in Resources */,
+				5C795B8B5A2D613DB42000256480E08D /* es.lproj in Resources */,
+				FF31099F233690EBD99594616448F197 /* fr.lproj in Resources */,
+				D63028F87F81108D3896F32DDD6417F4 /* ru.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4CB15090DB7235585A149451A532175C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				683FD2E5268B444D64108CE0CFF505FD /* CocoaAsyncSocket-dummy.m in Sources */,
-				92D96031DA0B437480AC71E897B4F481 /* GCDAsyncSocket.m in Sources */,
-				FA6029D6282EA32309F275B2718A64FC /* GCDAsyncUdpSocket.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5056268037CC34AC7C675C89CF99F4C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5A3E66ECE2045686F1E2AB7BFC7FCF1B /* Pods-Cryptanil_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BB2173461EF54F0F2671FFBEEAFC97B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,43 +1170,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAAE84638BCE3696007BB873E54E8A1E /* Sources */ = {
+		ACFA14832E2588511CDA5D86B3185F91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				196063F495238CF8883B90764BE6D984 /* Alamofire+Codable.swift in Sources */,
-				C3848642012DCCBEA9877657B21E0D54 /* CoinAddress.swift in Sources */,
-				FF821E0D94E62D57B37E3130C9A24CA0 /* Cryptanil-dummy.m in Sources */,
-				0CA65191525C93B932B2F5209C3C248A /* CryptanilApiClient.swift in Sources */,
-				46E3F9E9157E3FE30A20D5BB3A4AD3CE /* CryptanilApiClient+Execution.swift in Sources */,
-				914F266DE5F96B1961662F9A65C8DDAE /* CryptanilApiClient+UI.swift in Sources */,
-				4DAA1B8BE80F312A52E3EA6C0845ABAF /* CryptanilColors.swift in Sources */,
-				717CE2124EC92C8894A3392BACBF6A43 /* CryptanilDialog.swift in Sources */,
-				E668089CCA81CCC88C77608DC16A726F /* CryptanilDialog.xib in Sources */,
-				3C60B662012BD361ABA260598546B828 /* CryptanilError.swift in Sources */,
-				10977FA5A219BEC6C192BF4F20BBDC6B /* CryptanilExtensions.swift in Sources */,
-				B991D61E1E60B0669B2C0684FFE205B9 /* CryptanilImages.swift in Sources */,
-				1702D32F312507F10F1F3ED22467DA4C /* CryptanilLanguage.swift in Sources */,
-				046DB13E1B5AC1B063AE1A8CF5F4FD42 /* CryptanilLoading.swift in Sources */,
-				47D4E822A412DEE55D421A4E00DB6962 /* CryptanilLoading.xib in Sources */,
-				5271F0350F527A2B09BC9F2ED95081FA /* CryptanilMessage.swift in Sources */,
-				3F051FC6154E2D254A6427B2EFEFF437 /* CryptanilOrderInfo.swift in Sources */,
-				23FC9494A1E5D3EF657E3F4E1DB26320 /* CryptanilPaymentStatusViewController.swift in Sources */,
-				633D941CA127DC0CBD6DCDF68FE9A5AB /* CryptanilProgress.swift in Sources */,
-				DA7B5D97AFC53EDAC08E50A73A2660E3 /* CryptanilResponse.swift in Sources */,
-				FD3F5101B1A869D6594CAFF1609B2594 /* CryptanilResult.swift in Sources */,
-				EA47D5DAC0D21E27E089D0D233BAEF2E /* CryptanilRouter.swift in Sources */,
-				48E21CAB0A8143BFA94C63543A3297DD /* CryptanilSearchViewController.swift in Sources */,
-				ED93F44F23E91DF32A7663FEF5B8B268 /* CryptanilSplashViewController.swift in Sources */,
-				3C9B986B006EA5D9696F216CD2767CBE /* CryptanilTextField.swift in Sources */,
-				EA2B434F67C1C9FDFCB3F4F21B17A219 /* CryptanilTopMessage.swift in Sources */,
-				62CE622F83782D22C28006D027947869 /* CryptanilTransactionViewController.swift in Sources */,
-				2AF8DEBBE641685C73652383C5C41592 /* CryptanilViewController.swift in Sources */,
-				4B2B6BA864F6FA4755F60C489A315B30 /* GetCoinAddressRequest.swift in Sources */,
-				E5D1DB976032B01EECF398387154755F /* GetCryptanilOrderInfo.swift in Sources */,
-				00358E517E25C35B72F73DB32680655E /* GetWalletInfoRequest.swift in Sources */,
-				B055495E17B5833958EEEA11EE68D2D3 /* SubmitOrderRequest.swift in Sources */,
-				5E6183D742BC5BB62AA1E50F4C879D5F /* WalletInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC4079293C48E303A4A0652429DE8F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE340FFF3FC5E2DB918AD46533A74FB /* CocoaAsyncSocket-dummy.m in Sources */,
+				9DD4B9B315513D98AD4F921CD9020B2B /* GCDAsyncSocket.m in Sources */,
+				235369FA26CB79065DE63E3ABCD38DC6 /* GCDAsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,65 +1195,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3D1621D5387AA46E2B45D301F4F5BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C27F75053D643BBB8691F4FBBC59E95 /* Alamofire+Codable.swift in Sources */,
+				13F5DA15676B7CDD288E6D13C94921C5 /* CoinAddress.swift in Sources */,
+				179081A3AB86A0DC6ED51C1632E28FDF /* Cryptanil-dummy.m in Sources */,
+				89B025ABC138AA6CEF1674C0B348F62B /* CryptanilApiClient.swift in Sources */,
+				70BD29EF06A60954A1F05674718CEA0C /* CryptanilApiClient+Execution.swift in Sources */,
+				8EA28E73DF9C9474C1E52E7D2BAA51FF /* CryptanilApiClient+UI.swift in Sources */,
+				B1A0CB9DC5B5D1BBF58142A27291EF67 /* CryptanilColors.swift in Sources */,
+				2AD4B257FE9815E47BE4837494CB4B0B /* CryptanilDialog.swift in Sources */,
+				8F1EBD426908FFFA1CCD95912B4AA659 /* CryptanilDialog.xib in Sources */,
+				46B89F868399342CCBC69A6F3BEF5462 /* CryptanilError.swift in Sources */,
+				F48A3CC0E800FF6CEE35B556D0065993 /* CryptanilExtensions.swift in Sources */,
+				4C58D3A762A75097CF98FAE35E9DD5A9 /* CryptanilImages.swift in Sources */,
+				72037C2C89520FFDCA8FFB2DCAEEDD75 /* CryptanilLanguage.swift in Sources */,
+				C7DCC4D5CFC133D3F620AF72A370D8FA /* CryptanilLoading.swift in Sources */,
+				065C43566EC04943CC2DD2825AE89D8D /* CryptanilLoading.xib in Sources */,
+				21973BA79749EA08857BD015C6D60A1B /* CryptanilMessage.swift in Sources */,
+				9DD5E19053BFA6981DDC6ABF76AEF50C /* CryptanilOrderInfo.swift in Sources */,
+				C5A71D45332111D43A528EFD0002822C /* CryptanilPaymentStatusView.swift in Sources */,
+				73A0968DE51B064B69E6FEABA46939B4 /* CryptanilPaymentStatusViewController.swift in Sources */,
+				BED48F68FF95910D9B6076D4FE8EA94C /* CryptanilProgress.swift in Sources */,
+				17ECE2DEFB4B6C4D7E619838476B60CA /* CryptanilResponse.swift in Sources */,
+				7424355199D0F7E60BD01F7B51D49563 /* CryptanilResult.swift in Sources */,
+				97C7650AED4F241BED25958E758A681F /* CryptanilRouter.swift in Sources */,
+				D2E2D057D15363D3DDC2321363D8A3BB /* CryptanilSearchViewController.swift in Sources */,
+				831431AA000744062809301B12B8B364 /* CryptanilSplashView.swift in Sources */,
+				2D0F067ECE2AE7B02DA07DE8350FE425 /* CryptanilSplashViewController.swift in Sources */,
+				1C849F6E618F5365975A78AAA9020953 /* CryptanilTextField.swift in Sources */,
+				73161DF349D416EE9D758293C04E3AC0 /* CryptanilTopMessage.swift in Sources */,
+				DE75B9CB087DD60CF10A8CB3983CEDA7 /* CryptanilTransactionView.swift in Sources */,
+				708949B1E36D99DDFF59D1824EA8274C /* CryptanilTransactionViewController.swift in Sources */,
+				202ABD909F81A2C685978BFB06F1A293 /* CryptanilView.swift in Sources */,
+				1E501BC9B615FEB4CD8ED45948E13A9A /* CryptanilViewController.swift in Sources */,
+				FD9F6C49665E846133B26232ADCF3B99 /* GetCoinAddressRequest.swift in Sources */,
+				4B18C2F162DCEE6029C9E0CB21787FCA /* GetCryptanilOrderInfo.swift in Sources */,
+				3BC6FF2B0700825FC3D282054C3AF488 /* GetWalletInfoRequest.swift in Sources */,
+				DBAAF65EB69C7E32E7BB4755BD2F9B1D /* SubmitOrderRequest.swift in Sources */,
+				282CC23769478EAC6CAC5E156B608E7C /* WalletInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F269BBF5F2ACBFDDBBCE0FDD9A14F25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 410C78201EDF9CFBCD486E82EA2394DE /* PBXContainerItemProxy */;
-		};
-		23502B0F8CA429FAAAE80125C2C2D059 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 0337C4BFC47114D4B51E5D109A38B6EF /* PBXContainerItemProxy */;
-		};
-		41172EBE80794A17A4B14ADB3E3BAF08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Bagel;
-			target = 92077976CB3E088351E515981DC39115 /* Bagel */;
-			targetProxy = 807584CE42C4302F5497727601E48E57 /* PBXContainerItemProxy */;
-		};
-		48876C23BF3D1582B20C14F234B8B337 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 16E977A0E33F9C96B7C97961FF6E3B11 /* PBXContainerItemProxy */;
-		};
-		5AD48CF42FB3CCF47E95A924B91F5060 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 643DC185F274A9A8EC90F9EC4FD36DBF /* PBXContainerItemProxy */;
-		};
-		99BE191ED727467FDF708B5E59CEF462 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Cryptanil-Cryptanil";
-			target = F3DD427D43D57AF1299B4775D5D37E44 /* Cryptanil-Cryptanil */;
-			targetProxy = 0B8837A388369B913DE467C1AC39FA45 /* PBXContainerItemProxy */;
-		};
-		C6C1E6E34F5B95A4E4A46A3ABD583924 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cryptanil;
-			target = 76125DD0BE4CD07C4B187C14D0E656B3 /* Cryptanil */;
-			targetProxy = 8F80B45EBA7F21773FE89710D1AFD171 /* PBXContainerItemProxy */;
-		};
-		CF57C3C1BEC50E539DBF17F2759B6E29 /* PBXTargetDependency */ = {
+		13359FCC81AB2C711213686AF2138B37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Cryptanil_Example";
 			target = F34CA09687202E5E857F745389C78F5B /* Pods-Cryptanil_Example */;
-			targetProxy = 7DD9E964A5864192F824C58AAACDD77B /* PBXContainerItemProxy */;
+			targetProxy = 537AC88E21FB0CCA3FD3289A342F613C /* PBXContainerItemProxy */;
+		};
+		137497111B238D447B6ED2B0C2FD4C15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = ED4E64A45BBEF1B45547439A5E0D7BB2 /* PBXContainerItemProxy */;
+		};
+		2E5CF1D794891D902298AFE6A6BA5A7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bagel;
+			target = 92077976CB3E088351E515981DC39115 /* Bagel */;
+			targetProxy = E74C6BA0EADA5A9511107E285DB0F541 /* PBXContainerItemProxy */;
+		};
+		47A1286701FD812704F2AD222FFDCA6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = AE3155B05ED0C56D054B9A559D3BDBE2 /* PBXContainerItemProxy */;
+		};
+		BEAC3FBA9638C3F330448F9B407BC9A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cryptanil-Cryptanil";
+			target = F3DD427D43D57AF1299B4775D5D37E44 /* Cryptanil-Cryptanil */;
+			targetProxy = 65AC2DEF4D15B7C14D8A7C594B96331F /* PBXContainerItemProxy */;
+		};
+		C93CD35813E63C9771A9A888B61624A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = E3E51B54EF22929E97E27F45E2FD1402 /* PBXContainerItemProxy */;
+		};
+		D66B67B3BB0380271C651501D06DC6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 8EE7F77A2D4F5E242C218BA9875F38E0 /* PBXContainerItemProxy */;
+		};
+		FE9181C3A3F061D6A39D56C6C4388F55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cryptanil;
+			target = 76125DD0BE4CD07C4B187C14D0E656B3 /* Cryptanil */;
+			targetProxy = 3CBBB81A7A256BCAB1EF0664B28E4EC8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		064E0BC73F9C2F4778851452DDE6F7D5 /* Debug */ = {
+		2C39633BD93F947C8B54B6F8E552D45A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 665675675C382C48CA821DEF41FD3CE1 /* CocoaAsyncSocket.debug.xcconfig */;
+			baseConfigurationReference = 0BE87E916BDE0053C76CF8774E1450F2 /* Cryptanil.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1249,14 +1307,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Cryptanil/Cryptanil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cryptanil/Cryptanil-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
-				PRODUCT_NAME = CocoaAsyncSocket;
+				MODULEMAP_FILE = "Target Support Files/Cryptanil/Cryptanil.modulemap";
+				PRODUCT_MODULE_NAME = Cryptanil;
+				PRODUCT_NAME = Cryptanil;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1266,55 +1324,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		0C2495589E915703A802C99D950314E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B60381ED4CF9E610D8B72BA87274C4B /* Cryptanil.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Cryptanil";
-				DEVELOPMENT_TEAM = 2MQXH7746J;
-				IBSC_MODULE = Cryptanil;
-				INFOPLIST_FILE = "Target Support Files/Cryptanil/ResourceBundle-Cryptanil-Cryptanil-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_NAME = Cryptanil;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		4F069AF494CE1B9AFBA50FA0C42A4BBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E88B91222558FDE205D68EFC4092BBA2 /* CocoaAsyncSocket.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
-				PRODUCT_NAME = CocoaAsyncSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		4F39AB6DBF8CCCACC2D8786AA527170F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1348,38 +1357,22 @@
 			};
 			name = Release;
 		};
-		5D170FB13BEDA59252729EBD10F16823 /* Release */ = {
+		61837A8A8D914CE65D99C5E125513118 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B60381ED4CF9E610D8B72BA87274C4B /* Cryptanil.release.xcconfig */;
+			baseConfigurationReference = 0BE87E916BDE0053C76CF8774E1450F2 /* Cryptanil.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cryptanil/Cryptanil-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cryptanil/Cryptanil-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Cryptanil";
+				DEVELOPMENT_TEAM = 2MQXH7746J;
+				IBSC_MODULE = Cryptanil;
+				INFOPLIST_FILE = "Target Support Files/Cryptanil/ResourceBundle-Cryptanil-Cryptanil-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cryptanil/Cryptanil.modulemap";
-				PRODUCT_MODULE_NAME = Cryptanil;
 				PRODUCT_NAME = Cryptanil;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		69A901B49C11E09B6EB8A2C541C8F62F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1544,38 +1537,6 @@
 			};
 			name = Debug;
 		};
-		948AA7A1AEB85E2F7DEBCF683985584B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C5C96E1B7215DFCEB342D6AAEB9E12D /* Cryptanil.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cryptanil/Cryptanil-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cryptanil/Cryptanil-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cryptanil/Cryptanil.modulemap";
-				PRODUCT_MODULE_NAME = Cryptanil;
-				PRODUCT_NAME = Cryptanil;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1636,6 +1597,37 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		B1391D8BF01DFEECD023FCA8AFBB956F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 665675675C382C48CA821DEF41FD3CE1 /* CocoaAsyncSocket.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C3EDD8443ACCE6F0B93D37A595846D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1705,22 +1697,37 @@
 			};
 			name = Debug;
 		};
-		C97802B5888355177940AC3E0DB04DB2 /* Debug */ = {
+		CA2FCBB2253B5AEAEF16C656233286E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C5C96E1B7215DFCEB342D6AAEB9E12D /* Cryptanil.debug.xcconfig */;
+			baseConfigurationReference = E88B91222558FDE205D68EFC4092BBA2 /* CocoaAsyncSocket.release.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Cryptanil";
-				DEVELOPMENT_TEAM = 2MQXH7746J;
-				IBSC_MODULE = Cryptanil;
-				INFOPLIST_FILE = "Target Support Files/Cryptanil/ResourceBundle-Cryptanil-Cryptanil-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_NAME = Cryptanil;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		E200169C8EB84F3B2AE5C07D8F4222FD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1743,6 +1750,56 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F540EF459E5E3F27419E3D99F07FF111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12DE33C60078293F77ADCCF63E75C95D /* Cryptanil.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Cryptanil";
+				DEVELOPMENT_TEAM = 2MQXH7746J;
+				IBSC_MODULE = Cryptanil;
+				INFOPLIST_FILE = "Target Support Files/Cryptanil/ResourceBundle-Cryptanil-Cryptanil-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = Cryptanil;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		F8BE298BEF11555040829D9A129346D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12DE33C60078293F77ADCCF63E75C95D /* Cryptanil.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cryptanil/Cryptanil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cryptanil/Cryptanil-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cryptanil/Cryptanil.modulemap";
+				PRODUCT_MODULE_NAME = Cryptanil;
+				PRODUCT_NAME = Cryptanil;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1810,15 +1867,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56D36BBB419A99AC839E95AE62C7FB36 /* Build configuration list for PBXNativeTarget "Cryptanil-Cryptanil" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C97802B5888355177940AC3E0DB04DB2 /* Debug */,
-				0C2495589E915703A802C99D950314E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		79DD6B4C30DD9428C8229CC9014785A9 /* Build configuration list for PBXNativeTarget "Pods-Cryptanil_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1846,20 +1894,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A911142C7AFC30E12B85D649868F7CEA /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+		B25B829B63D3BA00C4BF3354622A6D3F /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				064E0BC73F9C2F4778851452DDE6F7D5 /* Debug */,
-				4F069AF494CE1B9AFBA50FA0C42A4BBC /* Release */,
+				B1391D8BF01DFEECD023FCA8AFBB956F /* Debug */,
+				CA2FCBB2253B5AEAEF16C656233286E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDBD1E9463952971CE13368BCB92BD53 /* Build configuration list for PBXNativeTarget "Cryptanil" */ = {
+		B59CBB11A0B9E1F2CA9C04CE0EB09B85 /* Build configuration list for PBXNativeTarget "Cryptanil-Cryptanil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				948AA7A1AEB85E2F7DEBCF683985584B /* Debug */,
-				5D170FB13BEDA59252729EBD10F16823 /* Release */,
+				61837A8A8D914CE65D99C5E125513118 /* Debug */,
+				F540EF459E5E3F27419E3D99F07FF111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEAF5E7951D9419D872FBA0DC9A5B445 /* Build configuration list for PBXNativeTarget "Cryptanil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C39633BD93F947C8B54B6F8E552D45A /* Debug */,
+				F8BE298BEF11555040829D9A129346D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

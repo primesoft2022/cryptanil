@@ -9,7 +9,7 @@ import UIKit
 
 class CryptanilSplashViewController: UIViewController {
    
-    private var orderId: String
+    private var orderKey: String
     private weak var delegate: CryptanilViewControllerDelegate?
     private var presenting: Bool {
         return presentingViewController != nil && navigationController?.viewControllers == [self]
@@ -35,8 +35,8 @@ class CryptanilSplashViewController: UIViewController {
         }
     }
     
-    init(orderId: String, delegate: CryptanilViewControllerDelegate?) {
-        self.orderId = orderId
+    init(orderKey: String, delegate: CryptanilViewControllerDelegate?) {
+        self.orderKey = orderKey
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
@@ -49,42 +49,23 @@ class CryptanilSplashViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = CryptanilColors.background
         navigationController?.isNavigationBarHidden = true
-        let contentView = UIView()
-        view.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        let iconView = UIImageView()
-        iconView.image = CryptanilImages.logo
-        contentView.addSubview(iconView)
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        iconView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        iconView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        iconView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        let cryptalinLabel = UILabel()
-        cryptalinLabel.text = "Cryptanil"
-        cryptalinLabel.font = UIFont.systemFont(ofSize: 24)
-        cryptalinLabel.textColor = CryptanilColors.black
-        cryptalinLabel.textAlignment = .center
-        contentView.addSubview(cryptalinLabel)
-        cryptalinLabel.translatesAutoresizingMaskIntoConstraints = false
-        cryptalinLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: 20).isActive = true
-        cryptalinLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        cryptalinLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        cryptalinLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        let cryptanilSplashView = CryptanilSplashView()
+        view.addSubview(cryptanilSplashView)
+        cryptanilSplashView.translatesAutoresizingMaskIntoConstraints = false
+        cryptanilSplashView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        cryptanilSplashView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        cryptanilSplashView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
     }
     
     func getCryptaneilOrderInfo() {
-        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: orderId)) { orderInfo, message, error in
+        CryptanilApiClient.getCryptanilOrderInfo(parameter: GetCryptanilOrderInfoRequest(auth: orderKey)) { orderInfo, message, error in
             if let orderInfo = orderInfo, let orderStatus = CryptanilOrderStatus(rawValue: orderInfo.status) {
                 self.delegate?.cryptanilTransactionChanged(to: orderStatus, for: orderInfo)
                 var vc: UIViewController!
                 if orderStatus == .created {
-                    vc = CryptanilTransactionViewController(orderId: self.orderId, orderInfo: orderInfo, delegate: self.delegate, presenting: self.presenting)
+                    vc = CryptanilTransactionViewController(orderKey: self.orderKey, orderInfo: orderInfo, delegate: self.delegate, presenting: self.presenting)
                 } else {
-                    vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, orderId: self.orderId, delegate: self.delegate, presenting: self.presenting)
+                    vc = CryptanilPaymentStatusViewController(orderInfo: orderInfo, orderKey: self.orderKey, delegate: self.delegate, presenting: self.presenting)
                 }
                 var viewControllers = self.navigationController?.viewControllers ?? []
                 viewControllers.removeAll(where: {$0 == self})
