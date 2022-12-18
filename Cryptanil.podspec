@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Cryptanil'
-  s.version          = '0.2.7'
+  s.version          = '0.2.9'
   s.summary          = 'Cryptanils is good thing.'
   
 # This description is used to generate tags and improve search results.
